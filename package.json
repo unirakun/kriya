@@ -8,7 +8,8 @@
     "lint:js": "eslint --ext js,jsx .",
     "lint:sass": "sass-lint -v -q",
     "lint": "npm-run-all --parallel lint:*",
-    "test": "jest"
+    "test": "jest",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "jest": {
     "transform": {
@@ -96,6 +97,7 @@
     "babel-preset-react": "^6.23.0",
     "babel-register": "^6.24.0",
     "classnames": "^2.2.5",
+    "coveralls": "^2.13.0",
     "enzyme": "^2.8.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
