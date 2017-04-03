@@ -1,0 +1,597 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`common/Icon graphical (JSX) should add custom className 1`] = `
+<div
+  className="icon custom colored"
+  style={Object {}}
+>
+  <i
+    className="mdv-icon"
+    name="mdv-icon"
+  >
+    <span
+      className="path1"
+    />
+    <span
+      className="path2"
+    />
+    <span
+      className="path3"
+    />
+    <span
+      className="path4"
+    />
+    <span
+      className="path5"
+    />
+    <span
+      className="path6"
+    />
+    <span
+      className="path7"
+    />
+    <span
+      className="path8"
+    />
+    <span
+      className="path9"
+    />
+    <span
+      className="path10"
+    />
+    <span
+      className="path11"
+    />
+    <span
+      className="path12"
+    />
+    <span
+      className="path13"
+    />
+  </i>
+</div>
+`;
+
+exports[`common/Icon graphical (JSX) should add custom style 1`] = `
+<div
+  className="icon colored"
+  style={
+    Object {
+      "backgroundColor": "red",
+    }
+  }
+>
+  <i
+    className="mdv-icon"
+    name="mdv-icon"
+  >
+    <span
+      className="path1"
+    />
+    <span
+      className="path2"
+    />
+    <span
+      className="path3"
+    />
+    <span
+      className="path4"
+    />
+    <span
+      className="path5"
+    />
+    <span
+      className="path6"
+    />
+    <span
+      className="path7"
+    />
+    <span
+      className="path8"
+    />
+    <span
+      className="path9"
+    />
+    <span
+      className="path10"
+    />
+    <span
+      className="path11"
+    />
+    <span
+      className="path12"
+    />
+    <span
+      className="path13"
+    />
+  </i>
+</div>
+`;
+
+exports[`common/Icon graphical (JSX) should create a disabled icon 1`] = `
+<div
+  className="icon disabled colored"
+  style={Object {}}
+>
+  <i
+    className="mdv-icon"
+    name="mdv-icon"
+  >
+    <span
+      className="path1"
+    />
+    <span
+      className="path2"
+    />
+    <span
+      className="path3"
+    />
+    <span
+      className="path4"
+    />
+    <span
+      className="path5"
+    />
+    <span
+      className="path6"
+    />
+    <span
+      className="path7"
+    />
+    <span
+      className="path8"
+    />
+    <span
+      className="path9"
+    />
+    <span
+      className="path10"
+    />
+    <span
+      className="path11"
+    />
+    <span
+      className="path12"
+    />
+    <span
+      className="path13"
+    />
+  </i>
+</div>
+`;
+
+exports[`common/Icon graphical (JSX) should create a primary icon 1`] = `
+<div
+  className="icon primary colored"
+  style={Object {}}
+>
+  <i
+    className="mdv-icon"
+    name="mdv-icon"
+  >
+    <span
+      className="path1"
+    />
+    <span
+      className="path2"
+    />
+    <span
+      className="path3"
+    />
+    <span
+      className="path4"
+    />
+    <span
+      className="path5"
+    />
+    <span
+      className="path6"
+    />
+    <span
+      className="path7"
+    />
+    <span
+      className="path8"
+    />
+    <span
+      className="path9"
+    />
+    <span
+      className="path10"
+    />
+    <span
+      className="path11"
+    />
+    <span
+      className="path12"
+    />
+    <span
+      className="path13"
+    />
+  </i>
+</div>
+`;
+
+exports[`common/Icon graphical (JSX) should create a secondary icon 1`] = `
+<div
+  className="icon secondary colored"
+  style={Object {}}
+>
+  <i
+    className="mdv-icon"
+    name="mdv-icon"
+  >
+    <span
+      className="path1"
+    />
+    <span
+      className="path2"
+    />
+    <span
+      className="path3"
+    />
+    <span
+      className="path4"
+    />
+    <span
+      className="path5"
+    />
+    <span
+      className="path6"
+    />
+    <span
+      className="path7"
+    />
+    <span
+      className="path8"
+    />
+    <span
+      className="path9"
+    />
+    <span
+      className="path10"
+    />
+    <span
+      className="path11"
+    />
+    <span
+      className="path12"
+    />
+    <span
+      className="path13"
+    />
+  </i>
+</div>
+`;
+
+exports[`common/Icon graphical (JSX) should create an icon with label to left 1`] = `
+<div
+  className="icon colored"
+  style={Object {}}
+>
+  <label
+    htmlFor="mdv-icon"
+  >
+    label
+  </label>
+  <i
+    className="mdv-icon"
+    name="mdv-icon"
+  >
+    <span
+      className="path1"
+    />
+    <span
+      className="path2"
+    />
+    <span
+      className="path3"
+    />
+    <span
+      className="path4"
+    />
+    <span
+      className="path5"
+    />
+    <span
+      className="path6"
+    />
+    <span
+      className="path7"
+    />
+    <span
+      className="path8"
+    />
+    <span
+      className="path9"
+    />
+    <span
+      className="path10"
+    />
+    <span
+      className="path11"
+    />
+    <span
+      className="path12"
+    />
+    <span
+      className="path13"
+    />
+  </i>
+</div>
+`;
+
+exports[`common/Icon graphical (JSX) should create an icon with label to right 1`] = `
+<div
+  className="icon colored"
+  style={Object {}}
+>
+  <i
+    className="mdv-icon"
+    name="mdv-icon"
+  >
+    <span
+      className="path1"
+    />
+    <span
+      className="path2"
+    />
+    <span
+      className="path3"
+    />
+    <span
+      className="path4"
+    />
+    <span
+      className="path5"
+    />
+    <span
+      className="path6"
+    />
+    <span
+      className="path7"
+    />
+    <span
+      className="path8"
+    />
+    <span
+      className="path9"
+    />
+    <span
+      className="path10"
+    />
+    <span
+      className="path11"
+    />
+    <span
+      className="path12"
+    />
+    <span
+      className="path13"
+    />
+  </i>
+  <label
+    htmlFor="mdv-icon"
+  >
+    label to right
+  </label>
+</div>
+`;
+
+exports[`common/Icon graphical (JSX) should create an icon without color 1`] = `
+<div
+  className="icon"
+  style={Object {}}
+>
+  <i
+    className="mdv-icon"
+    name="mdv-icon"
+  >
+    <span
+      className="path1"
+    />
+    <span
+      className="path2"
+    />
+    <span
+      className="path3"
+    />
+    <span
+      className="path4"
+    />
+    <span
+      className="path5"
+    />
+    <span
+      className="path6"
+    />
+    <span
+      className="path7"
+    />
+    <span
+      className="path8"
+    />
+    <span
+      className="path9"
+    />
+    <span
+      className="path10"
+    />
+    <span
+      className="path11"
+    />
+    <span
+      className="path12"
+    />
+    <span
+      className="path13"
+    />
+  </i>
+</div>
+`;
+
+exports[`common/Icon graphical (JSX) should have a default behaviour 1`] = `
+<div
+  className="icon colored"
+  style={Object {}}
+>
+  <i
+    className="mdv-icon"
+    name="mdv-icon"
+  >
+    <span
+      className="path1"
+    />
+    <span
+      className="path2"
+    />
+    <span
+      className="path3"
+    />
+    <span
+      className="path4"
+    />
+    <span
+      className="path5"
+    />
+    <span
+      className="path6"
+    />
+    <span
+      className="path7"
+    />
+    <span
+      className="path8"
+    />
+    <span
+      className="path9"
+    />
+    <span
+      className="path10"
+    />
+    <span
+      className="path11"
+    />
+    <span
+      className="path12"
+    />
+    <span
+      className="path13"
+    />
+  </i>
+</div>
+`;
+
+exports[`common/Icon graphical (JSX) should print labels to both sides 1`] = `
+<div
+  className="icon colored"
+  style={Object {}}
+>
+  <label
+    htmlFor="mdv-icon"
+  >
+    left
+  </label>
+  <i
+    className="mdv-icon"
+    name="mdv-icon"
+  >
+    <span
+      className="path1"
+    />
+    <span
+      className="path2"
+    />
+    <span
+      className="path3"
+    />
+    <span
+      className="path4"
+    />
+    <span
+      className="path5"
+    />
+    <span
+      className="path6"
+    />
+    <span
+      className="path7"
+    />
+    <span
+      className="path8"
+    />
+    <span
+      className="path9"
+    />
+    <span
+      className="path10"
+    />
+    <span
+      className="path11"
+    />
+    <span
+      className="path12"
+    />
+    <span
+      className="path13"
+    />
+  </i>
+  <label
+    htmlFor="mdv-icon"
+  >
+    right
+  </label>
+</div>
+`;
+
+exports[`common/Icon graphical (JSX) should take an icon name as children 1`] = `
+<div
+  className="icon colored"
+  style={Object {}}
+>
+  <i
+    className="mdv-different-icon"
+    name="mdv-different-icon"
+  >
+    <span
+      className="path1"
+    />
+    <span
+      className="path2"
+    />
+    <span
+      className="path3"
+    />
+    <span
+      className="path4"
+    />
+    <span
+      className="path5"
+    />
+    <span
+      className="path6"
+    />
+    <span
+      className="path7"
+    />
+    <span
+      className="path8"
+    />
+    <span
+      className="path9"
+    />
+    <span
+      className="path10"
+    />
+    <span
+      className="path11"
+    />
+    <span
+      className="path12"
+    />
+    <span
+      className="path13"
+    />
+  </i>
+</div>
+`;
