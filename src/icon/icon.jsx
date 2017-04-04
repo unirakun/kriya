@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
-import styles from './icon.styles.scss'
+import styles from '../../src/icon/icon.styles.scss'
 
 const labelFactory = htmlFor => label => <label htmlFor={htmlFor}>{label}</label>
 

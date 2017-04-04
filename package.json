@@ -1,11 +1,12 @@
 {
   "name": "kriya",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "main": "index.js",
   "description": "Kriya is a react/redux components library",
   "license": "MIT",
   "scripts": {
-    "lint:js": "eslint --ext js,jsx .",
+    "build": "cross-env BABEL_ENV=cjs babel --ignore \"*.spec.js\" ./src/ --out-dir lib",
+    "lint:js": "eslint --ext js,jsx src",
     "lint:sass": "sass-lint -v -q",
     "lint": "npm-run-all --parallel lint:*",
     "test": "jest",
@@ -65,12 +66,7 @@
     ],
     "presets": [
       "es2017",
-      [
-        "es2015",
-        {
-          "modules": false
-        }
-      ],
+      "es2015",
       "react"
     ],
     "env": {
@@ -82,7 +78,7 @@
     }
   },
   "devDependencies": {
-    "babel": "^6.23.0",
+    "babel-cli": "^6.24.0",
     "babel-core": "^6.24.0",
     "babel-eslint": "^7.2.1",
     "babel-jest": "^19.0.0",
@@ -98,6 +94,7 @@
     "babel-register": "^6.24.0",
     "classnames": "^2.2.5",
     "coveralls": "^2.13.0",
+    "cross-env": "^4.0.0",
     "enzyme": "^2.8.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
