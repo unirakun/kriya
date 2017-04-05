@@ -1,0 +1,52 @@
+@import '~styles/theme';
+
+.icon {
+  align-items: center;
+  display: flex;
+
+  label {
+    margin: 0 .5em;
+  }
+
+  span {
+    font-family: inherit;
+  }
+}
+
+.colored {
+  span {
+    &::before {
+      color: $font-color-dark !important;
+    }
+  }
+}
+
+.primary {
+  color: $primary-color;
+
+  span {
+    &::before {
+      color: $primary-color !important;
+    }
+  }
+}
+
+.secondary {
+  color: $secondary-color;
+
+  span {
+    &::before {
+      color: $secondary-color !important;
+    }
+  }
+}
+
+.disabled {
+  color: $disable-bg-color;
+
+  span {
+    &::before {
+      color: $disable-bg-color !important;
+    }
+  }
+}
