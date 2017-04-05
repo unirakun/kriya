@@ -6,10 +6,11 @@ import renderer from 'react-test-renderer'
 import { mount } from 'enzyme'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
+import mockComponent from 'misc/__mocks__/component'
 import Button from './button'
 import ButtonContainer from './button.container'
 
-jest.mock('../icon')
+jest.mock('../icon', () => mockComponent('icon'))
 
 const snap = ({ onClick = () => {}, ...rest }) => {
   const component = renderer.create(

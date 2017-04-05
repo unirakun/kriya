@@ -1,0 +1,400 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`common/Input labels should print a * on label when input is required 1`] = `
+<div
+  className="input type-input"
+  style={Object {}}
+>
+  <label
+    htmlFor="name"
+  >
+    my label
+    *
+  </label>
+  <input
+    className="field"
+    disabled={false}
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    required={true}
+    type="input"
+    value=""
+  />
+</div>
+`;
+
+exports[`common/Input labels should print a label 1`] = `
+<div
+  className="input type-input"
+  style={Object {}}
+>
+  <label
+    htmlFor="name"
+  >
+    my label
+  </label>
+  <input
+    className="field"
+    disabled={false}
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    required={false}
+    type="input"
+    value=""
+  />
+</div>
+`;
+
+exports[`common/Input should add custom className 1`] = `
+<div
+  className="input type-input custom"
+  style={Object {}}
+>
+  <input
+    className="field"
+    disabled={false}
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    required={false}
+    type="input"
+    value=""
+  />
+</div>
+`;
+
+exports[`common/Input should add custom style 1`] = `
+<div
+  className="input type-input"
+  style={
+    Object {
+      "backgroundColor": "red",
+    }
+  }
+>
+  <input
+    className="field"
+    disabled={false}
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    required={false}
+    type="input"
+    value=""
+  />
+</div>
+`;
+
+exports[`common/Input should be disabled 1`] = `
+<div
+  className="input type-input"
+  style={Object {}}
+>
+  <input
+    className="field"
+    disabled={true}
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    required={false}
+    type="input"
+    value=""
+  />
+</div>
+`;
+
+exports[`common/Input should have a default behaviour 1`] = `
+<div
+  className="input type-input"
+  style={Object {}}
+>
+  <input
+    className="field"
+    disabled={false}
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    required={false}
+    type="input"
+    value=""
+  />
+</div>
+`;
+
+exports[`common/Input should print an icon when this is a select 1`] = `
+<div
+  className="input type-select"
+  style={Object {}}
+>
+  <select
+    className="field"
+    disabled={false}
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    required={false}
+    type="select"
+    value=""
+  />
+  <i
+    className="arrow mdv-expand_more"
+  />
+</div>
+`;
+
+exports[`common/Input should print the placeholder 1`] = `
+<div
+  className="input type-input"
+  style={Object {}}
+>
+  <input
+    className="field"
+    disabled={false}
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder="My placeholder"
+    required={false}
+    type="input"
+    value=""
+  />
+</div>
+`;
+
+exports[`common/Input types should print a select 1`] = `
+<div
+  className="input type-select"
+  style={Object {}}
+>
+  <select
+    className="field"
+    disabled={false}
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    required={false}
+    type="select"
+    value=""
+  />
+  <i
+    className="arrow mdv-expand_more"
+  />
+</div>
+`;
+
+exports[`common/Input types should print a textarea 1`] = `
+<div
+  className="input type-textarea"
+  style={Object {}}
+>
+  <textarea
+    className="field"
+    disabled={false}
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    required={false}
+    type="textarea"
+    value=""
+  />
+</div>
+`;
+
+exports[`common/Input types should print an input (checkbox) 1`] = `
+<div
+  className="input type-checkbox"
+  style={Object {}}
+>
+  <input
+    checked={false}
+    className="field"
+    disabled={false}
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    required={false}
+    type="checkbox"
+    value=""
+  />
+</div>
+`;
+
+exports[`common/Input types should print an input (input) 1`] = `
+<div
+  className="input type-input"
+  style={Object {}}
+>
+  <input
+    className="field"
+    disabled={false}
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    required={false}
+    type="input"
+    value=""
+  />
+</div>
+`;
+
+exports[`common/Input types should print an input (number) 1`] = `
+<div
+  className="input type-number"
+  style={Object {}}
+>
+  <input
+    className="field"
+    disabled={false}
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    required={false}
+    type="number"
+    value=""
+  />
+</div>
+`;
+
+exports[`common/Input types should print an input (radio) 1`] = `
+<div
+  className="input type-radio"
+  style={Object {}}
+>
+  <input
+    checked={false}
+    className="field"
+    disabled={false}
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    required={false}
+    type="radio"
+    value={undefined}
+  />
+</div>
+`;
+
+exports[`common/Input types should print options on select 1`] = `
+<div
+  className="input type-select"
+  style={Object {}}
+>
+  <select
+    className="field"
+    disabled={false}
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    required={false}
+    type="select"
+    value=""
+  >
+    <option
+      value="o1"
+    >
+      l1
+    </option>
+    <option
+      value="o4"
+    >
+      l4
+    </option>
+    <option
+      value="o2"
+    >
+      l2
+    </option>
+    <option
+      value="o3"
+    >
+      l3
+    </option>
+  </select>
+  <i
+    className="arrow mdv-expand_more"
+  />
+</div>
+`;
+
+exports[`common/Input types shouldnt print options (not select) 1`] = `
+<div
+  className="input type-input"
+  style={Object {}}
+>
+  <input
+    className="field"
+    disabled={false}
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    required={false}
+    type="input"
+    value=""
+  />
+</div>
+`;

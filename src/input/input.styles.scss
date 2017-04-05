@@ -1,0 +1,84 @@
+@import '~styles/theme';
+
+.input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 15em;
+
+  label {
+    margin-bottom: $input-radius-size;
+  }
+
+  select {
+    appearance: none;
+    background-color: $default-bg-color;
+    height: 2.3em;
+    line-height: 1.1em;
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+}
+
+.arrow {
+  color: $default-grey-color;
+  font-size: 1.5em;
+  pointer-events: none;
+  position: absolute;
+  right: $input-radius-size;
+  top: .3em;
+  transition: $default-transition transform, $default-transition color;
+}
+
+.field {
+  border: $border-size solid $default-grey-color;
+  border-radius: $input-radius-size;
+  box-shadow: none;
+  font-weight: 300;
+  outline: none;
+  padding: $input-radius-size;
+  transition: $default-transition border-color;
+  width: 100%;
+
+  &:focus {
+    border: $border-size solid $primary-color;
+
+    & + .arrow {
+      color: $primary-color;
+      transform: rotateZ(180deg);
+    }
+  }
+
+  &:invalid {
+    border: $border-size solid $error-color;
+
+    & + .arrow {
+      color: $error-color;
+    }
+  }
+
+  &:disabled {
+    @include disabled;
+    background-color: $disable-bg-color;
+    border: $border-size solid $default-grey-color;
+
+    & + .arrow {
+      color: $default-grey-color;
+    }
+
+    &:hover {
+      background-color: $disable-bg-color;
+    }
+  }
+
+  &::placeholder {
+    color: $default-grey-color;
+    font-weight: 300;
+  }
+}
+
+.type-radio {
+  width: 1.5em;
+}

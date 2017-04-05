@@ -1,6 +1,6 @@
 {
   "name": "kriya",
-  "version": "0.0.12",
+  "version": "0.1.1",
   "main": "index.js",
   "description": "Kriya is a react/redux components library",
   "license": "MIT",
@@ -21,13 +21,14 @@
       "<rootDir>"
     ],
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/misc/__mocks__/fileMock.js",
       "\\.(css|scss|less|sass)$": "identity-obj-proxy"
     },
     "setupFiles": [
-      "./testSetup.js"
+      "./misc/testSetup.js"
     ]
   },
+  "sasslintConfig": "./misc/sass-lint.yml",
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": [
@@ -122,6 +123,7 @@
   "dependencies": {
     "react-ink": "^6.1.1",
     "react-redux": "^5.0.3",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "redux-form": "^6.6.1"
   }
 }

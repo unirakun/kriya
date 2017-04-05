@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`common/Number graphical (JSX) should adapt for a map 1`] = `
+<div
+  className="number map primary"
+  style={Object {}}
+/>
+`;
+
+exports[`common/Number graphical (JSX) should add children 1`] = `
+<div
+  className="number primary"
+  style={Object {}}
+>
+  a child
+</div>
+`;
+
+exports[`common/Number graphical (JSX) should add custom className 1`] = `
+<div
+  className="number custom primary"
+  style={Object {}}
+/>
+`;
+
+exports[`common/Number graphical (JSX) should add custom style 1`] = `
+<div
+  className="number primary"
+  style={
+    Object {
+      "backgroundColor": "red",
+    }
+  }
+/>
+`;
+
+exports[`common/Number graphical (JSX) should be secondary 1`] = `
+<div
+  className="number secondary"
+  style={Object {}}
+/>
+`;
+
+exports[`common/Number graphical (JSX) should have a default behaviour 1`] = `
+<div
+  className="number primary"
+  style={Object {}}
+/>
+`;
