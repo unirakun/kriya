@@ -1,0 +1,97 @@
+@import '~styles/theme';
+
+.button {
+  align-items: center;
+  background-color: $primary-color;
+  border: 0;
+  border-radius: $input-radius-size;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 1em;
+  font-weight: bold;
+  outline: none;
+  padding: $input-radius-size 1.5em;
+  position: relative;
+  text-decoration: none;
+  transition: $default-transition background-color;
+}
+
+.flat {
+  background-color: transparent;
+  padding: .1em;
+  transition: $default-transition transform;
+
+  &.primaryFlat {
+    color: $primary-color;
+  }
+
+  &.secondaryFlat {
+    color: $secondary-color;
+  }
+
+  &.disabled {
+    background: $disable-bg-color;
+
+    &:hover {
+      background: $disable-bg-color;
+    }
+  }
+
+  &:hover {
+    background-color: inherit;
+  }
+
+  &:active {
+    transform: scale(.95);
+  }
+}
+
+.primary {
+  background: $primary-color;
+  color: $font-color-light;
+
+  &.disabled {
+    background: $disable-bg-color;
+
+    &:hover {
+      background: $disable-bg-color;
+    }
+  }
+
+  &:hover {
+    background: $primary-color-lighten-1;
+  }
+}
+
+.secondary {
+  background: transparent;
+  border: solid $border-size $primary-color;
+  box-sizing: border-box;
+  color: $font-color-dark;
+
+  &.disabled {
+    border: solid $border-size $disable-bg-color;
+    color: $default-grey-color;
+  }
+
+  &:hover {
+    background-color: $primary-color-darken-1;
+  }
+}
+
+.disabled {
+  @include disabled;
+}
+
+.large {
+  padding: 1em 2em;
+}
+
+.iconLeft {
+  margin-right: .5em;
+}
+
+.iconRight {
+  margin-left: 1em;
+}
