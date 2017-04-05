@@ -6,8 +6,11 @@ $primary-color-darken-1: darken($primary-color, 7%) !default;
 // Secondary color and derivated
 $secondary-color: #558dff !default;
 
-// Others colors
+// Backgrounds colors
+$default-bg-color: #fff !default;
 $disable-bg-color: #f5f5f5 !default;
+
+// Others colors
 $font-color-dark: #373b43 !default;
 $font-color-light: #fff !default;
 $default-grey-color: #ccc !default;

@@ -1,0 +1,52 @@
+@import '~styles/theme';
+
+.number {
+  align-items: center;
+  border: .3em solid;
+  border-radius: 50%;
+  display: flex;
+  font-size: .8em;
+  font-weight: bold;
+  height: 1.8em;
+  justify-content: center;
+  transition: $default-transition;
+  user-select: none;
+  width: 1.8em;
+
+  &.large {
+    height: 3em;
+    width: 3em;
+  }
+
+  &.primary {
+    background-color: $primary-color;
+    border-color: $default-bg-color;
+    color: $default-bg-color;
+
+    &.reverse {
+      background-color: $default-bg-color;
+      border-color: $primary-color;
+      color: $primary-color;
+    }
+  }
+
+  &.secondary {
+    background-color: $secondary-color;
+    border-color: $default-bg-color;
+    color: $default-bg-color;
+    height: 1.2em;
+    width: 1.2em;
+
+    &.reverse {
+      background-color: $default-bg-color;
+      border-color: $secondary-color;
+      color: $secondary-color;
+    }
+  }
+
+  &.map {
+    &:not(.secondary) {
+      cursor: pointer;
+    }
+  }
+}
