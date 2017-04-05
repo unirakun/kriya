@@ -11,7 +11,6 @@ const component = ({ ...props }) => {
   )
 }
 
-
 const snap = (props) => {
   const tree = component({ children: 'icon', ...props }).toJSON()
   expect(tree).toMatchSnapshot()
