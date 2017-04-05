@@ -1,0 +1,22 @@
+@import '~styles/theme';
+
+.popover {
+  align-items: center;
+  background-color: $popover-background-color;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity $default-transition;
+  width: 100vw;
+  z-index: -10;
+}
+
+.print {
+  opacity: 1;
+  transform: scaleY(1) scaleX(1);
+  z-index: 3000;
+}
