@@ -1,13 +1,117 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`common/Icon container should looking for prefix in redux 1`] = `
+<div
+  className="icon colored"
+  style={Object {}}
+>
+  <i
+    className="redux-prefixicon"
+    name="redux-prefixicon"
+  >
+    <span
+      className="path1"
+    />
+    <span
+      className="path2"
+    />
+    <span
+      className="path3"
+    />
+    <span
+      className="path4"
+    />
+    <span
+      className="path5"
+    />
+    <span
+      className="path6"
+    />
+    <span
+      className="path7"
+    />
+    <span
+      className="path8"
+    />
+    <span
+      className="path9"
+    />
+    <span
+      className="path10"
+    />
+    <span
+      className="path11"
+    />
+    <span
+      className="path12"
+    />
+    <span
+      className="path13"
+    />
+  </i>
+</div>
+`;
+
+exports[`common/Icon container should use a default prefix (empty one) 1`] = `
+<div
+  className="icon colored"
+  style={Object {}}
+>
+  <i
+    className="icon"
+    name="icon"
+  >
+    <span
+      className="path1"
+    />
+    <span
+      className="path2"
+    />
+    <span
+      className="path3"
+    />
+    <span
+      className="path4"
+    />
+    <span
+      className="path5"
+    />
+    <span
+      className="path6"
+    />
+    <span
+      className="path7"
+    />
+    <span
+      className="path8"
+    />
+    <span
+      className="path9"
+    />
+    <span
+      className="path10"
+    />
+    <span
+      className="path11"
+    />
+    <span
+      className="path12"
+    />
+    <span
+      className="path13"
+    />
+  </i>
+</div>
+`;
+
 exports[`common/Icon graphical (JSX) should add custom className 1`] = `
 <div
   className="icon custom colored"
   style={Object {}}
 >
   <i
-    className="mdv-icon"
-    name="mdv-icon"
+    className="aprefix-icon"
+    name="aprefix-icon"
   >
     <span
       className="path1"
@@ -62,8 +166,8 @@ exports[`common/Icon graphical (JSX) should add custom style 1`] = `
   }
 >
   <i
-    className="mdv-icon"
-    name="mdv-icon"
+    className="aprefix-icon"
+    name="aprefix-icon"
   >
     <span
       className="path1"
@@ -114,8 +218,8 @@ exports[`common/Icon graphical (JSX) should create a disabled icon 1`] = `
   style={Object {}}
 >
   <i
-    className="mdv-icon"
-    name="mdv-icon"
+    className="aprefix-icon"
+    name="aprefix-icon"
   >
     <span
       className="path1"
@@ -166,8 +270,8 @@ exports[`common/Icon graphical (JSX) should create a primary icon 1`] = `
   style={Object {}}
 >
   <i
-    className="mdv-icon"
-    name="mdv-icon"
+    className="aprefix-icon"
+    name="aprefix-icon"
   >
     <span
       className="path1"
@@ -218,8 +322,8 @@ exports[`common/Icon graphical (JSX) should create a secondary icon 1`] = `
   style={Object {}}
 >
   <i
-    className="mdv-icon"
-    name="mdv-icon"
+    className="aprefix-icon"
+    name="aprefix-icon"
   >
     <span
       className="path1"
@@ -270,13 +374,13 @@ exports[`common/Icon graphical (JSX) should create an icon with label to left 1`
   style={Object {}}
 >
   <label
-    htmlFor="mdv-icon"
+    htmlFor="aprefix-icon"
   >
     label
   </label>
   <i
-    className="mdv-icon"
-    name="mdv-icon"
+    className="aprefix-icon"
+    name="aprefix-icon"
   >
     <span
       className="path1"
@@ -327,8 +431,8 @@ exports[`common/Icon graphical (JSX) should create an icon with label to right 1
   style={Object {}}
 >
   <i
-    className="mdv-icon"
-    name="mdv-icon"
+    className="aprefix-icon"
+    name="aprefix-icon"
   >
     <span
       className="path1"
@@ -371,7 +475,7 @@ exports[`common/Icon graphical (JSX) should create an icon with label to right 1
     />
   </i>
   <label
-    htmlFor="mdv-icon"
+    htmlFor="aprefix-icon"
   >
     label to right
   </label>
@@ -384,8 +488,8 @@ exports[`common/Icon graphical (JSX) should create an icon without color 1`] = `
   style={Object {}}
 >
   <i
-    className="mdv-icon"
-    name="mdv-icon"
+    className="aprefix-icon"
+    name="aprefix-icon"
   >
     <span
       className="path1"
@@ -436,8 +540,8 @@ exports[`common/Icon graphical (JSX) should have a default behaviour 1`] = `
   style={Object {}}
 >
   <i
-    className="mdv-icon"
-    name="mdv-icon"
+    className="aprefix-icon"
+    name="aprefix-icon"
   >
     <span
       className="path1"
@@ -488,13 +592,13 @@ exports[`common/Icon graphical (JSX) should print labels to both sides 1`] = `
   style={Object {}}
 >
   <label
-    htmlFor="mdv-icon"
+    htmlFor="aprefix-icon"
   >
     left
   </label>
   <i
-    className="mdv-icon"
-    name="mdv-icon"
+    className="aprefix-icon"
+    name="aprefix-icon"
   >
     <span
       className="path1"
@@ -537,10 +641,62 @@ exports[`common/Icon graphical (JSX) should print labels to both sides 1`] = `
     />
   </i>
   <label
-    htmlFor="mdv-icon"
+    htmlFor="aprefix-icon"
   >
     right
   </label>
+</div>
+`;
+
+exports[`common/Icon graphical (JSX) should take a prefix 1`] = `
+<div
+  className="icon colored"
+  style={Object {}}
+>
+  <i
+    className="myPrefix-myIcon"
+    name="myPrefix-myIcon"
+  >
+    <span
+      className="path1"
+    />
+    <span
+      className="path2"
+    />
+    <span
+      className="path3"
+    />
+    <span
+      className="path4"
+    />
+    <span
+      className="path5"
+    />
+    <span
+      className="path6"
+    />
+    <span
+      className="path7"
+    />
+    <span
+      className="path8"
+    />
+    <span
+      className="path9"
+    />
+    <span
+      className="path10"
+    />
+    <span
+      className="path11"
+    />
+    <span
+      className="path12"
+    />
+    <span
+      className="path13"
+    />
+  </i>
 </div>
 `;
 
@@ -550,8 +706,8 @@ exports[`common/Icon graphical (JSX) should take an icon name as children 1`] = 
   style={Object {}}
 >
   <i
-    className="mdv-different-icon"
-    name="mdv-different-icon"
+    className="aprefix-different-icon"
+    name="aprefix-different-icon"
   >
     <span
       className="path1"
