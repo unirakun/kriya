@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`common/Icon graphical (JSX) should add custom className 1`] = `
+<div
+  className="avatar custom"
+  onClick={undefined}
+  style={Object {}}
+>
+  <div
+    className="icon"
+  >
+    {"name":"icon","props":{"className":"icon","primary":true,"children":"avatar_woman","style":{},"alt":"avatar"}}
+  </div>
+</div>
+`;
+
+exports[`common/Icon graphical (JSX) should add custom style 1`] = `
+<div
+  className="avatar"
+  onClick={undefined}
+  style={
+    Object {
+      "backgroundColor": "red",
+    }
+  }
+>
+  <div
+    className="icon"
+  >
+    {"name":"icon","props":{"className":"icon","primary":true,"children":"avatar_woman","style":{},"alt":"avatar"}}
+  </div>
+</div>
+`;
+
+exports[`common/Icon graphical (JSX) should create a picture avatar 1`] = `
+<div
+  className="avatar"
+  onClick={undefined}
+  style={Object {}}
+>
+  <img
+    alt="avatar"
+    className="img"
+    onClick={undefined}
+    onError={[Function]}
+    src="picture"
+    style={Object {}}
+  />
+</div>
+`;
+
+exports[`common/Icon graphical (JSX) should create female avatar 1`] = `
+<div
+  className="avatar"
+  onClick={undefined}
+  style={Object {}}
+>
+  <div
+    className="icon"
+  >
+    {"name":"icon","props":{"className":"icon","primary":true,"children":"avatar_woman","style":{},"alt":"avatar"}}
+  </div>
+</div>
+`;
+
+exports[`common/Icon graphical (JSX) should create male avatar 1`] = `
+<div
+  className="avatar"
+  onClick={undefined}
+  style={Object {}}
+>
+  <div
+    className="icon"
+  >
+    {"name":"icon","props":{"className":"icon","primary":true,"children":"avatar_man","style":{},"alt":"avatar"}}
+  </div>
+</div>
+`;
+
+exports[`common/Icon graphical (JSX) should have a default behaviour 1`] = `
+<div
+  className="avatar"
+  onClick={undefined}
+  style={Object {}}
+>
+  <div
+    className="icon"
+  >
+    {"name":"icon","props":{"className":"icon","primary":true,"children":"avatar_woman","style":{},"alt":"avatar"}}
+  </div>
+</div>
+`;

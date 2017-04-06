@@ -1,0 +1,20 @@
+@import '~styles/theme';
+
+.avatar {
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  height: $avatar-size;
+  justify-content: center;
+  overflow: hidden;
+  width: $avatar-size;
+}
+
+.img {
+  height: auto;
+  max-width: $avatar-size;
+}
+
+.icon {
+  font-size: 2.5em;
+}
