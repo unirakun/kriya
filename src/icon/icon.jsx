@@ -9,6 +9,7 @@ const Icon = ({
   style, className, children,
   labelLeft, labelRight,
   primary, secondary, disabled,
+  prefix,
   noColor /* set to true to print the native icon color */,
 }) => {
   const classes = classnames(
@@ -22,7 +23,7 @@ const Icon = ({
     },
   )
 
-  const iconCode = `mdv-${children}`
+  const iconCode = `${prefix}${children}`
 
   // Icon from icomoon have different path (up to 13) to handle colors
   // We inject all of them
@@ -54,6 +55,7 @@ Icon.propTypes = {
   children: PropTypes.string.isRequired,
   labelLeft: PropTypes.string,
   labelRight: PropTypes.string,
+  prefix: PropTypes.string.isRequired,
   primary: PropTypes.bool,
   secondary: PropTypes.bool,
   disabled: PropTypes.bool,
