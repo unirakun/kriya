@@ -252,7 +252,9 @@ exports[`common/Button graphical (JSX) should create button with left icon  1`] 
     }
     width={0}
   />
-  <div>
+  <div
+    className="icon"
+  >
     {"name":"icon","props":{"className":"iconLeft","primary":false,"secondary":false,"disabled":false,"children":"calendar"}}
   </div>
 </button>
@@ -346,10 +348,14 @@ exports[`common/Button graphical (JSX) should create button with right and left 
     }
     width={0}
   />
-  <div>
+  <div
+    className="icon"
+  >
     {"name":"icon","props":{"className":"iconLeft","primary":false,"secondary":false,"disabled":false,"children":"calendar"}}
   </div>
-  <div>
+  <div
+    className="icon"
+  >
     {"name":"icon","props":{"className":"iconRight","primary":false,"secondary":false,"disabled":false,"children":"calendar"}}
   </div>
 </button>
@@ -382,7 +388,9 @@ exports[`common/Button graphical (JSX) should create button with right icon  1`]
     }
     width={0}
   />
-  <div>
+  <div
+    className="icon"
+  >
     {"name":"icon","props":{"className":"iconRight","primary":false,"secondary":false,"disabled":false,"children":"calendar"}}
   </div>
 </button>

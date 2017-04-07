@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`common/Group should add children 1`] = `
+<div
+  className="group horizontal"
+  style={Object {}}
+>
+  a child
+</div>
+`;
+
+exports[`common/Group should add custom className 1`] = `
+<div
+  className="group custom horizontal"
+  style={Object {}}
+/>
+`;
+
+exports[`common/Group should add custom style 1`] = `
+<div
+  className="group horizontal"
+  style={
+    Object {
+      "backgroundColor": "red",
+    }
+  }
+/>
+`;
+
+exports[`common/Group should add vertical class when vertical group 1`] = `
+<div
+  className="group vertical"
+  style={Object {}}
+/>
+`;
+
+exports[`common/Group should have a default behaviour 1`] = `
+<div
+  className="group horizontal"
+  style={Object {}}
+/>
+`;

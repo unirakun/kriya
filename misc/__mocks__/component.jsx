@@ -9,7 +9,7 @@ export default (name) => {
   return props => {
     const debugStr = JSON.stringify({ ...debug, props })
     return (
-      <div>{debugStr}</div>
+      <div className={name}>{debugStr}</div>
     )
   }
 }

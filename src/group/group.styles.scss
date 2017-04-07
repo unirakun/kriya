@@ -1,0 +1,117 @@
+@import '~styles/theme';
+
+.group {
+  display: flex;
+  min-width: 38em;
+
+  & >
+  a,
+  button {
+    &:not(:first-child) {
+      &:not(:last-child) { // sass-lint:disable-line nesting-depth
+        border-radius: 0;
+      }
+    }
+  }
+
+  & > div {
+    flex: 1;
+
+    &:not(:first-child) {
+      &:not(:last-child) > input, // sass-lint:disable-line nesting-depth
+      &:not(:last-child) > select {
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+.horizontal {
+  & >
+  a,
+  button {
+    height: 2.5em;
+    margin-bottom: 0;
+    margin-top: 0;
+
+    &:not(:first-child) {
+      border-top: 0;
+    }
+
+    &:first-child {
+      border-radius: $input-radius-size 0 0 $input-radius-size;
+    }
+
+    &:last-child {
+      border-radius: 0 $input-radius-size $input-radius-size 0;
+    }
+  }
+
+  & > div {
+    margin-left: 0;
+    margin-right: 0;
+
+    & > input,
+    & > select {
+      height: 2.5em;
+    }
+
+    &:not(:first-child) > input,
+    &:not(:first-child) > select {
+      border-left: 0;
+    }
+
+    &:first-child > input,
+    &:first-child > select {
+      border-radius: $input-radius-size 0 0 $input-radius-size;
+    }
+
+    &:last-child > input,
+    &:last-child > select {
+      border-radius: 0 $input-radius-size $input-radius-size 0;
+    }
+  }
+}
+
+.vertical {
+  flex-direction: column;
+
+  & >
+  a,
+  button {
+    margin-bottom: 0;
+    margin-top: 0;
+
+    &:not(:first-child) {
+      border-top: 0;
+    }
+
+    &:first-child {
+      border-radius: $input-radius-size $input-radius-size 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 $input-radius-size $input-radius-size;
+    }
+  }
+
+  & > div {
+    margin-bottom: 0;
+    margin-top: 0;
+
+    &:not(:first-child) > input,
+    &:not(:first-child) > select {
+      border-top: 0;
+    }
+
+    &:first-child > input,
+    &:first-child > select {
+      border-radius: $input-radius-size $input-radius-size 0 0;
+    }
+
+    &:last-child > input,
+    &:last-child > select {
+      border-radius: 0 0 $input-radius-size $input-radius-size;
+    }
+  }
+}
