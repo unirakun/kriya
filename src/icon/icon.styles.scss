@@ -24,6 +24,10 @@
 .primary {
   color: $primary-color;
 
+  * {
+    color: $primary-color;
+  }
+
   span {
     &::before {
       color: $primary-color !important;
@@ -33,6 +37,10 @@
 
 .secondary {
   color: $secondary-color;
+
+  * {
+    color: $secondary-color;
+  }
 
   span {
     &::before {
