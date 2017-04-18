@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`common/Step graphical (JSX) should add children 1`] = `
+<div
+  className="step intermediate"
+  style={Object {}}
+>
+  <button
+    onClick={[Function]}
+  >
+    a child
+  </button>
+  <div
+    className="separator"
+  >
+     /
+  </div>
+</div>
+`;
+
+exports[`common/Step graphical (JSX) should add custom className 1`] = `
+<div
+  className="step custom intermediate"
+  style={Object {}}
+>
+  <button
+    onClick={[Function]}
+  >
+    Hello step
+  </button>
+  <div
+    className="separator"
+  >
+     /
+  </div>
+</div>
+`;
+
+exports[`common/Step graphical (JSX) should add custom style 1`] = `
+<div
+  className="step intermediate"
+  style={
+    Object {
+      "backgroundColor": "red",
+    }
+  }
+>
+  <button
+    onClick={[Function]}
+  >
+    Hello step
+  </button>
+  <div
+    className="separator"
+  >
+     /
+  </div>
+</div>
+`;
+
+exports[`common/Step graphical (JSX) should have a default behaviour 1`] = `
+<div
+  className="step intermediate"
+  style={Object {}}
+>
+  <button
+    onClick={[Function]}
+  >
+    Hello step
+  </button>
+  <div
+    className="separator"
+  >
+     /
+  </div>
+</div>
+`;
+
+exports[`common/Step graphical (JSX) should not print separator on last item 1`] = `
+<div
+  className="step last"
+  style={Object {}}
+>
+  <button
+    onClick={[Function]}
+  >
+    Hello step
+  </button>
+</div>
+`;

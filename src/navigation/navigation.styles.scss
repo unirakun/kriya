@@ -1,0 +1,10 @@
+@import '~styles/theme';
+
+.navigation {
+  align-items: center;
+  background-color: $default-bg-grey-color;
+  display: flex;
+  font-size: .8em;
+  height: 3em;
+  padding-left: 2em;
+}

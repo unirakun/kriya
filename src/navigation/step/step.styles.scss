@@ -1,0 +1,35 @@
+@import '~styles/theme';
+
+.step {
+  display: flex;
+
+  .separator {
+    color: $default-fg-grey-color;
+  }
+
+  button {
+    background-color: inherit;
+    border: 0;
+    line-height: .7em;
+    outline: none;
+    text-decoration: none;
+  }
+
+  &.intermediate {
+    button {
+      color: $default-fg-grey-color;
+      display: flex;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &.last {
+    button {
+      font-weight: bold;
+    }
+  }
+}
