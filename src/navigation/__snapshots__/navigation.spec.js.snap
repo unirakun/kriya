@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`common/Navigation graphical (JSX) should add custom className 1`] = `
+<div
+  className="navigation custom"
+  style={Object {}}
+/>
+`;
+
+exports[`common/Navigation graphical (JSX) should add custom style 1`] = `
+<div
+  className="navigation"
+  style={
+    Object {
+      "backgroundColor": "red",
+    }
+  }
+/>
+`;
+
+exports[`common/Navigation graphical (JSX) should handle multiple steps 1`] = `
+<div
+  className="navigation"
+  style={Object {}}
+>
+  <div
+    className="step intermediate"
+    style={Object {}}
+  >
+    <button
+      onClick={[Function]}
+    >
+      step 1
+    </button>
+    <div
+      className="separator"
+    >
+       /
+    </div>
+  </div>
+  <div
+    className="step last"
+    style={Object {}}
+  >
+    <button
+      onClick={undefined}
+    >
+      step 2
+    </button>
+  </div>
+</div>
+`;
+
+exports[`common/Navigation graphical (JSX) should handle one step 1`] = `
+<div
+  className="navigation"
+  style={Object {}}
+>
+  <div
+    className="step last"
+    style={Object {}}
+  >
+    <button
+      onClick={undefined}
+    >
+      step 1
+    </button>
+  </div>
+</div>
+`;
+
+exports[`common/Navigation graphical (JSX) should have a default behaviour 1`] = `
+<div
+  className="navigation"
+  style={Object {}}
+/>
+`;
