@@ -295,6 +295,7 @@ exports[`common/Button graphical (JSX) should create button with link on new tab
   className="button"
   disabled={false}
   href="http://A_LINK_TO_THE_PAST"
+  onClick={[Function]}
   style={Object {}}
   target="_blank"
   title=""

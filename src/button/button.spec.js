@@ -34,7 +34,7 @@ describe('common/Button', () => {
       expect(onClick.mock.calls.length).toBe(1)
     })
 
-    it('should not call onClick when link clicked', () => {
+    it('should call onClick when link clicked', () => {
       const onClick = jest.fn()
 
       const wrapper = mount(
@@ -42,7 +42,7 @@ describe('common/Button', () => {
       )
       wrapper.find('a').simulate('click')
 
-      expect(onClick.mock.calls.length).toBe(0)
+      expect(onClick.mock.calls.length).toBe(1)
     })
 
     it('should add custom className', () => snap({ className: 'custom' }))
@@ -82,7 +82,7 @@ describe('common/Button', () => {
       expect(dispatch.mock.calls[0]).toEqual([{ type: 'BTN_CLICKED_button' }])
     })
 
-    it('should not dispatch a link click event', () => {
+    it('should dispatch a link click event', () => {
       const store = createStore(() => ({}))
       const dispatch = jest.fn()
       store.dispatch = dispatch
@@ -95,7 +95,8 @@ describe('common/Button', () => {
 
       wrapper.find('a').simulate('click')
 
-      expect(dispatch.mock.calls.length).toBe(0)
+      expect(dispatch.mock.calls.length).toBe(1)
+      expect(dispatch.mock.calls[0]).toEqual([{ type: 'BTN_CLICKED_link' }])
     })
   })
 })
