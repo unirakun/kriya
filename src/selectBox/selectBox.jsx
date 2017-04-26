@@ -2,34 +2,32 @@ import React, { PropTypes } from 'react'
 import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
 import Select from 'react-select'
-import styles from '../../src/selectBox/selectBox.styles.scss'
+import styles from './selectBox.styles.scss'
 
-const SelectBox = ({
-  className,
-  style,
-  name,
-  label,
-  required,
-  ...selectProps
- }) => {
-  const classes = classnames(
-    styles.select,
-    className,
-  )
+const SelectBox =
+  ({
+     className, style,
+     name,
+     label,
+     required,
+     ...selectProps,
+   }) => {
 
-  return (
-    <div className={classes} style={style}>
-      {label && <label htmlFor={name}>{label}{required && '*'}</label>}
-      <Select
-        noResultsText="Aucun résultat"
-        clearAllText="Effacer tout"
-        clearValueText="Effacer"
-        simpleValue
-        {...selectProps}
-      />
-    </div>
-  )
-}
+    const classes = classnames(
+      styles.select,
+      className,
+    )
+
+    return (
+      <div className={classes} style={style}>
+        {label && <label htmlFor={name}>{label}{required && '*'}</label>}
+        <Select
+          simpleValue
+          {...selectProps}
+        />
+      </div>
+    )
+  }
 
 SelectBox.propTypes = {
   className: PropTypes.string,
@@ -38,6 +36,11 @@ SelectBox.propTypes = {
   value: PropTypes.string,
   label: PropTypes.string,
   required: PropTypes.bool,
+  options: PropTypes.arrayOf(PropTypes.shape({
+    value: PropTypes.string,
+    label: PropTypes.string,
+  })),
+  onChange: PropTypes.func.isRequired,
 }
 
 SelectBox.defaultProps = {
