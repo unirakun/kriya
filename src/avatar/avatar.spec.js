@@ -4,7 +4,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import ReactTestUtils from 'react-dom/test-utils'
-import mockComponent from 'misc/__mocks__/component'
+import mockComponent from '__mocks__/component'
 import Avatar from './avatar'
 
 jest.mock('../icon', () => mockComponent('icon'))

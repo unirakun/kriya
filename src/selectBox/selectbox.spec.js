@@ -6,7 +6,7 @@ import renderer from 'react-test-renderer'
 import { reduxForm } from 'redux-form'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import mockComponent from 'misc/__mocks__/component'
+import mockComponent from '__mocks__/component'
 import SelectBox from './selectBox.jsx'
 
 jest.mock('react-select', () => mockComponent('react-select'))
