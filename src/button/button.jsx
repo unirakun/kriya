@@ -68,7 +68,7 @@ const Button = ({
   return (
     !href ?
       <button {...commonProps} onClick={onClick}>{childrenComponent}</button> :
-      <a {...linkProps} {...commonProps}>{childrenComponent}</a>
+      <a {...linkProps} {...commonProps} onClick={onClick}>{childrenComponent}</a>
   )
 }
 
