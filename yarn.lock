@@ -3316,8 +3316,8 @@ react-dom@^15.5.4:
     prop-types "~15.5.7"
 
 react-img-fallback@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/react-img-fallback/-/react-img-fallback-1.0.0.tgz#1160d5524adbeec374a25df9c74a86e61cc506f3"
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-img-fallback/-/react-img-fallback-1.0.1.tgz#75343144775b2f18efbcc69bfefd6a3d9053537b"
 
 react-ink@^6.2.0:
   version "6.2.0"
