@@ -6,3 +6,7 @@
     box-shadow: none;
   }
 }
+
+@mixin hovered {
+  box-shadow: $hovered-color 0 0 1em -.3em;
+}

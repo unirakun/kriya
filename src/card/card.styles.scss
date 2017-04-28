@@ -1,0 +1,18 @@
+@import '~styles/theme';
+
+.card {
+  background-color: $default-bg-color;
+  padding: 2em;
+
+  transition: all $default-transition; // sass-lint:disable-line no-transition-all
+
+  &:hover {
+    @include hovered;
+  }
+}
+
+.closed {
+  cursor: pointer;
+  max-height: 2em;
+  padding: .5em 2em;
+}

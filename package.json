@@ -121,6 +121,7 @@
     "recompose": "^0.22.0"
   },
   "dependencies": {
+    "prop-types": "^15.5.8",
     "react-img-fallback": "^1.0.0",
     "react-ink": "^6.1.1",
     "react-redux": "^5.0.3",
