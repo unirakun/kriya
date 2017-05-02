@@ -18,6 +18,11 @@
     }
   }
 
+  :global(.is-focused:not(is-open)) > :global(.Select-control) {
+    border-color: $default-grey-color;
+    box-shadow: none;
+  }
+
   :global(.is-open .Select-arrow) {
     border-top-color: $default-grey-color;
   }
