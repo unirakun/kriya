@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
 import Select from 'react-select'
-import styles from './selectBox.styles.scss'
+import styles from '../../src/selectBox/selectBox.styles.scss'
 
 const SelectBox =
   ({
@@ -10,9 +10,8 @@ const SelectBox =
      name,
      label,
      required,
-     ...selectProps,
+     ...selectProps
    }) => {
-
     const classes = classnames(
       styles.select,
       className,
@@ -40,7 +39,7 @@ SelectBox.propTypes = {
     value: PropTypes.string,
     label: PropTypes.string,
   })),
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
 }
 
 SelectBox.defaultProps = {
@@ -50,6 +49,7 @@ SelectBox.defaultProps = {
   className: '',
   style: {},
   options: [],
+  onChange: undefined,
 }
 
 export default onlyUpdateForPropTypes(SelectBox)
