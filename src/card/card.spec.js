@@ -10,6 +10,8 @@ import { open } from './redux'
 import Card from './card'
 import CardContainer from './card.container'
 
+const Child = props => <div>Children {JSON.stringify(props)}</div>
+
 describe('common/Card', () => {
   describe('graphical (JSX)', () => {
     const snap = (props, state = {}) => {
@@ -29,8 +31,9 @@ describe('common/Card', () => {
     it('should add custom className', () => snap({ className: 'custom' }))
     it('should add custom style', () => snap({ style: { backgroundColor: 'red' } }))
     it('should have a default behaviour', () => snap({}))
-    it('should print the closed element', () => snap({ closed: true, closeElm: 'close elm', children: 'children' }))
-    it('should print the children', () => snap({ closed: false, closeElm: 'close elm', children: 'children' }))
+    it('should print the closed element', () => snap({ closed: true, closeElm: 'close elm', children: <Child /> }))
+    it('should print the children', () => snap({ closed: false, closeElm: 'close elm', children: <Child /> }))
+    it('should print the children with a closed prop', () => snap({ closed: true, children: <Child /> }))
   })
 
   describe('container', () => {

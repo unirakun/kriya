@@ -1,6 +1,6 @@
 /* eslint-env jest */
 /* eslint-disable comma-dangle */
-import { isClosed, isOpened } from './card.selectors'
+import { isOpened } from './card.selectors'
 import { open, close, openAll, closeAll } from './card.actions'
 import reducer from './card'
 
@@ -16,7 +16,7 @@ describe('card/redux', () => {
     }
 
     it('should be closed', () =>
-      expect(isClosed(state)('card2'))
+      expect(!isOpened(state)('card2'))
       .toBe(true)
     )
 

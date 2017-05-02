@@ -1,10 +1,10 @@
 import { connect } from 'react-redux'
-import { open, isClosed } from './redux'
+import { open, isOpened } from './redux'
 import Component from './card'
 
 const mapStateToProps = (state, { name }) => {
   return {
-    closed: isClosed(state)(name),
+    closed: !isOpened(state)(name),
   }
 }
 

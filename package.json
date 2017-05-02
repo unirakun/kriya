@@ -1,6 +1,6 @@
 {
   "name": "kriya",
-  "version": "0.2.9",
+  "version": "0.2.14",
   "main": "index.js",
   "description": "Kriya is a react/redux components library",
   "license": "MIT",

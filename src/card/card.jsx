@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
-import styles from './card.styles.scss'
+import styles from '../../src/card/card.styles.scss'
 
 const Card = ({ style, className, closed, children, closeElm, onClick }) => {
   const classes = classnames(
@@ -13,10 +13,13 @@ const Card = ({ style, className, closed, children, closeElm, onClick }) => {
     },
   )
 
+  let enhancedChildren = children
+  if (!closeElm && children) enhancedChildren = React.cloneElement(children, { closed })
+
   return (
     <div style={style} className={classes} onClick={onClick}>
-      {closed || children}
-      {closed && closeElm}
+      {closed || enhancedChildren}
+      {closed && (closeElm || enhancedChildren)}
     </div>
   )
 }
