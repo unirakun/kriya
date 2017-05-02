@@ -5,3 +5,8 @@ global.Intl = require('intl')
 global.Intl.__disableRegExpRestore()
 
 /* eslint-enable */
+
+// Make console.error a real failure
+console.error = (message) => { // eslint-disable-line no-console
+  throw new Error(message)
+}
