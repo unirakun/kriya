@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "cross-env BABEL_ENV=cjs babel --ignore \"*.spec.js,__mocks__\" ./src/ --out-dir lib",
-    "lint:js": "eslint --ext js,jsx src",
+    "lint:js": "eslint --cache --ext js,jsx src",
     "lint:sass": "sass-lint -v -q",
     "lint": "npm-run-all --parallel lint:*",
     "test": "jest",
