@@ -1,0 +1,27 @@
+@import '~styles/theme';
+
+$padding: 2em;
+
+.menu {
+  align-items: center;
+  background-color: $primary-color;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - #{2 * $padding});
+  padding: $padding;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.sep {
+  border-bottom: 1px solid $primary-color-darken-2;
+  margin: 2em 0;
+  width: 70%;
+}

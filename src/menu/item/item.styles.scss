@@ -1,0 +1,10 @@
+@import '~styles/theme';
+
+.item {
+  background-color: $default-bg-color;
+  margin-bottom: 1em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
