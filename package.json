@@ -1,12 +1,12 @@
 {
   "name": "kriya",
-  "version": "0.2.20",
+  "version": "0.2.21",
   "main": "index.js",
   "description": "Kriya is a react/redux components library",
   "license": "MIT",
   "scripts": {
     "build": "cross-env BABEL_ENV=cjs babel --ignore \"*.spec.js,__mocks__\" ./src/ --out-dir lib",
-    "lint:js": "eslint --ext js,jsx src",
+    "lint:js": "eslint --cache --ext js,jsx src",
     "lint:sass": "sass-lint -v -q",
     "lint": "npm-run-all --parallel lint:*",
     "test": "jest",
@@ -120,6 +120,7 @@
     "recompose": "^0.22.0"
   },
   "dependencies": {
+    "prop-types": "^15.5.8",
     "react-img-fallback": "^1.0.0",
     "react-ink": "^6.2.0",
     "react-redux": "^5.0.4",
