@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`common/Item graphical (JSX) should add custom className 1`] = `
+<div
+  className="button"
+>
+  {"name":"button","props":{"style":{},"className":"item custom","large":true,"name":"MENU-ITEM-undefined"}}
+</div>
+`;
+
+exports[`common/Item graphical (JSX) should add custom style 1`] = `
+<div
+  className="button"
+>
+  {"name":"button","props":{"style":{"backgroundColor":"red"},"className":"item","large":true,"name":"MENU-ITEM-undefined"}}
+</div>
+`;
+
+exports[`common/Item graphical (JSX) should have a default behaviour 1`] = `
+<div
+  className="button"
+>
+  {"name":"button","props":{"style":{},"className":"item","large":true,"name":"MENU-ITEM-undefined"}}
+</div>
+`;
+
+exports[`common/Item graphical (JSX) should take a name 1`] = `
+<div
+  className="button"
+>
+  {"name":"button","props":{"style":{},"className":"item","large":true,"name":"MENU-ITEM-a name"}}
+</div>
+`;

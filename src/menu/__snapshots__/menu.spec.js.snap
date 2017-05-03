@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`common/Menu should add a footer 1`] = `
+<div
+  className="menu"
+  style={Object {}}
+>
+  <div
+    className="sep"
+  />
+  <div
+    className="items"
+  />
+  <div
+    className="footer"
+  >
+    <div>
+      footer
+    </div>
+  </div>
+</div>
+`;
+
+exports[`common/Menu should add a header 1`] = `
+<div
+  className="menu"
+  style={Object {}}
+>
+  <div>
+    header
+  </div>
+  <div
+    className="sep"
+  />
+  <div
+    className="items"
+  />
+  <div
+    className="footer"
+  />
+</div>
+`;
+
+exports[`common/Menu should add custom className 1`] = `
+<div
+  className="menu custom"
+  style={Object {}}
+>
+  <div
+    className="sep"
+  />
+  <div
+    className="items"
+  />
+  <div
+    className="footer"
+  />
+</div>
+`;
+
+exports[`common/Menu should add custom style 1`] = `
+<div
+  className="menu"
+  style={
+    Object {
+      "backgroundColor": "red",
+    }
+  }
+>
+  <div
+    className="sep"
+  />
+  <div
+    className="items"
+  />
+  <div
+    className="footer"
+  />
+</div>
+`;
+
+exports[`common/Menu should add items 1`] = `
+<div
+  className="menu"
+  style={Object {}}
+>
+  <div
+    className="sep"
+  />
+  <div
+    className="items"
+  >
+    <div>
+      1
+    </div>
+    <div>
+      2
+    </div>
+  </div>
+  <div
+    className="footer"
+  />
+</div>
+`;
+
+exports[`common/Menu should have a default behaviour 1`] = `
+<div
+  className="menu"
+  style={Object {}}
+>
+  <div
+    className="sep"
+  />
+  <div
+    className="items"
+  />
+  <div
+    className="footer"
+  />
+</div>
+`;
