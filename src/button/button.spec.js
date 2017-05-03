@@ -6,7 +6,7 @@ import renderer from 'react-test-renderer'
 import { mount } from 'enzyme'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import mockComponent from 'misc/__mocks__/component'
+import mockComponent from '__mocks__/component'
 import Button from './button'
 import ButtonContainer from './button.container'
 

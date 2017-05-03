@@ -19,7 +19,8 @@
 
     &:not(:first-child) {
       &:not(:last-child) > input, // sass-lint:disable-line nesting-depth
-      &:not(:last-child) > select {
+      &:not(:last-child) > select,
+      &:not(:last-child) > :global(.Select .Select-control) {
         border-radius: 0;
       }
     }
@@ -52,22 +53,26 @@
     margin-right: 0;
 
     & > input,
-    & > select {
+    & > select,
+    & > :global(.Select .Select-control) {
       height: 2.5em;
     }
 
     &:not(:first-child) > input,
-    &:not(:first-child) > select {
+    &:not(:first-child) > select,
+    &:not(:first-child) > :global(.Select .Select-control) {
       border-left: 0;
     }
 
     &:first-child > input,
-    &:first-child > select {
+    &:first-child > select,
+    &:first-child > :global(.Select .Select-control) {
       border-radius: $input-radius-size 0 0 $input-radius-size;
     }
 
     &:last-child > input,
-    &:last-child > select {
+    &:last-child > select,
+    &:last-child > :global(.Select .Select-control) {
       border-radius: 0 $input-radius-size $input-radius-size 0;
     }
   }
@@ -100,17 +105,20 @@
     margin-top: 0;
 
     &:not(:first-child) > input,
-    &:not(:first-child) > select {
+    &:not(:first-child) > select,
+    &:not(:first-child) > :global(.Select .Select-control) {
       border-top: 0;
     }
 
     &:first-child > input,
-    &:first-child > select {
+    &:first-child > select,
+    &:first-child > :global(.Select .Select-control) {
       border-radius: $input-radius-size $input-radius-size 0 0;
     }
 
     &:last-child > input,
-    &:last-child > select {
+    &:last-child > select,
+    &:last-child > :global(.Select .Select-control) {
       border-radius: 0 0 $input-radius-size $input-radius-size;
     }
   }
