@@ -5,34 +5,28 @@ import { onlyUpdateForPropTypes } from 'recompose'
 import Select from 'react-select'
 import styles from '../../src/selectBox/selectBox.styles.scss'
 
-const SelectBox =
-  ({
-     className, style,
-     name,
-     label,
-     required,
-     ...selectProps
-   }) => {
-    const classes = classnames(
-      styles.select,
-      className,
-    )
+const SelectBox = ({ className, style, name, label, required, ...selectProps }) => {
+  const classes = classnames(
+    styles.select,
+    className,
+  )
 
-    return (
-      <div className={classes} style={style}>
-        {label && <label htmlFor={name}>{label}{required && '*'}</label>}
-        <Select
-          simpleValue
-          {...selectProps}
-        />
-      </div>
-    )
-  }
+  return (
+    <div className={classes} style={style}>
+      {label && <label htmlFor={name}>{label}{required && '*'}</label>}
+      <Select
+        simpleValue
+        {...selectProps}
+      />
+    </div>
+  )
+}
 
 SelectBox.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   name: PropTypes.string.isRequired,
+  form: PropTypes.string.isRequired,
   value: PropTypes.string,
   label: PropTypes.string,
   required: PropTypes.bool,

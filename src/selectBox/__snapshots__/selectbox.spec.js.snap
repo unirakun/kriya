@@ -8,7 +8,7 @@ exports[`common/SelectBox container should pass value of redux form 1`] = `
   <div
     className="react-select"
   >
-    {"name":"react-select","props":{"simpleValue":true,"form":"form1","options":[{"label":"Chirurgiens cardio-vasculaires et thoraciques","value":"1"},{"label":"Chirurgiens de la face et du cou","value":"2"},{"label":"Chirurgiens de la main","value":"3"}],"value":"1"}}
+    {"name":"react-select","props":{"simpleValue":true,"anyTouched":false,"asyncValidating":false,"dirty":true,"form":"form1","initialized":false,"invalid":false,"pristine":false,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"options":[{"label":"Chirurgiens cardio-vasculaires et thoraciques","value":"1"},{"label":"Chirurgiens de la face et du cou","value":"2"},{"label":"Chirurgiens de la main","value":"3"}],"pure":true,"array":{},"value":"1"}}
   </div>
 </div>
 `;

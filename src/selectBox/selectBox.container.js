@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import { change, formValueSelector } from 'redux-form'
+import { formInjector } from '../helpers'
 import Component from './selectBox'
 
 const mapStateToProps = (state, { form, name }) => {
@@ -14,4 +15,4 @@ const mapDispatchToProps = (dispatch, { form, name }) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Component)
+export default formInjector(connect(mapStateToProps, mapDispatchToProps)(Component))
