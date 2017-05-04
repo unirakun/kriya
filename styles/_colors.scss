@@ -2,6 +2,7 @@
 $primary-color: #50e39e !default;
 $primary-color-lighten-1: lighten($primary-color, 7%) !default;
 $primary-color-darken-1: darken($primary-color, 7%) !default;
+$primary-color-darken-2: darken($primary-color, 12%) !default;
 
 // Secondary color and derivated
 $secondary-color: #558dff !default;
