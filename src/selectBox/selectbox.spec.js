@@ -13,6 +13,7 @@ import SelectBoxContainer from './selectBox.container'
 jest.mock('react-select', () => mockComponent('react-select'))
 
 const Decorated = reduxForm({ form: 'testForm' })(SelectBox)
+const DecoratedContainer = reduxForm({ form: 'formCont' })(SelectBoxContainer)
 
 const snap = ({ name = 'name', ...rest }) => {
   const store = createStore(() => ({}))
@@ -62,7 +63,7 @@ describe('common/SelectBox', () => {
       ))
       const component = renderer.create(
         <Provider store={store}>
-          <SelectBoxContainer {...props} />
+          <DecoratedContainer {...props} />
         </Provider>,
       )
 
