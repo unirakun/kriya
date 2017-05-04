@@ -3,7 +3,7 @@
 
 import React from 'react'
 import renderer from 'react-test-renderer'
-import mockComponent from 'misc/__mocks__/component'
+import mockComponent from '__mocks__/component'
 import Item from './item'
 
 jest.mock('../../button', () => mockComponent('button'))

@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`common/SelectBox container should pass value of redux form 1`] = `
+<div
+  className="select"
+  style={Object {}}
+>
+  <div
+    className="react-select"
+  >
+    {"name":"react-select","props":{"simpleValue":true,"form":"form1","options":[{"label":"Chirurgiens cardio-vasculaires et thoraciques","value":"1"},{"label":"Chirurgiens de la face et du cou","value":"2"},{"label":"Chirurgiens de la main","value":"3"}],"value":"1"}}
+  </div>
+</div>
+`;
+
+exports[`common/SelectBox graphical (JSX) labels should print a * on label when input is required 1`] = `
+<div
+  className="select"
+  style={Object {}}
+>
+  <label
+    htmlFor="name"
+  >
+    my label
+    *
+  </label>
+  <div
+    className="react-select"
+  >
+    {"name":"react-select","props":{"simpleValue":true,"anyTouched":false,"asyncValidating":false,"dirty":false,"form":"testForm","initialized":false,"invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{},"options":[]}}
+  </div>
+</div>
+`;
+
+exports[`common/SelectBox graphical (JSX) labels should print a label 1`] = `
+<div
+  className="select"
+  style={Object {}}
+>
+  <label
+    htmlFor="name"
+  >
+    my label
+  </label>
+  <div
+    className="react-select"
+  >
+    {"name":"react-select","props":{"simpleValue":true,"anyTouched":false,"asyncValidating":false,"dirty":false,"form":"testForm","initialized":false,"invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{},"options":[]}}
+  </div>
+</div>
+`;
+
+exports[`common/SelectBox graphical (JSX) should add custom className 1`] = `
+<div
+  className="select custom"
+  style={Object {}}
+>
+  <div
+    className="react-select"
+  >
+    {"name":"react-select","props":{"simpleValue":true,"anyTouched":false,"asyncValidating":false,"dirty":false,"form":"testForm","initialized":false,"invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{},"options":[]}}
+  </div>
+</div>
+`;
+
+exports[`common/SelectBox graphical (JSX) should add custom style 1`] = `
+<div
+  className="select"
+  style={
+    Object {
+      "backgroundColor": "red",
+    }
+  }
+>
+  <div
+    className="react-select"
+  >
+    {"name":"react-select","props":{"simpleValue":true,"anyTouched":false,"asyncValidating":false,"dirty":false,"form":"testForm","initialized":false,"invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{},"options":[]}}
+  </div>
+</div>
+`;
+
+exports[`common/SelectBox graphical (JSX) should add options 1`] = `
+<div
+  className="select"
+  style={Object {}}
+>
+  <div
+    className="react-select"
+  >
+    {"name":"react-select","props":{"simpleValue":true,"anyTouched":false,"asyncValidating":false,"dirty":false,"form":"testForm","initialized":false,"invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"options":[{"label":"Chirurgiens cardio-vasculaires et thoraciques","value":"1"},{"label":"Chirurgiens de la face et du cou","value":"2"},{"label":"Chirurgiens de la main","value":"3"}],"pure":true,"array":{}}}
+  </div>
+</div>
+`;
+
+exports[`common/SelectBox graphical (JSX) should have a default behaviour 1`] = `
+<div
+  className="select"
+  style={Object {}}
+>
+  <div
+    className="react-select"
+  >
+    {"name":"react-select","props":{"simpleValue":true,"anyTouched":false,"asyncValidating":false,"dirty":false,"form":"testForm","initialized":false,"invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{},"options":[]}}
+  </div>
+</div>
+`;
