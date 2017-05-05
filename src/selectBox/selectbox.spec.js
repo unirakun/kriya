@@ -10,7 +10,7 @@ import mockComponent from '__mocks__/component'
 import SelectBox from './selectBox.jsx'
 import SelectBoxContainer from './selectBox.container'
 
-jest.mock('react-select', () => mockComponent('react-select'))
+jest.mock('kriya-select', () => mockComponent('kriya-select'))
 
 const Decorated = reduxForm({ form: 'testForm' })(SelectBox)
 const DecoratedContainer = reduxForm({ form: 'formCont' })(SelectBoxContainer)
