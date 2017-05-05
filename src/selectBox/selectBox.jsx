@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
-import Select from 'react-select'
+import Select from 'kriya-select'
 import styles from '../../src/selectBox/selectBox.styles.scss'
 
 const SelectBox = ({ className, style, name, label, required, ...selectProps }) => {
