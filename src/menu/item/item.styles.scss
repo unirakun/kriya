@@ -1,10 +1,27 @@
 @import '~styles/theme';
 
 .item {
-  background-color: $default-bg-color;
+  background-color: inherit;
+  border: 1px solid $primary-color-darken-2;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
   margin-bottom: 1em;
+  margin-left: -2em;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &:hover {
+    background-color: $primary-color-darken-2;
+  }
+}
+
+.selected {
+  background-color: $default-bg-color;
+  border: 0;
+
+  &:hover {
+    background-color: $default-bg-color;
   }
 }

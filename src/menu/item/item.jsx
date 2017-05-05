@@ -5,10 +5,13 @@ import { onlyUpdateForPropTypes } from 'recompose'
 import Button from '../../button'
 import styles from '../../../src/menu/item/item.styles.scss'
 
-const Item = ({ style, className, children, name }) => {
+const Item = ({ style, className, children, name, selected }) => {
   const classes = classnames(
     styles.item,
     className,
+    {
+      [styles.selected]: selected,
+    },
   )
 
   return (
@@ -23,6 +26,7 @@ Item.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
   name: PropTypes.string,
+  selected: PropTypes.bool,
 }
 
 Item.defaultProps = {
@@ -30,6 +34,7 @@ Item.defaultProps = {
   className: '',
   children: undefined,
   name: undefined,
+  selected: false,
 }
 
 export default onlyUpdateForPropTypes(Item)
