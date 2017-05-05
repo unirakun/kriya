@@ -1,7 +1,6 @@
 {
   "name": "kriya",
-  "version": "0.3.16",
-  "version": "0.3.18",
+  "version": "0.3.19",
   "main": "index.js",
   "description": "Kriya is a react/redux components library",
   "license": "MIT",
@@ -118,7 +117,7 @@
   },
   "peerDependencies": {
     "classnames": "^2.2.5",
-    "kriya-select": "^1.0.1",
+    "kriya-select": "^1.0.2",
     "react": "^15.4.2",
     "recompose": "^0.22.0"
   },

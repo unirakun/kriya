@@ -10,7 +10,8 @@
     margin-bottom: $input-radius-size;
   }
 
-  select {
+  select,
+  :global(.Select) {
     appearance: none;
     background-color: $default-bg-color;
     height: 2.3em;
@@ -18,6 +19,20 @@
 
     &::-ms-expand {
       display: none;
+    }
+  }
+
+  :global(.is-focused:not(is-open)) > :global(.Select-control) {
+    border: $border-size solid $primary-color;
+    box-shadow: none;
+  }
+
+  :global(.Select-control) {
+    height: 2.4em;
+    padding: 0;
+
+    :global(.Select-value) {
+      padding: .6em;
     }
   }
 }
@@ -32,7 +47,8 @@
   transition: $default-transition transform, $default-transition color;
 }
 
-.field {
+.field,
+:global(.Select-control)  {
   border: $border-size solid $default-grey-color;
   border-radius: $input-radius-size;
   box-shadow: none;
