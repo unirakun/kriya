@@ -1,6 +1,8 @@
 @import '~styles/theme';
 
 .select {
+  width: 15em;
+
   :global(.Select .Select-control) {
     background-color: $default-bg-color;
 
