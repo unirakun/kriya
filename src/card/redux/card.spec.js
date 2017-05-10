@@ -1,7 +1,7 @@
 /* eslint-env jest */
 /* eslint-disable comma-dangle */
 import { isOpened } from './card.selectors'
-import { open, close, openAll, closeAll } from './card.actions'
+import { open, close, openAll, closeAll, toggle } from './card.actions'
 import reducer from './card'
 
 describe('card/redux', () => {
@@ -46,6 +46,22 @@ describe('card/redux', () => {
       .toEqual({
         ...state,
         card2: true,
+      })
+    )
+
+    it('should toggle a card [false -> true]', () =>
+      expect(reducer(state, toggle('card2')))
+      .toEqual({
+        ...state,
+        card2: true,
+      })
+    )
+
+    it('should toggle a card [true -> false]', () =>
+      expect(reducer(state, toggle('card1')))
+      .toEqual({
+        ...state,
+        card1: false,
       })
     )
 
