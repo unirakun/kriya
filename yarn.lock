@@ -1075,7 +1075,7 @@ coveralls@^2.13.0:
     minimist "1.2.0"
     request "2.79.0"
 
-create-react-class@^15.5.1:
+create-react-class@^15.5.1, create-react-class@^15.5.2:
   version "15.5.2"
   resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.5.2.tgz#6a8758348df660b88326a0e764d569f274aad681"
   dependencies:
@@ -2681,11 +2681,12 @@ klaw@^1.0.0:
   optionalDependencies:
     graceful-fs "^4.1.9"
 
-kriya-select@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/kriya-select/-/kriya-select-1.0.1.tgz#99fa302e5aa49f46e12db36bf9f8bfae819fa99f"
+kriya-select@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/kriya-select/-/kriya-select-1.0.2.tgz#495914f6f17a72ae647d851f4c3686e38c022d08"
   dependencies:
     classnames "^2.2.4"
+    create-react-class "^15.5.2"
     react-input-autosize "^1.1.0"
     react-proptypes "^1.0.0"
 

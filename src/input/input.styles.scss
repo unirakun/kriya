@@ -13,9 +13,6 @@
   select,
   :global(.Select) {
     appearance: none;
-    background-color: $default-bg-color;
-    height: 2.3em;
-    line-height: 1.1em;
 
     &::-ms-expand {
       display: none;
@@ -28,13 +25,33 @@
   }
 
   :global(.Select-control) {
-    height: 2.4em;
-    padding: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
     :global(.Select-value) {
-      padding: .6em;
+      align-items: center;
+      display: flex;
+      padding-right: 2em;
     }
   }
+}
+
+:global(.Select-input) {
+  height: inherit;
+  padding: 0 .1em;
+}
+
+:global(.Select-placeholder) {
+  align-items: center;
+  display: flex;
+}
+
+:global(.Select span) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .arrow {
@@ -48,7 +65,7 @@
 }
 
 .field,
-:global(.Select-control)  {
+:global(.Select-control) {
   border: $border-size solid $default-grey-color;
   border-radius: $input-radius-size;
   box-shadow: none;
