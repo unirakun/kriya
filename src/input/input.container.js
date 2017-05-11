@@ -12,6 +12,7 @@ const mapStateToProps = (state, { form, name, type }) => {
 const mapDispatchToProps = (dispatch, { form, name, type }) => {
   return type === 'selectbox' ? {
     onChange: value => dispatch(change(form, name, value)),
+    onInputChange: value => dispatch(change(form, name, value)),
   } : {}
 }
 

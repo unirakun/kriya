@@ -81,6 +81,7 @@ Input.propTypes = {
     label: PropTypes.string,
   })),
   onChange: PropTypes.func,
+  onInputChange: PropTypes.func,
   loadOptions: PropTypes.func,
 }
 
@@ -96,6 +97,7 @@ Input.defaultProps = {
   style: {},
   options: [],
   onChange: undefined,
+  onInputChange: undefined,
   loadOptions: undefined,
 }
 
