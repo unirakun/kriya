@@ -24,8 +24,18 @@
     box-shadow: none;
   }
 
+  :global(.Select-clear-zone) {
+    margin: 0 .3em;
+    display: flex;
+    justify-content: center;
+  }
+
   :global(.Select-clear) {
     color: $default-grey-color;
+  }
+
+  :global(.Select-arrow) {
+    margin-bottom: -3.5px;
   }
 
   :global(.Select-control) {
@@ -92,6 +102,7 @@
 
 :global(.Select-placeholder) {
   align-items: center;
+  color: $default-grey-color;
   display: flex;
 }
 
