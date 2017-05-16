@@ -1,6 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`common/Input labels should print a * on label when input is required 1`] = `
+exports[`common/Input container should pass value of redux form for select 1`] = `
+<div
+  className="input type-select"
+  style={Object {}}
+>
+  <select
+    className="field"
+    disabled={false}
+    name="field1"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    required={false}
+    type="select"
+    value="1"
+  >
+    <option
+      value="o1"
+    >
+      l1
+    </option>
+    <option
+      value="o4"
+    >
+      l4
+    </option>
+    <option
+      value="o2"
+    >
+      l2
+    </option>
+    <option
+      value="o3"
+    >
+      l3
+    </option>
+  </select>
+  <i
+    className="arrow mdv-expand_more"
+  />
+</div>
+`;
+
+exports[`common/Input container should pass value of redux form for selectbox 1`] = `
+<div
+  className="input type-selectbox"
+  style={Object {}}
+>
+  <div
+    className="kriya-select"
+  >
+    {"name":"kriya-select","props":{"simpleValue":true,"value":"1","options":[{"value":"o1","label":"l1"},{"value":"o4","label":"l4"},{"value":"o2","label":"l2"},{"value":"o3","label":"l3"}],"name":"field1","placeholder":"","disabled":false,"required":false,"anyTouched":false,"asyncValidating":false,"dirty":true,"form":"form1","initialized":false,"invalid":false,"pristine":false,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{}}}
+  </div>
+</div>
+`;
+
+exports[`common/Input graphical (JSX) labels should print a * on label when input is required 1`] = `
 <div
   className="input type-input"
   style={Object {}}
@@ -28,7 +87,7 @@ exports[`common/Input labels should print a * on label when input is required 1`
 </div>
 `;
 
-exports[`common/Input labels should print a label 1`] = `
+exports[`common/Input graphical (JSX) labels should print a label 1`] = `
 <div
   className="input type-input"
   style={Object {}}
@@ -55,7 +114,7 @@ exports[`common/Input labels should print a label 1`] = `
 </div>
 `;
 
-exports[`common/Input should add custom className 1`] = `
+exports[`common/Input graphical (JSX) should add custom className 1`] = `
 <div
   className="input type-input custom"
   style={Object {}}
@@ -77,7 +136,7 @@ exports[`common/Input should add custom className 1`] = `
 </div>
 `;
 
-exports[`common/Input should add custom style 1`] = `
+exports[`common/Input graphical (JSX) should add custom style 1`] = `
 <div
   className="input type-input"
   style={
@@ -103,7 +162,7 @@ exports[`common/Input should add custom style 1`] = `
 </div>
 `;
 
-exports[`common/Input should be disabled 1`] = `
+exports[`common/Input graphical (JSX) should be disabled 1`] = `
 <div
   className="input type-input"
   style={Object {}}
@@ -125,7 +184,7 @@ exports[`common/Input should be disabled 1`] = `
 </div>
 `;
 
-exports[`common/Input should have a default behaviour 1`] = `
+exports[`common/Input graphical (JSX) should have a default behaviour 1`] = `
 <div
   className="input type-input"
   style={Object {}}
@@ -147,7 +206,7 @@ exports[`common/Input should have a default behaviour 1`] = `
 </div>
 `;
 
-exports[`common/Input should print an icon when this is a select 1`] = `
+exports[`common/Input graphical (JSX) should print an icon when this is a select 1`] = `
 <div
   className="input type-select"
   style={Object {}}
@@ -172,7 +231,7 @@ exports[`common/Input should print an icon when this is a select 1`] = `
 </div>
 `;
 
-exports[`common/Input should print the placeholder 1`] = `
+exports[`common/Input graphical (JSX) should print the placeholder 1`] = `
 <div
   className="input type-input"
   style={Object {}}
@@ -194,7 +253,7 @@ exports[`common/Input should print the placeholder 1`] = `
 </div>
 `;
 
-exports[`common/Input types should print a select 1`] = `
+exports[`common/Input graphical (JSX) types should print a select 1`] = `
 <div
   className="input type-select"
   style={Object {}}
@@ -219,7 +278,20 @@ exports[`common/Input types should print a select 1`] = `
 </div>
 `;
 
-exports[`common/Input types should print a textarea 1`] = `
+exports[`common/Input graphical (JSX) types should print a selectbox 1`] = `
+<div
+  className="input type-selectbox"
+  style={Object {}}
+>
+  <div
+    className="kriya-select"
+  >
+    {"name":"kriya-select","props":{"simpleValue":true,"options":[],"name":"name","placeholder":"","disabled":false,"required":false,"anyTouched":false,"asyncValidating":false,"dirty":false,"form":"testForm","initialized":false,"invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{}}}
+  </div>
+</div>
+`;
+
+exports[`common/Input graphical (JSX) types should print a textarea 1`] = `
 <div
   className="input type-textarea"
   style={Object {}}
@@ -241,7 +313,7 @@ exports[`common/Input types should print a textarea 1`] = `
 </div>
 `;
 
-exports[`common/Input types should print an input (checkbox) 1`] = `
+exports[`common/Input graphical (JSX) types should print an input (checkbox) 1`] = `
 <div
   className="input type-checkbox"
   style={Object {}}
@@ -249,12 +321,12 @@ exports[`common/Input types should print an input (checkbox) 1`] = `
   <div
     className="checkbox"
   >
-    {"name":"checkbox","props":{"input":{"name":"name","value":"","checked":false},"meta":{"active":false,"asyncValidating":false,"autofilled":false,"dirty":false,"form":"testForm","invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"touched":false,"valid":true,"visited":false},"className":"","type":"checkbox","placeholder":"","disabled":false,"required":false,"children":null}}
+    {"name":"checkbox","props":{"input":{"name":"name","value":"","checked":false},"meta":{"active":false,"asyncValidating":false,"autofilled":false,"dirty":false,"form":"testForm","invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"touched":false,"valid":true,"visited":false},"className":"","placeholder":"","disabled":false,"required":false,"type":"checkbox","children":null}}
   </div>
 </div>
 `;
 
-exports[`common/Input types should print an input (input) 1`] = `
+exports[`common/Input graphical (JSX) types should print an input (input) 1`] = `
 <div
   className="input type-input"
   style={Object {}}
@@ -276,7 +348,7 @@ exports[`common/Input types should print an input (input) 1`] = `
 </div>
 `;
 
-exports[`common/Input types should print an input (number) 1`] = `
+exports[`common/Input graphical (JSX) types should print an input (number) 1`] = `
 <div
   className="input type-number"
   style={Object {}}
@@ -298,7 +370,7 @@ exports[`common/Input types should print an input (number) 1`] = `
 </div>
 `;
 
-exports[`common/Input types should print an input (radio) 1`] = `
+exports[`common/Input graphical (JSX) types should print an input (radio) 1`] = `
 <div
   className="input type-radio"
   style={Object {}}
@@ -321,7 +393,7 @@ exports[`common/Input types should print an input (radio) 1`] = `
 </div>
 `;
 
-exports[`common/Input types should print options on select 1`] = `
+exports[`common/Input graphical (JSX) types should print options on select 1`] = `
 <div
   className="input type-select"
   style={Object {}}
@@ -367,7 +439,20 @@ exports[`common/Input types should print options on select 1`] = `
 </div>
 `;
 
-exports[`common/Input types shouldnt print options (not select) 1`] = `
+exports[`common/Input graphical (JSX) types should print options on selectbox 1`] = `
+<div
+  className="input type-selectbox"
+  style={Object {}}
+>
+  <div
+    className="kriya-select"
+  >
+    {"name":"kriya-select","props":{"simpleValue":true,"options":[{"value":"o1","label":"l1"},{"value":"o4","label":"l4"},{"value":"o2","label":"l2"},{"value":"o3","label":"l3"}],"name":"name","placeholder":"","disabled":false,"required":false,"anyTouched":false,"asyncValidating":false,"dirty":false,"form":"testForm","initialized":false,"invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{}}}
+  </div>
+</div>
+`;
+
+exports[`common/Input graphical (JSX) types shouldnt print options (not select) 1`] = `
 <div
   className="input type-input"
   style={Object {}}
