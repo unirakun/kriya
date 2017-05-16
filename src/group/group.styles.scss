@@ -1,8 +1,7 @@
-@import '~styles/theme';
+@import '../../styles/theme';
 
 .group {
   display: flex;
-  min-width: 38em;
 
   & >
   a,
@@ -15,7 +14,6 @@
   }
 
   & > div {
-    flex: 1;
 
     &:not(:first-child) {
       &:not(:last-child) > input, // sass-lint:disable-line nesting-depth
