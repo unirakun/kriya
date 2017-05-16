@@ -1,6 +1,7 @@
 // Primary color and derivated
 $primary-color: #50e39e !default;
 $primary-color-lighten-1: lighten($primary-color, 7%) !default;
+$primary-color-lighten-2: lighten($primary-color, 15%) !default;
 $primary-color-darken-1: darken($primary-color, 7%) !default;
 $primary-color-darken-2: darken($primary-color, 12%) !default;
 
@@ -11,6 +12,10 @@ $secondary-color: #558dff !default;
 $default-bg-color: #fff !default;
 $default-bg-grey-color: #f5f5f5 !default;
 $disable-bg-color: #f5f5f5 !default;
+
+// Checkbox colors
+$checkbox-back-bg: #818181 !default;
+$checkbox-ball-bg: #f5f5f5 !default;
 
 // Others colors
 $font-color-dark: #373b43 !default;

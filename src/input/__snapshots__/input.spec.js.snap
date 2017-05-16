@@ -246,21 +246,11 @@ exports[`common/Input types should print an input (checkbox) 1`] = `
   className="input type-checkbox"
   style={Object {}}
 >
-  <input
-    checked={false}
-    className="field"
-    disabled={false}
-    name="name"
-    onBlur={[Function]}
-    onChange={[Function]}
-    onDragStart={[Function]}
-    onDrop={[Function]}
-    onFocus={[Function]}
-    placeholder=""
-    required={false}
-    type="checkbox"
-    value=""
-  />
+  <div
+    className="checkbox"
+  >
+    {"name":"checkbox","props":{"input":{"name":"name","value":"","checked":false},"meta":{"active":false,"asyncValidating":false,"autofilled":false,"dirty":false,"form":"testForm","invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"touched":false,"valid":true,"visited":false},"className":"","type":"checkbox","placeholder":"","disabled":false,"required":false,"children":null}}
+  </div>
 </div>
 `;
 

@@ -3,12 +3,14 @@ import PropTypes from 'prop-types'
 import { Field } from 'redux-form'
 import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
+import Checkbox from './checkbox'
 import styles from '../../src/input/input.styles.scss'
 
 const getComponent = (type) => {
   switch (type) {
     case 'select': return 'select'
     case 'textarea': return 'textarea'
+    case 'checkbox': return Checkbox
     default: return 'input'
   }
 }
@@ -31,7 +33,7 @@ const Input = ({
     <div className={classes} style={style}>
       {label && <label htmlFor={name}>{label}{required && '*'}</label>}
       <Field
-        className={styles.field}
+        className={type === 'checkbox' ? '' : styles.field}
         name={name}
         component={getComponent(type)}
         type={type}

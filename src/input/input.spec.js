@@ -6,7 +6,10 @@ import renderer from 'react-test-renderer'
 import { reduxForm } from 'redux-form'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
+import mockComponent from '__mocks__/component'
 import Input from './input'
+
+jest.mock('./checkbox', () => mockComponent('checkbox'))
 
 const store = createStore(() => ({}))
 const Decorated = reduxForm({ form: 'testForm' })(Input)
