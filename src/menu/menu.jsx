@@ -4,7 +4,7 @@ import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
 import styles from '../../src/menu/menu.styles.scss'
 
-const Menu = ({ style, className, children, header, footer }) => {
+const Menu = ({ style, className, children, header, footer, onHeaderClick, onFooterClick }) => {
   const classes = classnames(
     styles.menu,
     className,
@@ -12,10 +12,18 @@ const Menu = ({ style, className, children, header, footer }) => {
 
   return (
     <div style={style} className={classes}>
-      {header}
+      {header &&
+        <div className={styles.header} onClick={onHeaderClick}>
+          {header}
+        </div>
+      }
       <div className={styles.sep} />
       <div className={styles.items}>{children}</div>
-      <div className={styles.footer}>{footer}</div>
+      {footer &&
+        <div className={styles.footer} onClick={onFooterClick}>
+          {footer}
+        </div>
+      }
     </div>
   )
 }
@@ -26,6 +34,8 @@ Menu.propTypes = {
   children: PropTypes.node,
   header: PropTypes.node,
   footer: PropTypes.node,
+  onFooterClick: PropTypes.func.isRequired,
+  onHeaderClick: PropTypes.func.isRequired,
 }
 
 Menu.defaultProps = {
