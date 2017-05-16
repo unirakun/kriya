@@ -24,16 +24,37 @@
     box-shadow: none;
   }
 
+  :global(.Select-clear-zone) {
+    display: flex;
+    justify-content: center;
+    margin: 0 .3em;
+  }
+
+  :global(.Select-clear) {
+    color: $default-grey-color;
+  }
+
+  :global(.Select-arrow) {
+    margin-bottom: -3.5px;
+  }
+
   :global(.Select-control) {
     align-items: center;
     display: flex;
     flex-direction: row;
+    height: auto;
     justify-content: space-between;
+
+    :global(.Select-multi-value-wrapper) {
+      display: flex;
+      flex-grow: 1;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
 
     :global(.Select-value) {
       align-items: center;
       display: flex;
-      padding-right: 2em;
 
       > :global(.Select-value-label) {
         line-height: 1.1em;
@@ -42,8 +63,10 @@
   }
 }
 
-:global(.Select-input) {
+:global(.Select-input),
+:global(.Select--multi .Select-input) {
   height: inherit;
+  margin-left: 0;
   padding: 0 .1em;
 
   > input {
@@ -52,13 +75,40 @@
   }
 }
 
+:global(.Select--multi .Select-value) {
+  background: $primary-color-darken-2;
+  border-radius: $input-radius-size;
+  margin: .2em .2em 0 0;
+  max-width: 10em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  :global(.Select-value-icon) {
+    border: 0;
+    color: $font-color-light;
+  }
+
+  :global(.Select-value-icon:focus) {
+    background: $primary-color-darken-1;
+    border: 0;
+    color: $font-color-light;
+  }
+
+  :global(.Select-value-label) {
+    color: $font-color-light;
+  }
+}
+
 :global(.Select-placeholder) {
   align-items: center;
+  color: $default-grey-color;
   display: flex;
 }
 
 :global(.Select-value-label) {
   overflow: hidden;
+  padding-right: 2em;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
