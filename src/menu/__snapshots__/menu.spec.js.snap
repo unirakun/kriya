@@ -13,6 +13,7 @@ exports[`common/Menu should add a footer 1`] = `
   />
   <div
     className="footer"
+    onClick={[Function]}
   >
     <div>
       footer
@@ -26,17 +27,19 @@ exports[`common/Menu should add a header 1`] = `
   className="menu"
   style={Object {}}
 >
-  <div>
-    header
+  <div
+    className="header"
+    onClick={[Function]}
+  >
+    <div>
+      header
+    </div>
   </div>
   <div
     className="sep"
   />
   <div
     className="items"
-  />
-  <div
-    className="footer"
   />
 </div>
 `;
@@ -51,9 +54,6 @@ exports[`common/Menu should add custom className 1`] = `
   />
   <div
     className="items"
-  />
-  <div
-    className="footer"
   />
 </div>
 `;
@@ -72,9 +72,6 @@ exports[`common/Menu should add custom style 1`] = `
   />
   <div
     className="items"
-  />
-  <div
-    className="footer"
   />
 </div>
 `;
@@ -97,9 +94,6 @@ exports[`common/Menu should add items 1`] = `
       2
     </div>
   </div>
-  <div
-    className="footer"
-  />
 </div>
 `;
 
@@ -113,9 +107,6 @@ exports[`common/Menu should have a default behaviour 1`] = `
   />
   <div
     className="items"
-  />
-  <div
-    className="footer"
   />
 </div>
 `;
