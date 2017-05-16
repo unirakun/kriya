@@ -1,0 +1,46 @@
+@import '~styles/theme';
+
+$height: 1em;
+$width: 3em;
+
+$ball-height: $height * 1.5;
+
+.checkbox {
+  cursor: pointer;
+  height: $ball-height;
+  position: relative;
+  width: $width;
+}
+
+.back,
+.ball {
+  position: absolute;
+  transition: background-color $default-transition, transform $default-transition;
+}
+
+.back {
+  background-color: $checkbox-back-bg;
+  border-radius: $height;
+  height: $height;
+  top: $height / 4;
+  width: $width;
+}
+
+.ball {
+  background-color: $checkbox-ball-bg;
+  border-radius: 50%;
+  box-shadow: 0 .04em .1em .01em $default-grey-color;
+  height: $ball-height;
+  width: $ball-height;
+}
+
+.checked {
+  .back {
+    background-color: $primary-color-lighten-2;
+  }
+
+  .ball {
+    background-color: $primary-color;
+    transform: translate($ball-height);
+  }
+}

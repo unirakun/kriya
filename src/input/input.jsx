@@ -4,16 +4,15 @@ import { Field } from 'redux-form'
 import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
 import Select from 'kriya-select'
+import Checkbox from './checkbox'
 import styles from '../../src/input/input.styles.scss'
 
 const getComponent = (type) => {
   switch (type) {
-    case 'select':
-      return 'select'
-    case 'textarea':
-      return 'textarea'
-    default:
-      return 'input'
+    case 'select': return 'select'
+    case 'textarea': return 'textarea'
+    case 'checkbox': return Checkbox
+    default: return 'input'
   }
 }
 
@@ -47,7 +46,7 @@ const Input = ({
 
   const field = (
     <Field
-      className={styles.field}
+      className={type === 'checkbox' ? '' : styles.field}
       component={getComponent(type)}
       {...commonProps}
       type={type}

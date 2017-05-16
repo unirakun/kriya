@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`common/Input/Checkbox should add custom className 1`] = `
+<div
+  className="checkbox custom"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <div
+    className="back"
+  />
+  <div
+    className="ball"
+  />
+</div>
+`;
+
+exports[`common/Input/Checkbox should add custom style 1`] = `
+<div
+  className="checkbox"
+  onClick={[Function]}
+  style={
+    Object {
+      "backgroundColor": "red",
+    }
+  }
+>
+  <div
+    className="back"
+  />
+  <div
+    className="ball"
+  />
+</div>
+`;
+
+exports[`common/Input/Checkbox should be checked 1`] = `
+<div
+  className="checkbox checked"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <div
+    className="back"
+  />
+  <div
+    className="ball"
+  />
+</div>
+`;
+
+exports[`common/Input/Checkbox should have a default behaviour 1`] = `
+<div
+  className="checkbox"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <div
+    className="back"
+  />
+  <div
+    className="ball"
+  />
+</div>
+`;

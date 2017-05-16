@@ -12,6 +12,9 @@ import InputContainer from './input.container'
 
 jest.mock('kriya-select', () => mockComponent('kriya-select'))
 
+jest.mock('./checkbox', () => mockComponent('checkbox'))
+
+const store = createStore(() => ({}))
 const Decorated = reduxForm({ form: 'testForm' })(Input)
 const DecoratedContainer = reduxForm({ form: 'formCont' })(InputContainer)
 
