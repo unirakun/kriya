@@ -1,0 +1,24 @@
+@import '~styles/theme';
+
+.tab {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding: 1em;
+  position: relative;
+
+  &.activated {
+    font-weight: bold;
+  }
+}
+
+.border {
+  background-color: $primary-color;
+  bottom: 0;
+  height: .5em;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}

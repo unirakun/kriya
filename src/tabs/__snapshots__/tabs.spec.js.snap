@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`common/tabs container should maps tabs keys to props 1`] = `
+Object {
+  "tabs": Array [
+    "CHOOSE",
+    "FIND",
+  ],
+}
+`;
+
+exports[`common/tabs container should not map if children in props 1`] = `Object {}`;
+
+exports[`common/tabs graphical (JSX) should add custom className 1`] = `
+<div
+  className="tabs custom"
+  style={Object {}}
+/>
+`;
+
+exports[`common/tabs graphical (JSX) should add custom style 1`] = `
+<div
+  className="tabs"
+  style={
+    Object {
+      "backgroundColor": "red",
+    }
+  }
+/>
+`;
+
+exports[`common/tabs graphical (JSX) should have a default behaviour 1`] = `
+<div
+  className="tabs"
+  style={Object {}}
+/>
+`;
+
+exports[`common/tabs graphical (JSX) should prints children 1`] = `
+<div
+  className="tabs"
+  style={Object {}}
+>
+  first
+  second
+</div>
+`;
+
+exports[`common/tabs graphical (JSX) should prints tabs 1`] = `
+<div
+  className="tabs"
+  style={Object {}}
+>
+  <div
+    className="tab"
+  >
+    {"name":"tab","props":{"code":"CHOOSE"}}
+  </div>
+  <div
+    className="tab"
+  >
+    {"name":"tab","props":{"code":"SEARCH"}}
+  </div>
+</div>
+`;

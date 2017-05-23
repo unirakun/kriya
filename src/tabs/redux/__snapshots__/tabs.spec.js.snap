@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tabs/redux reducer should activate SEARCH tab 1`] = `
+Object {
+  "activated": "SEARCH",
+  "data": Object {
+    "FIND": Object {
+      "label": "Find",
+    },
+    "SEARCH": Object {
+      "label": "Search",
+    },
+  },
+  "keys": Array [
+    "SEARCH",
+    "FIND",
+  ],
+}
+`;
+
+exports[`tabs/redux reducer should add LOOK tab 1`] = `
+Object {
+  "activated": "FIND",
+  "data": Object {
+    "FIND": Object {
+      "label": "Find",
+    },
+    "LOOK": Object {
+      "code": "LOOK",
+      "label": "Look up !",
+    },
+    "SEARCH": Object {
+      "label": "Search",
+    },
+  },
+  "keys": Array [
+    "SEARCH",
+    "FIND",
+    "LOOK",
+  ],
+}
+`;
+
+exports[`tabs/redux reducer should initialize 1`] = `
+Object {
+  "activated": undefined,
+  "data": Object {},
+  "keys": Array [],
+}
+`;
+
+exports[`tabs/redux reducer should reset tabs 1`] = `
+Object {
+  "activated": undefined,
+  "data": Object {},
+  "keys": Array [],
+}
+`;
+
+exports[`tabs/redux selectors should return activated tabs 1`] = `"FIND"`;
+
+exports[`tabs/redux selectors should return data 1`] = `
+Object {
+  "FIND": Object {
+    "label": "Find",
+  },
+  "SEARCH": Object {
+    "label": "Search",
+  },
+}
+`;
+
+exports[`tabs/redux selectors should return tab -notfound- 1`] = `undefined`;
+
+exports[`tabs/redux selectors should return tab 1`] = `
+Object {
+  "label": "Search",
+}
+`;
+
+exports[`tabs/redux selectors should return tabs sub-reducer 1`] = `
+Object {
+  "activated": "FIND",
+  "data": Object {
+    "FIND": Object {
+      "label": "Find",
+    },
+    "SEARCH": Object {
+      "label": "Search",
+    },
+  },
+  "keys": Array [
+    "SEARCH",
+    "FIND",
+  ],
+}
+`;
+
+exports[`tabs/redux selectors should return that FIND is activated 1`] = `true`;
