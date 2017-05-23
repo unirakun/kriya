@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`common/tabs/tab container should map an isActivated to false 1`] = `
+Object {
+  "activated": false,
+  "an": "other choose property",
+  "code": "CHOOSE",
+  "label": "A choose label",
+}
+`;
+
+exports[`common/tabs/tab container should maps isActivated and tabs information 1`] = `
+Object {
+  "activated": true,
+  "an": "other find property",
+  "code": "FIND",
+  "label": "A find label",
+}
+`;
+
+exports[`common/tabs/tab graphical (JSX) should activate the tab 1`] = `
+<div
+  className="tab activated"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <div
+    className="ink"
+  >
+    {"name":"ink","props":{"style":{"zIndex":2}}}
+  </div>
+  
+  <div
+    className="border"
+  />
+</div>
+`;
+
+exports[`common/tabs/tab graphical (JSX) should add custom className 1`] = `
+<div
+  className="tab custom"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <div
+    className="ink"
+  >
+    {"name":"ink","props":{"style":{"zIndex":2}}}
+  </div>
+  
+</div>
+`;
+
+exports[`common/tabs/tab graphical (JSX) should add custom style 1`] = `
+<div
+  className="tab"
+  onClick={[Function]}
+  style={
+    Object {
+      "backgroundColor": "red",
+    }
+  }
+>
+  <div
+    className="ink"
+  >
+    {"name":"ink","props":{"style":{"zIndex":2}}}
+  </div>
+  
+</div>
+`;
+
+exports[`common/tabs/tab graphical (JSX) should have a default behaviour 1`] = `
+<div
+  className="tab"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <div
+    className="ink"
+  >
+    {"name":"ink","props":{"style":{"zIndex":2}}}
+  </div>
+  
+</div>
+`;
+
+exports[`common/tabs/tab graphical (JSX) should pass a label 1`] = `
+<div
+  className="tab"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <div
+    className="ink"
+  >
+    {"name":"ink","props":{"style":{"zIndex":2}}}
+  </div>
+  a label
+</div>
+`;
