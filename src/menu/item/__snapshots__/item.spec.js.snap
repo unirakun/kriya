@@ -1,16 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`common/Item container should inject selected for a nested route 1`] = `"{\\"selected\\":true}"`;
+exports[`common/Item container should inject selected for a nested route 1`] = `
+Object {
+  "selected": true,
+}
+`;
 
-exports[`common/Item container should inject selected for a nested route, with list 1`] = `"{\\"selected\\":true}"`;
+exports[`common/Item container should inject selected for a nested route, with list 1`] = `
+Object {
+  "selected": true,
+}
+`;
 
-exports[`common/Item container should inject selected for a simple route 1`] = `"{\\"selected\\":true}"`;
+exports[`common/Item container should inject selected for a simple route 1`] = `
+Object {
+  "selected": true,
+}
+`;
 
-exports[`common/Item container should inject selected for a simple route, with list 1`] = `"{\\"selected\\":true}"`;
+exports[`common/Item container should inject selected for a simple route, with list 1`] = `
+Object {
+  "selected": true,
+}
+`;
 
-exports[`common/Item container should not inject selected 1`] = `"{\\"selected\\":false}"`;
+exports[`common/Item container should not inject selected 1`] = `
+Object {
+  "selected": false,
+}
+`;
 
-exports[`common/Item container should not inject selected, with list 1`] = `"{\\"selected\\":false}"`;
+exports[`common/Item container should not inject selected, with list 1`] = `
+Object {
+  "selected": false,
+}
+`;
 
 exports[`common/Item graphical (JSX) should add custom className 1`] = `
 <div

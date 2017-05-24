@@ -2,33 +2,23 @@
 /* eslint-env jest */
 
 import React from 'react'
-import renderer from 'react-test-renderer'
 import ReactTestUtils from 'react-dom/test-utils'
 import mockComponent from '__mocks__/component'
+import snap from 'snap'
 import Avatar from './avatar'
 
 jest.mock('../icon', () => mockComponent('icon'))
 
-const component = (props) => {
-  return renderer.create(
-    <Avatar {...props} />,
-  )
-}
-
-const snap = (props, Component) => {
-  const c = Component || component(props)
-  const tree = c.toJSON()
-  expect(tree).toMatchSnapshot()
-}
+const snapshot = snap(Avatar)
 
 describe('common/Icon', () => {
   describe('graphical (JSX)', () => {
-    it('should add custom className', () => snap({ className: 'custom' }))
-    it('should add custom style', () => snap({ style: { backgroundColor: 'red' } }))
-    it('should create a picture avatar', () => snap({ picture: 'picture' }))
-    it('should create male avatar', () => snap({ isMale: true }))
-    it('should create female avatar', () => snap({ isMale: false }))
-    it('should have a default behaviour', () => snap({}))
+    it('should add custom className', snapshot({ className: 'custom' }))
+    it('should add custom style', snapshot({ style: { backgroundColor: 'red' } }))
+    it('should create a picture avatar', snapshot({ picture: 'picture' }))
+    it('should create male avatar', snapshot({ isMale: true }))
+    it('should create female avatar', snapshot({ isMale: false }))
+    it('should have a default behaviour', snapshot({}))
 
     it('should print avatar when image is on error', () => {
       const rendered = ReactTestUtils.renderIntoDocument(<Avatar picture="url://url.jpeg" />)

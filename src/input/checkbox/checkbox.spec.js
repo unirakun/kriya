@@ -2,24 +2,17 @@
 /* eslint-env jest */
 
 import React from 'react'
-import renderer from 'react-test-renderer'
 import { mount } from 'enzyme'
+import snap from 'snap'
 import Checkbox from './checkbox'
 
-const snap = (props) => {
-  const component = renderer.create(
-    <Checkbox {...props} />,
-  )
-
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
-}
+const snapshot = snap(Checkbox)
 
 describe('common/Input/Checkbox', () => {
-  it('should have a default behaviour', () => snap({}))
-  it('should add custom className', () => snap({ className: 'custom' }))
-  it('should add custom style', () => snap({ style: { backgroundColor: 'red' } }))
-  it('should be checked', () => snap({ input: { checked: true } }))
+  it('should have a default behaviour', snapshot({}))
+  it('should add custom className', snapshot({ className: 'custom' }))
+  it('should add custom style', snapshot({ style: { backgroundColor: 'red' } }))
+  it('should be checked', snapshot({ input: { checked: true } }))
 
   describe('callbacks', () => {
     const onClickTest = (checked) => {

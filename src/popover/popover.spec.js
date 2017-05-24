@@ -11,6 +11,7 @@ import renderer from 'react-test-renderer'
 import { mount } from 'enzyme'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
+import snap from 'snap'
 import { closePopover, CLOSE_POPOVER } from './redux'
 import Popover from './popover'
 import PopoverContainer from './popover.container'
@@ -18,23 +19,16 @@ import PopoverContainer from './popover.container'
 const Child = ({ print, onClose, ...props }) => <div {...props}>{`custom_component_child${JSON.stringify({ print, onClose })}`}</div>
 const Child2 = ({ print, onClose, ...props }) => <div {...props}>{`custom_2${JSON.stringify({ print, onClose })}`}</div>
 
-const snap = (props) => {
-  const component = renderer.create(
-    <Popover children={<Child />} {...props} />,
-  )
-
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
-}
+const snapshot = props => snap(Popover)({ children: <Child />, ...props })
 
 describe('common/Popover', () => {
   describe('graphical (JSX)', () => {
-    it('should add custom className', () => snap({ className: 'custom' }))
-    it('should add custom style', () => snap({ style: { backgroundColor: 'red' } }))
-    it('should add children', () => snap({ children: <Child2 /> }))
-    it('should have a default behaviour', () => snap({}))
-    it('should be print when asked for and passed it to child', () => snap({ print: true }))
-    it('should pass onClose function to child', () => snap({ onClose: () => {} }))
+    it('should add custom className', snapshot({ className: 'custom' }))
+    it('should add custom style', snapshot({ style: { backgroundColor: 'red' } }))
+    it('should add children', snapshot({ children: <Child2 /> }))
+    it('should have a default behaviour', snapshot({}))
+    it('should be print when asked for and passed it to child', snapshot({ print: true }))
+    it('should pass onClose function to child', snapshot({ onClose: () => {} }))
     it('should call onClose when clicked', () => {
       const onClick = jest.fn()
       const wrapper = mount(

@@ -1,30 +1,21 @@
 /* eslint-disable import/no-extraneous-dependencies, react/jsx-filename-extension */
 /* eslint-env jest */
-import React from 'react'
-import renderer from 'react-test-renderer'
+import snap from 'snap'
 import mockComponent from '__mocks__/component'
 import Tab from './tab'
 import { mapStateToProps, mapDispatchToProps } from './tab.container'
 
 jest.mock('react-ink', () => mockComponent('ink'))
 
-const snapshot = model => expect(model).toMatchSnapshot()
-const snap = (props) => {
-  const component = renderer.create(
-    <Tab onClick={() => {}} {...props} />,
-  )
-
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
-}
+const snapshot = props => snap(Tab)({ onClick: () => {}, ...props })
 
 describe('common/tabs/tab', () => {
   describe('graphical (JSX)', () => {
-    it('should add custom className', () => snap({ className: 'custom' }))
-    it('should add custom style', () => snap({ style: { backgroundColor: 'red' } }))
-    it('should have a default behaviour', () => snap({}))
-    it('should pass a label', () => snap({ label: 'a label' }))
-    it('should activate the tab', () => snap({ activated: true }))
+    it('should add custom className', snapshot({ className: 'custom' }))
+    it('should add custom style', snapshot({ style: { backgroundColor: 'red' } }))
+    it('should have a default behaviour', snapshot({}))
+    it('should pass a label', snapshot({ label: 'a label' }))
+    it('should activate the tab', snapshot({ activated: true }))
   })
 
   describe('container', () => {
@@ -48,8 +39,10 @@ describe('common/tabs/tab', () => {
       },
     }
 
-    it('should maps isActivated and tabs information', () => snapshot(mapStateToProps(state, { code: 'FIND' })))
-    it('should map an isActivated to false', () => snapshot(mapStateToProps(state, { code: 'CHOOSE' })))
+    const snapObject = object => expect(object).toMatchSnapshot()
+
+    it('should maps isActivated and tabs information', () => snapObject(mapStateToProps(state, { code: 'FIND' })))
+    it('should map an isActivated to false', () => snapObject(mapStateToProps(state, { code: 'CHOOSE' })))
     it('should dispatch a TAB_CLICKED event', () => {
       const dispatch = jest.fn()
       const props = mapDispatchToProps(dispatch, { code: 'FIND' })
