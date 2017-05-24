@@ -42,12 +42,12 @@ describe('common/Icon', () => {
     }
     /* eslint-enable react/no-children-prop */
 
-    it('should looking for prefix in redux', snapContainer(
+    it('should looking for prefix in redux', () => snapContainer(
       { icon: { prefix: 'redux-prefix' } },
       {},
     ))
 
-    it('should use a default prefix (empty one)', snapContainer(
+    it('should use a default prefix (empty one)', () => snapContainer(
       {},
       {},
     ))
