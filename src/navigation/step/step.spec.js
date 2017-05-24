@@ -2,21 +2,14 @@
 /* eslint-env jest */
 
 import React from 'react'
-import renderer from 'react-test-renderer'
 import { shallow, mount } from 'enzyme'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
+import snap from 'snap'
 import Step from './step'
 import StepContainer from './step.container'
 
-const snap = (props) => {
-  const component = renderer.create(
-    <Step children={['Hello step']} onClick={() => {}} {...props} />, // eslint-disable-line react/no-children-prop
-  )
-
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
-}
+const snapshot = props => snap(Step)({ children: ['Hello step'], onClick: () => {}, ...props })
 
 describe('common/Step', () => {
   describe('graphical (JSX)', () => {
@@ -31,11 +24,11 @@ describe('common/Step', () => {
       expect(onClick.mock.calls.length).toBe(1)
     })
 
-    it('should add custom className', () => snap({ className: 'custom' }))
-    it('should add custom style', () => snap({ style: { backgroundColor: 'red' } }))
-    it('should add children', () => snap({ children: ['a child'] }))
-    it('should have a default behaviour', () => snap({}))
-    it('should not print separator on last item', () => snap({ last: true }))
+    it('should add custom className', snapshot({ className: 'custom' }))
+    it('should add custom style', snapshot({ style: { backgroundColor: 'red' } }))
+    it('should add children', snapshot({ children: ['a child'] }))
+    it('should have a default behaviour', snapshot({}))
+    it('should not print separator on last item', snapshot({ last: true }))
   })
 
   describe('container', () => {

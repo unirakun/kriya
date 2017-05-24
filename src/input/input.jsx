@@ -16,7 +16,7 @@ const getComponent = (type) => {
   }
 }
 
-const Input = ({
+export const Input = ({
    className, style,
    type, name, label,
    placeholder, disabled,

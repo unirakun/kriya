@@ -1,33 +1,20 @@
 /* eslint-disable import/no-extraneous-dependencies, react/jsx-filename-extension */
 /* eslint-env jest */
-
-import React from 'react'
-import renderer from 'react-test-renderer'
-import { createStore } from 'redux'
-import { Provider } from 'react-redux'
+import mockComponent from '__mocks__/component'
+import snap from 'snap'
 import Navigation from './navigation'
 
-const snap = (props) => {
-  const store = createStore(() => ({}))
-  /* eslint-disable react/no-children-prop */
-  const component = renderer.create(
-    <Provider store={store}>
-      <Navigation children={[]} {...props} />
-    </Provider>,
-  )
-  /* eslint-enable react/no-children-prop */
+jest.mock('./step', () => mockComponent('step'))
 
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
-}
+const snapshot = props => snap(Navigation)({ children: [], ...props })
 
 describe('common/Navigation', () => {
   describe('graphical (JSX)', () => {
-    it('should add custom className', () => snap({ className: 'custom' }))
-    it('should add custom style', () => snap({ style: { backgroundColor: 'red' } }))
-    it('should have a default behaviour', () => snap({}))
-    it('should handle one step', () => snap({ children: ['step 1'] }))
-    it('should handle multiple steps', () => snap({ children: ['step 1', 'step 2'] }))
+    it('should add custom className', snapshot({ className: 'custom' }))
+    it('should add custom style', snapshot({ style: { backgroundColor: 'red' } }))
+    it('should have a default behaviour', snapshot({}))
+    it('should handle one step', snapshot({ children: ['step 1'] }))
+    it('should handle multiple steps', snapshot({ children: ['step 1', 'step 2'] }))
   })
 })
 

@@ -1,27 +1,18 @@
 /* eslint-disable import/no-extraneous-dependencies, react/jsx-filename-extension */
 /* eslint-env jest */
-
-import React from 'react'
-import renderer from 'react-test-renderer'
+import snap from 'snap'
 import Number from './number'
 
-const snap = (props) => {
-  const component = renderer.create(
-    <Number {...props} />,
-  )
-
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
-}
+const snapshot = snap(Number)
 
 describe('common/Number', () => {
   describe('graphical (JSX)', () => {
-    it('should add custom className', () => snap({ className: 'custom' }))
-    it('should add custom style', () => snap({ style: { backgroundColor: 'red' } }))
-    it('should add children', () => snap({ children: 'a child' }))
-    it('should have a default behaviour', () => snap({}))
-    it('should adapt for a map', () => snap({ map: true }))
-    it('should be secondary', () => snap({ secondary: true }))
+    it('should add custom className', snapshot({ className: 'custom' }))
+    it('should add custom style', snapshot({ style: { backgroundColor: 'red' } }))
+    it('should add children', snapshot({ children: 'a child' }))
+    it('should have a default behaviour', snapshot({}))
+    it('should adapt for a map', snapshot({ map: true }))
+    it('should be secondary', snapshot({ secondary: true }))
   })
 })
 

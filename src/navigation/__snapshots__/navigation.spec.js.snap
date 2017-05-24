@@ -24,29 +24,14 @@ exports[`common/Navigation graphical (JSX) should handle multiple steps 1`] = `
   style={Object {}}
 >
   <div
-    className="step intermediate"
-    style={Object {}}
+    className="step"
   >
-    <button
-      onClick={[Function]}
-    >
-      step 1
-    </button>
-    <div
-      className="separator"
-    >
-       /
-    </div>
+    {"name":"step","props":{"number":0,"last":false,"children":"step 1"}}
   </div>
   <div
-    className="step last"
-    style={Object {}}
+    className="step"
   >
-    <button
-      onClick={undefined}
-    >
-      step 2
-    </button>
+    {"name":"step","props":{"number":1,"last":true,"children":"step 2"}}
   </div>
 </div>
 `;
@@ -57,14 +42,9 @@ exports[`common/Navigation graphical (JSX) should handle one step 1`] = `
   style={Object {}}
 >
   <div
-    className="step last"
-    style={Object {}}
+    className="step"
   >
-    <button
-      onClick={undefined}
-    >
-      step 1
-    </button>
+    {"name":"step","props":{"number":0,"last":true,"children":"step 1"}}
   </div>
 </div>
 `;

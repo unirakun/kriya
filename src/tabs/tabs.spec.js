@@ -1,32 +1,21 @@
 /* eslint-disable import/no-extraneous-dependencies, react/jsx-filename-extension */
 /* eslint-env jest */
-
-import React from 'react'
-import renderer from 'react-test-renderer'
+import snap from 'snap'
 import mockComponent from '__mocks__/component'
 import Tabs from './tabs'
 import { mapStateToProps } from './tabs.container'
 
 jest.mock('./tab', () => mockComponent('tab'))
 
-const snapshot = model => expect(model).toMatchSnapshot()
-
-const snap = (props) => {
-  const component = renderer.create(
-    <Tabs onClick={() => {}} {...props} />,
-  )
-
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
-}
+const snapshot = props => snap(Tabs)({ onClick: () => {}, ...props })
 
 describe('common/tabs', () => {
   describe('graphical (JSX)', () => {
-    it('should add custom className', () => snap({ className: 'custom' }))
-    it('should add custom style', () => snap({ style: { backgroundColor: 'red' } }))
-    it('should have a default behaviour', () => snap({}))
-    it('should prints children', () => snap({ children: ['first', 'second'] }))
-    it('should prints tabs', () => snap({ children: 'a child', tabs: ['CHOOSE', 'SEARCH'] }))
+    it('should add custom className', snapshot({ className: 'custom' }))
+    it('should add custom style', snapshot({ style: { backgroundColor: 'red' } }))
+    it('should have a default behaviour', snapshot({}))
+    it('should prints children', snapshot({ children: ['first', 'second'] }))
+    it('should prints tabs', snapshot({ children: 'a child', tabs: ['CHOOSE', 'SEARCH'] }))
   })
 
   describe('container', () => {
@@ -51,8 +40,10 @@ describe('common/tabs', () => {
       },
     }
 
-    it('should maps tabs keys to props', () => snapshot(mapStateToProps(state, {})))
-    it('should not map if children in props', () => snapshot(mapStateToProps(state, { children: 'a child' })))
+    const snapObject = model => expect(model).toMatchSnapshot()
+
+    it('should maps tabs keys to props', () => snapObject(mapStateToProps(state, {})))
+    it('should not map if children in props', () => snapObject(mapStateToProps(state, { children: 'a child' })))
   })
 })
 

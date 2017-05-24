@@ -2,27 +2,20 @@
 /* eslint-env jest */
 
 import React from 'react'
-import renderer from 'react-test-renderer'
 import { mount } from 'enzyme'
+import snap from 'snap'
 import Menu from './menu'
 import { mapDispatchToProps } from './menu.container'
 
-const snap = (props) => {
-  const component = renderer.create(
-    <Menu onHeaderClick={() => {}} onFooterClick={() => {}} {...props} />,
-  )
-
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
-}
+const snapshot = props => snap(Menu)({ onHeaderClick: () => {}, onFooterClick: () => {}, ...props })
 
 describe('common/Menu', () => {
-  it('should have a default behaviour', () => snap({}))
-  it('should add custom className', () => snap({ className: 'custom' }))
-  it('should add custom style', () => snap({ style: { backgroundColor: 'red' } }))
-  it('should add a header', () => snap({ header: <div>header</div> }))
-  it('should add a footer', () => snap({ footer: <div>footer</div> }))
-  it('should add items', () => snap({ children: [<div key={1}>1</div>, <div key={2}>2</div>] }))
+  it('should have a default behaviour', snapshot({}))
+  it('should add custom className', snapshot({ className: 'custom' }))
+  it('should add custom style', snapshot({ style: { backgroundColor: 'red' } }))
+  it('should add a header', snapshot({ header: <div>header</div> }))
+  it('should add a footer', snapshot({ footer: <div>footer</div> }))
+  it('should add items', snapshot({ children: [<div key={1}>1</div>, <div key={2}>2</div>] }))
 
   describe('callbacks', () => {
     const clickTest = (props, selector) => {
