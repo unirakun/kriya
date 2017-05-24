@@ -25,7 +25,7 @@ describe('common/Card', () => {
   })
 
   describe('container', () => {
-    const snap = (props, cards = {}) => {
+    const snapContainer = (props, cards = {}) => {
       const dispatch = jest.fn()
       const store = createStore(() => ({ ui: { cards } }))
       store.dispatch = dispatch
@@ -43,23 +43,23 @@ describe('common/Card', () => {
 
     it('should call the given click', () => {
       let onClick = jest.fn()
-      snap({ name: 'card1', onClick }, { card1: false })
+      snapContainer({ name: 'card1', onClick }, { card1: false })
       expect(onClick.mock.calls.length).toBe(1)
 
       onClick = jest.fn()
-      snap({ name: 'card1', onClick }, { card1: true })
+      snapContainer({ name: 'card1', onClick }, { card1: true })
       expect(onClick.mock.calls.length).toBe(1)
     })
 
     it('should open the card', () => {
-      const dispatch = snap({ name: 'card1' }, { card1: false })
+      const dispatch = snapContainer({ name: 'card1' }, { card1: false })
 
       expect(dispatch.mock.calls.length).toBe(1)
       expect(dispatch.mock.calls[0]).toEqual([open('card1')])
     })
 
     it('should not close the card', () => {
-      const dispatch = snap({ name: 'card1' }, { card1: true })
+      const dispatch = snapContainer({ name: 'card1' }, { card1: true })
 
       expect(dispatch.mock.calls.length).toBe(0)
     })
