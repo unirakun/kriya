@@ -11,6 +11,7 @@ const Icon = ({
   labelLeft, labelRight,
   primary, secondary, disabled,
   prefix,
+  title,
   noColor /* set to true to print the native icon color */,
 }) => {
   const classes = classnames(
@@ -29,7 +30,7 @@ const Icon = ({
   // Icon from icomoon have different path (up to 13) to handle colors
   // We inject all of them
   const iconComponent = (
-    <i name={iconCode} className={iconCode}>
+    <i name={iconCode} className={iconCode} title={title}>
       {
         Array.from(new Array(13), (x, i) => i + 1)
           .map(i => <span key={i} className={`path${i}`} />)
@@ -61,6 +62,7 @@ Icon.propTypes = {
   secondary: PropTypes.bool,
   disabled: PropTypes.bool,
   noColor: PropTypes.bool,
+  title: PropTypes.string,
 }
 
 Icon.defaultProps = {
@@ -72,6 +74,7 @@ Icon.defaultProps = {
   secondary: false,
   disabled: false,
   noColor: false,
+  title: undefined,
 }
 
 export default onlyUpdateForPropTypes(Icon)
