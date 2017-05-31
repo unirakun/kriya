@@ -8,6 +8,7 @@ exports[`common/Icon container should looking for prefix in redux 1`] = `
   <i
     className="redux-prefixicon"
     name="redux-prefixicon"
+    title={undefined}
   >
     <span
       className="path1"
@@ -60,6 +61,60 @@ exports[`common/Icon container should use a default prefix (empty one) 1`] = `
   <i
     className="icon"
     name="icon"
+    title={undefined}
+  >
+    <span
+      className="path1"
+    />
+    <span
+      className="path2"
+    />
+    <span
+      className="path3"
+    />
+    <span
+      className="path4"
+    />
+    <span
+      className="path5"
+    />
+    <span
+      className="path6"
+    />
+    <span
+      className="path7"
+    />
+    <span
+      className="path8"
+    />
+    <span
+      className="path9"
+    />
+    <span
+      className="path10"
+    />
+    <span
+      className="path11"
+    />
+    <span
+      className="path12"
+    />
+    <span
+      className="path13"
+    />
+  </i>
+</div>
+`;
+
+exports[`common/Icon graphical (JSX) should add a title 1`] = `
+<div
+  className="icon colored"
+  style={Object {}}
+>
+  <i
+    className="aprefix-icon"
+    name="aprefix-icon"
+    title="a title"
   >
     <span
       className="path1"
@@ -112,6 +167,7 @@ exports[`common/Icon graphical (JSX) should add custom className 1`] = `
   <i
     className="aprefix-icon"
     name="aprefix-icon"
+    title={undefined}
   >
     <span
       className="path1"
@@ -168,6 +224,7 @@ exports[`common/Icon graphical (JSX) should add custom style 1`] = `
   <i
     className="aprefix-icon"
     name="aprefix-icon"
+    title={undefined}
   >
     <span
       className="path1"
@@ -220,6 +277,7 @@ exports[`common/Icon graphical (JSX) should create a disabled icon 1`] = `
   <i
     className="aprefix-icon"
     name="aprefix-icon"
+    title={undefined}
   >
     <span
       className="path1"
@@ -272,6 +330,7 @@ exports[`common/Icon graphical (JSX) should create a primary icon 1`] = `
   <i
     className="aprefix-icon"
     name="aprefix-icon"
+    title={undefined}
   >
     <span
       className="path1"
@@ -324,6 +383,7 @@ exports[`common/Icon graphical (JSX) should create a secondary icon 1`] = `
   <i
     className="aprefix-icon"
     name="aprefix-icon"
+    title={undefined}
   >
     <span
       className="path1"
@@ -381,6 +441,7 @@ exports[`common/Icon graphical (JSX) should create an icon with label to left 1`
   <i
     className="aprefix-icon"
     name="aprefix-icon"
+    title={undefined}
   >
     <span
       className="path1"
@@ -433,6 +494,7 @@ exports[`common/Icon graphical (JSX) should create an icon with label to right 1
   <i
     className="aprefix-icon"
     name="aprefix-icon"
+    title={undefined}
   >
     <span
       className="path1"
@@ -490,6 +552,7 @@ exports[`common/Icon graphical (JSX) should create an icon without color 1`] = `
   <i
     className="aprefix-icon"
     name="aprefix-icon"
+    title={undefined}
   >
     <span
       className="path1"
@@ -542,6 +605,7 @@ exports[`common/Icon graphical (JSX) should have a default behaviour 1`] = `
   <i
     className="aprefix-icon"
     name="aprefix-icon"
+    title={undefined}
   >
     <span
       className="path1"
@@ -599,6 +663,7 @@ exports[`common/Icon graphical (JSX) should print labels to both sides 1`] = `
   <i
     className="aprefix-icon"
     name="aprefix-icon"
+    title={undefined}
   >
     <span
       className="path1"
@@ -656,6 +721,7 @@ exports[`common/Icon graphical (JSX) should take a prefix 1`] = `
   <i
     className="myPrefix-myIcon"
     name="myPrefix-myIcon"
+    title={undefined}
   >
     <span
       className="path1"
@@ -708,6 +774,7 @@ exports[`common/Icon graphical (JSX) should take an icon name as children 1`] = 
   <i
     className="aprefix-different-icon"
     name="aprefix-different-icon"
+    title={undefined}
   >
     <span
       className="path1"

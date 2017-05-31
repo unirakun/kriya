@@ -25,6 +25,7 @@ describe('common/Icon', () => {
     it('should take an icon name as children', snapshot({ children: 'different-icon' }))
     it('should take a prefix', snapshot({ children: 'myIcon', prefix: 'myPrefix-' }))
     it('should have a default behaviour', snapshot({}))
+    it('should add a title', snapshot({ title: 'a title' }))
   })
 
   describe('container', () => {
