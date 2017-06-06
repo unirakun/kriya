@@ -98,6 +98,37 @@ exports[`common/Button graphical (JSX) should add custom style 1`] = `
 </button>
 `;
 
+exports[`common/Button graphical (JSX) should be a submit button 1`] = `
+<button
+  className="button"
+  disabled={false}
+  onClick={[Function]}
+  style={Object {}}
+  title=""
+  type="submit"
+>
+  <canvas
+    className="ink"
+    height={0}
+    onDragOver={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    style={
+      Object {
+        "borderRadius": "inherit",
+        "height": "100%",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": "100%",
+      }
+    }
+    width={0}
+  />
+</button>
+`;
+
 exports[`common/Button graphical (JSX) should create a disabled button 1`] = `
 <button
   className="button disabled"

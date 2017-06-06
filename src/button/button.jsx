@@ -109,7 +109,7 @@ Button.defaultProps = {
   targetBlank: false,
   iconLeft: undefined,
   iconRight: undefined,
-  type: undefined, /* FIXME: test */
+  type: undefined,
 }
 
 export default onlyUpdateForPropTypes(Button)
