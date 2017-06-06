@@ -22,6 +22,7 @@ const Button = ({
   targetBlank,
   iconLeft,
   iconRight,
+  type,
 }) => {
   const classes = classnames(
     styles.button,
@@ -45,6 +46,7 @@ const Button = ({
     style,
     disabled,
     title,
+    onClick,
   }
 
   /* content of component (Button or Link) */
@@ -68,8 +70,8 @@ const Button = ({
 
   return (
     !href ?
-      <button {...commonProps} onClick={onClick}>{childrenComponent}</button> :
-      <a {...linkProps} {...commonProps} onClick={onClick}>{childrenComponent}</a>
+      <button {...commonProps} type={type}>{childrenComponent}</button> :
+      <a {...linkProps} {...commonProps}>{childrenComponent}</a>
   )
 }
 
@@ -89,6 +91,7 @@ Button.propTypes = {
   targetBlank: PropTypes.bool,
   iconLeft: PropTypes.string,
   iconRight: PropTypes.string,
+  type: PropTypes.string,
 }
 
 Button.defaultProps = {
@@ -106,6 +109,7 @@ Button.defaultProps = {
   targetBlank: false,
   iconLeft: undefined,
   iconRight: undefined,
+  type: undefined, /* FIXME: test */
 }
 
 export default onlyUpdateForPropTypes(Button)

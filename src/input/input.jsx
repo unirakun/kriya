@@ -5,6 +5,7 @@ import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
 import Select from 'kriya-select'
 import Checkbox from './checkbox'
+import KriyaField from './field'
 import styles from '../../src/input/input.styles.scss'
 
 const getComponent = (type) => {
@@ -12,9 +13,11 @@ const getComponent = (type) => {
     case 'select': return 'select'
     case 'textarea': return 'textarea'
     case 'checkbox': return Checkbox
-    default: return 'input'
+    default: return KriyaField
   }
 }
+
+const validateRequired = value => (value ? undefined : 'required')
 
 const Input = ({
    className, style,
@@ -22,6 +25,7 @@ const Input = ({
    placeholder, disabled,
    required, options, value,
    asynch, loadOptions,
+   error,
    ...selectboxProps
  }) => {
   const classes = classnames(
@@ -30,7 +34,7 @@ const Input = ({
     className,
   )
 
-  const commonProps = { name, placeholder, disabled, required }
+  const commonProps = { name, placeholder, disabled }
 
   const SelectComponent = asynch ? Select.Async : Select
   const select = (
@@ -39,16 +43,20 @@ const Input = ({
       value={value}
       options={options}
       loadOptions={loadOptions}
+      className={classnames({ [styles.error]: !!error })}
       {...commonProps}
       {...selectboxProps}
     />
   )
 
+  const validate = []
+  if (required) validate.push(validateRequired)
   const field = (
     <Field
       className={type === 'checkbox' ? '' : styles.field}
       component={getComponent(type)}
       {...commonProps}
+      validate={validate}
       type={type}
     >
       {type === 'select' ? options.map(o => <option key={o.value} value={o.value}>{o.label}</option>) : null}
@@ -68,7 +76,7 @@ Input.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   placeholder: PropTypes.string,
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   asynch: PropTypes.bool,
   name: PropTypes.string.isRequired,
   label: PropTypes.string,
@@ -76,12 +84,13 @@ Input.propTypes = {
   disabled: PropTypes.bool,
   required: PropTypes.bool,
   options: PropTypes.arrayOf(PropTypes.shape({
-    value: PropTypes.string,
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     label: PropTypes.string,
   })),
   onChange: PropTypes.func,
   onInputChange: PropTypes.func,
   loadOptions: PropTypes.func,
+  error: PropTypes.any,
 }
 
 Input.defaultProps = {
@@ -98,6 +107,7 @@ Input.defaultProps = {
   onChange: undefined,
   onInputChange: undefined,
   loadOptions: undefined,
+  error: false,
 }
 
 export default onlyUpdateForPropTypes(Input)

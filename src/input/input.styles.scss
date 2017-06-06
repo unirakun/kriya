@@ -123,6 +123,16 @@
   transition: $default-transition transform, $default-transition color;
 }
 
+.error {
+  :global(.Select-control) {
+    border: $border-size solid $error-color !important;
+
+    & + .arrow {
+      color: $error-color !important;
+    }
+  }
+}
+
 .field,
 :global(.Select-control) {
   border: $border-size solid $default-grey-color;
@@ -143,7 +153,8 @@
     }
   }
 
-  &:invalid {
+  &:invalid,
+  &.error {
     border: $border-size solid $error-color;
 
     & + .arrow {
