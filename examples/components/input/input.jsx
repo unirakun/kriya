@@ -4,6 +4,7 @@ import { reduxForm } from 'redux-form'
 import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
 import Input from '../../../src/input'
+import Button from '../../../src/button'
 import { options } from '../../constant'
 import styles from './input.styles.scss'
 
@@ -20,23 +21,20 @@ const Form = ({ style, className }) => {
       className={classes}
       style={style}
       id={formName}
-      onSubmit={e => e.preventDefault()}
     >
       <h1>Examples INPUT</h1>
       {/* form input */}
       <div>
-        <Input type="input" placeholder="input" name="input"/>
+        <Input type="input" placeholder="input" name="input" required />
         <Input type="textarea" placeholder="textarea" name="textArea" />
         <Input type="select" placeholder="select" name="select" options={options} />
       </div>
       <div>
-        <Input type="selectbox" placeholder="selectbox" name="selectbox" options={options} />
+        <Input type="selectbox" placeholder="selectbox" name="selectbox" options={options} required />
         <Input type="selectbox" placeholder="selectbox multi" name="selectbox_multi" options={options} multi />
         <Input type="checkbox" name="checkbox" />
       </div>
-      <div>
-
-      </div>
+      <Button type="submit" name="SUBMIT">Submit</Button>
     </form>
   )
 }

@@ -2,10 +2,10 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Component from './button'
 
-const mapDispatchToProps = (dispatch, { name, href }) => {
+const mapDispatchToProps = (dispatch, { name, href, type }) => {
   return {
     onClick: (e) => {
-      if (!href) e.preventDefault()
+      if (!href && type !== 'submit') e.preventDefault()
       e.stopPropagation()
       dispatch({ type: `BTN_CLICKED_${name}` })
     },

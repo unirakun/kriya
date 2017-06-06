@@ -54,6 +54,7 @@ describe('common/Button', () => {
     it('should create a flat primary button', snapshot({ flat: true, primary: true }))
     it('should create a flat secondary button', snapshot({ flat: true, secondary: true }))
     it('shouldnt print ink behaviour', snapshot({ ink: false }))
+    it('should be a submit button', snapshot({ type: 'submit' }))
     it('should have a default behaviour', snapshot({}))
   })
 

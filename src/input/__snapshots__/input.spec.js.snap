@@ -15,7 +15,6 @@ exports[`common/Input container should pass value of redux form for select 1`] =
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    required={false}
     type="select"
     value="1"
   >
@@ -54,7 +53,7 @@ exports[`common/Input container should pass value of redux form for selectbox 1`
   <div
     className="kriya-select"
   >
-    {"name":"kriya-select","props":{"simpleValue":true,"value":"1","options":[{"value":"o1","label":"l1"},{"value":"o4","label":"l4"},{"value":"o2","label":"l2"},{"value":"o3","label":"l3"}],"name":"field1","placeholder":"","disabled":false,"required":false,"anyTouched":false,"asyncValidating":false,"dirty":true,"form":"form1","initialized":false,"invalid":false,"pristine":false,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{}}}
+    {"name":"kriya-select","props":{"simpleValue":true,"value":"1","options":[{"value":"o1","label":"l1"},{"value":"o4","label":"l4"},{"value":"o2","label":"l2"},{"value":"o3","label":"l3"}],"className":"","name":"field1","placeholder":"","disabled":false,"anyTouched":false,"asyncValidating":false,"dirty":true,"form":"form1","initialized":false,"invalid":false,"pristine":false,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{}}}
   </div>
 </div>
 `;
@@ -72,7 +71,6 @@ exports[`common/Input graphical (JSX) labels should print a * on label when inpu
   </label>
   <input
     className="field"
-    disabled={false}
     name="name"
     onBlur={[Function]}
     onChange={[Function]}
@@ -80,7 +78,6 @@ exports[`common/Input graphical (JSX) labels should print a * on label when inpu
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    required={true}
     type="input"
     value=""
   />
@@ -99,7 +96,6 @@ exports[`common/Input graphical (JSX) labels should print a label 1`] = `
   </label>
   <input
     className="field"
-    disabled={false}
     name="name"
     onBlur={[Function]}
     onChange={[Function]}
@@ -107,7 +103,6 @@ exports[`common/Input graphical (JSX) labels should print a label 1`] = `
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    required={false}
     type="input"
     value=""
   />
@@ -121,7 +116,6 @@ exports[`common/Input graphical (JSX) should add custom className 1`] = `
 >
   <input
     className="field"
-    disabled={false}
     name="name"
     onBlur={[Function]}
     onChange={[Function]}
@@ -129,7 +123,6 @@ exports[`common/Input graphical (JSX) should add custom className 1`] = `
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    required={false}
     type="input"
     value=""
   />
@@ -147,7 +140,6 @@ exports[`common/Input graphical (JSX) should add custom style 1`] = `
 >
   <input
     className="field"
-    disabled={false}
     name="name"
     onBlur={[Function]}
     onChange={[Function]}
@@ -155,7 +147,6 @@ exports[`common/Input graphical (JSX) should add custom style 1`] = `
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    required={false}
     type="input"
     value=""
   />
@@ -169,7 +160,6 @@ exports[`common/Input graphical (JSX) should be disabled 1`] = `
 >
   <input
     className="field"
-    disabled={true}
     name="name"
     onBlur={[Function]}
     onChange={[Function]}
@@ -177,7 +167,6 @@ exports[`common/Input graphical (JSX) should be disabled 1`] = `
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    required={false}
     type="input"
     value=""
   />
@@ -191,7 +180,6 @@ exports[`common/Input graphical (JSX) should have a default behaviour 1`] = `
 >
   <input
     className="field"
-    disabled={false}
     name="name"
     onBlur={[Function]}
     onChange={[Function]}
@@ -199,7 +187,6 @@ exports[`common/Input graphical (JSX) should have a default behaviour 1`] = `
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    required={false}
     type="input"
     value=""
   />
@@ -221,7 +208,6 @@ exports[`common/Input graphical (JSX) should print an icon when this is a select
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    required={false}
     type="select"
     value=""
   />
@@ -238,7 +224,6 @@ exports[`common/Input graphical (JSX) should print the placeholder 1`] = `
 >
   <input
     className="field"
-    disabled={false}
     name="name"
     onBlur={[Function]}
     onChange={[Function]}
@@ -246,7 +231,6 @@ exports[`common/Input graphical (JSX) should print the placeholder 1`] = `
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder="My placeholder"
-    required={false}
     type="input"
     value=""
   />
@@ -268,7 +252,6 @@ exports[`common/Input graphical (JSX) types should print a select 1`] = `
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    required={false}
     type="select"
     value=""
   />
@@ -286,7 +269,7 @@ exports[`common/Input graphical (JSX) types should print a selectbox 1`] = `
   <div
     className="kriya-select"
   >
-    {"name":"kriya-select","props":{"simpleValue":true,"options":[],"name":"name","placeholder":"","disabled":false,"required":false,"anyTouched":false,"asyncValidating":false,"dirty":false,"form":"testForm","initialized":false,"invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{}}}
+    {"name":"kriya-select","props":{"simpleValue":true,"options":[],"className":"","name":"name","placeholder":"","disabled":false,"anyTouched":false,"asyncValidating":false,"dirty":false,"form":"testForm","initialized":false,"invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{}}}
   </div>
 </div>
 `;
@@ -306,7 +289,6 @@ exports[`common/Input graphical (JSX) types should print a textarea 1`] = `
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    required={false}
     type="textarea"
     value=""
   />
@@ -321,7 +303,7 @@ exports[`common/Input graphical (JSX) types should print an input (checkbox) 1`]
   <div
     className="checkbox"
   >
-    {"name":"checkbox","props":{"input":{"name":"name","value":"","checked":false},"meta":{"active":false,"asyncValidating":false,"autofilled":false,"dirty":false,"form":"testForm","invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"touched":false,"valid":true,"visited":false},"className":"","placeholder":"","disabled":false,"required":false,"type":"checkbox","children":null}}
+    {"name":"checkbox","props":{"input":{"name":"name","value":"","checked":false},"meta":{"active":false,"asyncValidating":false,"autofilled":false,"dirty":false,"form":"testForm","invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"touched":false,"valid":true,"visited":false},"className":"","placeholder":"","disabled":false,"type":"checkbox","children":null}}
   </div>
 </div>
 `;
@@ -333,7 +315,6 @@ exports[`common/Input graphical (JSX) types should print an input (input) 1`] = 
 >
   <input
     className="field"
-    disabled={false}
     name="name"
     onBlur={[Function]}
     onChange={[Function]}
@@ -341,7 +322,6 @@ exports[`common/Input graphical (JSX) types should print an input (input) 1`] = 
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    required={false}
     type="input"
     value=""
   />
@@ -355,7 +335,6 @@ exports[`common/Input graphical (JSX) types should print an input (number) 1`] =
 >
   <input
     className="field"
-    disabled={false}
     name="name"
     onBlur={[Function]}
     onChange={[Function]}
@@ -363,7 +342,6 @@ exports[`common/Input graphical (JSX) types should print an input (number) 1`] =
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    required={false}
     type="number"
     value=""
   />
@@ -378,7 +356,6 @@ exports[`common/Input graphical (JSX) types should print an input (radio) 1`] = 
   <input
     checked={false}
     className="field"
-    disabled={false}
     name="name"
     onBlur={[Function]}
     onChange={[Function]}
@@ -386,7 +363,6 @@ exports[`common/Input graphical (JSX) types should print an input (radio) 1`] = 
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    required={false}
     type="radio"
     value={undefined}
   />
@@ -408,7 +384,6 @@ exports[`common/Input graphical (JSX) types should print options on select 1`] =
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    required={false}
     type="select"
     value=""
   >
@@ -447,7 +422,7 @@ exports[`common/Input graphical (JSX) types should print options on selectbox 1`
   <div
     className="kriya-select"
   >
-    {"name":"kriya-select","props":{"simpleValue":true,"options":[{"value":"o1","label":"l1"},{"value":"o4","label":"l4"},{"value":"o2","label":"l2"},{"value":"o3","label":"l3"}],"name":"name","placeholder":"","disabled":false,"required":false,"anyTouched":false,"asyncValidating":false,"dirty":false,"form":"testForm","initialized":false,"invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{}}}
+    {"name":"kriya-select","props":{"simpleValue":true,"options":[{"value":"o1","label":"l1"},{"value":"o4","label":"l4"},{"value":"o2","label":"l2"},{"value":"o3","label":"l3"}],"className":"","name":"name","placeholder":"","disabled":false,"anyTouched":false,"asyncValidating":false,"dirty":false,"form":"testForm","initialized":false,"invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{}}}
   </div>
 </div>
 `;
@@ -459,7 +434,6 @@ exports[`common/Input graphical (JSX) types shouldnt print options (not select) 
 >
   <input
     className="field"
-    disabled={false}
     name="name"
     onBlur={[Function]}
     onChange={[Function]}
@@ -467,7 +441,6 @@ exports[`common/Input graphical (JSX) types shouldnt print options (not select) 
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    required={false}
     type="input"
     value=""
   />
