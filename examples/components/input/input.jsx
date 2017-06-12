@@ -25,7 +25,7 @@ const Form = ({ style, className }) => {
       <h1>Examples INPUT</h1>
       {/* form input */}
       <div>
-        <Input type="input" placeholder="input" name="input" required />
+        <Input type="input" placeholder="input" name="input" required label="Input label" />
         <Input type="textarea" placeholder="textarea" name="textArea" />
         <Input type="select" placeholder="select" name="select" options={options} />
       </div>
