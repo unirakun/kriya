@@ -6,7 +6,7 @@ export const initAction = { type: 'UNKNOWN' }
 
 export default (state = initState, { type, payload } = initAction) => {
   switch (type) {
-    case OPEN_POPOVER: return { ...state, [payload]: true }
+    case OPEN_POPOVER: return { ...state, [payload.code]: true, contents: payload.contents }
     case CLOSE_POPOVER: return omit(state, [payload])
     default: return state
   }

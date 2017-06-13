@@ -1,7 +1,3 @@
-import tabs from './tabs'
-
-const initState = {
-  tabs,
-}
-
-export default (state = initState) => state
+export { default } from './ui'
+export * from './ui.selectors'
+export * from './tabs'
