@@ -56,8 +56,8 @@ describe('common/Popover', () => {
       expect(tree).toMatchSnapshot()
     }
 
-    it('should pass print=false when the popover is not listed in redux', () => snapContainer({ pop1: true }, { code: 'pop2' }))
-    it('should pass print=true when the popover IS listed in redux', () => snapContainer({ pop1: true }, { code: 'pop1' }))
+    it('should pass print=false when the popover is not listed in redux', () => snapContainer({ pop1: { print: true } }, { code: 'pop2' }))
+    it('should pass print=true when the popover IS listed in redux', () => snapContainer({ pop1: { print: true } }, { code: 'pop1' }))
     it('should pass onClose callback when closable', () => snapContainer({}, { code: 'pop1', closable: true }))
     it('should pass contents', () => snapContainer({}, { code: 'pop1', contents: { descriptions: 'descriptions' } }))
     it(`should call ${CLOSE_POPOVER} when clicked`, () => {

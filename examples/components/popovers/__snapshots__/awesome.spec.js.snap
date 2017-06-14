@@ -9,7 +9,9 @@ exports[`popovers/innovative should add custom className 1`] = `
   <h1>
     AWESOME
   </h1>
-  <p />
+  <p>
+    
+  </p>
 </div>
 `;
 
@@ -26,7 +28,9 @@ exports[`popovers/innovative should add custom style 1`] = `
   <h1>
     AWESOME
   </h1>
-  <p />
+  <p>
+    
+  </p>
 </div>
 `;
 
@@ -39,7 +43,9 @@ exports[`popovers/innovative should have a default behaviour 1`] = `
   <h1>
     AWESOME
   </h1>
-  <p />
+  <p>
+    
+  </p>
 </div>
 `;
 
@@ -52,6 +58,8 @@ exports[`popovers/innovative should not print 1`] = `
   <h1>
     AWESOME
   </h1>
-  <p />
+  <p>
+    
+  </p>
 </div>
 `;

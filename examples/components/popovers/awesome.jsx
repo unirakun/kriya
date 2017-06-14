@@ -4,7 +4,7 @@ import { onlyUpdateForPropTypes } from 'recompose'
 import classnames from 'classnames'
 import styles from './popovers.styles.scss'
 
-const Awesome = ({ style, className, print, contents }) => {
+const Awesome = ({ style, className, print, description }) => {
   const classes = classnames(
     styles.popover,
     className,
@@ -18,7 +18,7 @@ const Awesome = ({ style, className, print, contents }) => {
       <h1>
         AWESOME
       </h1>
-      <p>{contents && contents.description}</p>
+      <p>{description}</p>
     </div>
   )
 }
@@ -27,13 +27,13 @@ Awesome.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
   print: PropTypes.bool.isRequired,
-  contents: PropTypes.object,
+  description: PropTypes.string,
 }
 
 Awesome.defaultProps = {
   style: {},
   className: '',
-  contents: undefined,
+  description: '',
 }
 
 export default onlyUpdateForPropTypes(Awesome)

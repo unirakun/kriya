@@ -3,8 +3,9 @@ import { closePopover, getPopover } from './redux'
 import Component from './popover'
 
 const mapStateToProps = (state, { code }) => {
-  const popover = getPopover(state)
-  return popover ? { print: popover[code], contents: popover.contents } : {}
+  const popover = getPopover(state)[code]
+  if (!popover) return {}
+  return popover
 }
 
 const mapDispatchToProps = (dispatch, { closable, code }) => {

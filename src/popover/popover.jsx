@@ -16,7 +16,7 @@ const Popover = ({ style, className, children, onClose, print, contents }) => {
   return (
     // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <div style={style} className={classes} onClick={onClose}>
-      {React.cloneElement(children, { print, onClose, contents })}
+      {React.cloneElement(children, { print, onClose, ...contents })}
     </div>
   )
 }
