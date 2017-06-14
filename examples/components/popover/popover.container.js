@@ -4,7 +4,8 @@ import Component from './popover'
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onClick: () => dispatch(openPopover('awesome', { description: 'U R AWESOME!' })),
+    onClickAwesome: () => dispatch(openPopover('awesome', { description: 'U R AWESOME!' })),
+    onClickNormal: () => dispatch(openPopover('awesome')),
   }
 }
 

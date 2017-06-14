@@ -1,4 +1,3 @@
-import omit from 'lodash/omit'
 import { OPEN_POPOVER, CLOSE_POPOVER } from './popover.actions'
 
 export const initState = { }

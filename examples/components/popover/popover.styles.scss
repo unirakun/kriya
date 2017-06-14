@@ -5,8 +5,15 @@
   bottom: 0;
 }
 
-.button {
+.awesome {
   background: $secondary-color;
+  color: #ffffff;
+  padding: 1em;
+  margin: 1em;
+}
+
+.normal {
+  background: $primary-color;
   color: #ffffff;
   padding: 1em;
   margin: 1em;

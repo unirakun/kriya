@@ -4,7 +4,7 @@ import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
 import styles from './popover.styles.scss'
 
-const Popover = ({ style, className, onClick }) => {
+const Popover = ({ style, className, onClickAwesome, onClickNormal }) => {
   const classes = classnames(
     styles.popover,
     className,
@@ -15,7 +15,8 @@ const Popover = ({ style, className, onClick }) => {
       className={classes}
       style={style}
     >
-      <div className={styles.button} name="AWESOME" onClick={onClick}>OPEN AWESOME POPOVER</div>
+      <div className={styles.awesome} name="AWESOME" onClick={onClickAwesome}>OPEN AWESOME POPOVER</div>
+      <div className={styles.normal} name="NORMAL" onClick={onClickNormal}>OPEN JUST NORMAL POPOVER</div>
     </div>
   )
 }
@@ -23,7 +24,8 @@ const Popover = ({ style, className, onClick }) => {
 Popover.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
-  onClick: PropTypes.func.isRequired,
+  onClickAwesome: PropTypes.func.isRequired,
+  onClickNormal: PropTypes.func.isRequired,
 }
 
 Popover.defaultProps = {
