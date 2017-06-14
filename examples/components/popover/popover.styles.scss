@@ -1,0 +1,20 @@
+@import '~styles/theme';
+
+.popover {
+  position: absolute;
+  bottom: 0;
+}
+
+.awesome {
+  background: $secondary-color;
+  color: #ffffff;
+  padding: 1em;
+  margin: 1em;
+}
+
+.normal {
+  background: $primary-color;
+  color: #ffffff;
+  padding: 1em;
+  margin: 1em;
+}
