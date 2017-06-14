@@ -39,7 +39,7 @@ describe('popover/redux', () => {
 
     it('should close a popover', () =>
       expect(reducer(state.ui.popover, closePopover('pop1')))
-      .toEqual({ pop2: state.ui.popover.pop2 })
+      .toEqual({ ...state.ui.popover, pop1: { ...state.ui.popover.pop1, print: false } })
     )
   })
 })

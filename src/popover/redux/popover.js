@@ -8,7 +8,8 @@ export default (state = initState, { type, payload } = initAction) => {
   switch (type) {
     case OPEN_POPOVER:
       return { ...state, [payload.code]: { print: true, contents: payload.contents } }
-    case CLOSE_POPOVER: return omit(state, [payload])
+    case CLOSE_POPOVER:
+      return { ...state, [payload]: { ...state[payload], print: false } }
     default: return state
   }
 }
