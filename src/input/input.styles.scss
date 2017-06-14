@@ -1,12 +1,12 @@
 @import '~styles/theme';
 
 .input {
-  flex: 1;
   flex-direction: column;
   position: relative;
   width: 15em;
 
   label {
+    display: inline-block;
     margin-bottom: $input-radius-size;
   }
 
