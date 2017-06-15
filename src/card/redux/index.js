@@ -1,7 +1,10 @@
-import card from './card'
+import cards from './card'
 import * as actions from './card.actions'
 import * as selectors from './card.selectors'
 
-Object.assign(card, actions, selectors)
+Object.assign(cards, actions, selectors)
 
-export default card
+export * from './card.actions'
+export * from './card.selectors'
+export default cards
+

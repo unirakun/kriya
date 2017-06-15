@@ -1,0 +1,5 @@
+{
+  "name": "kriya/redux",
+  "private": true,
+  "main": "../lib/redux.js"
+}

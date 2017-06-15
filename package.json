@@ -1,6 +1,6 @@
 {
   "name": "kriya",
-  "version": "1.8.0-alpha-1",
+  "version": "1.8.0-alpha-6",
   "main": "index.js",
   "description": "Kriya is a react/redux components library",
   "license": "MIT",
@@ -69,7 +69,7 @@
     ],
     "presets": [
       "es2017",
-      "es2015-rollup",
+      "es2015",
       "react"
     ],
     "env": {
@@ -93,7 +93,6 @@
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-plugin-transform-react-jsx": "^6.23.0",
     "babel-preset-es2015": "^6.24.0",
-    "babel-preset-es2015-rollup": "^3.0.0",
     "babel-preset-es2017": "^6.22.0",
     "babel-preset-react": "^6.23.0",
     "babel-register": "^6.24.0",
@@ -124,10 +123,6 @@
     "react-hot-loader": "3.0.0-beta.6",
     "react-test-renderer": "^15.4.2",
     "recompose": "^0.22.0",
-    "rollup": "^0.43.0",
-    "rollup-plugin-babel": "^2.7.1",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-plugin-uglify": "^2.0.1",
     "sass-lint": "^1.10.2",
     "sass-loader": "^4.1.1",
     "sinon": "^2.1.0",

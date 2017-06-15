@@ -1,0 +1,5 @@
+{
+  "name": "kriya/components",
+  "private": true,
+  "main": "../lib/components.js"
+}
