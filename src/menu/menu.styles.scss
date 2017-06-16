@@ -15,11 +15,16 @@ $padding: 2em;
   flex-direction: column;
   height: calc(100vh - #{2 * $padding});
   padding: $padding;
+  position: relative;
 }
 
 .items {
   display: flex;
   flex-direction: column;
+  left: 0;
+  position: absolute;
+  top: 7em;
+  width: 85%;
 }
 
 .footer {
