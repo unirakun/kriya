@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { reduxForm } from 'redux-form'
+import router from 'hoc-little-router'
 import classnames from 'classnames'
 import Input from '../../../src/input'
 import Group from '../../../src/group'
@@ -51,4 +52,4 @@ Form.defaultProps = {
   className: '',
 }
 
-export default reduxForm({ form: formName })(Form)
+export default router('GROUP')(reduxForm({ form: formName })(Form))

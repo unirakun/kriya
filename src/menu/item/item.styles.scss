@@ -5,6 +5,7 @@
   border: 1px solid $primary-color-darken-2;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
+  color: $default-bg-color;
   margin-bottom: 1em;
 
   &:last-child {
@@ -19,6 +20,7 @@
 .selected {
   background-color: $default-bg-color;
   border: 0;
+  color: $secondary-color;
 
   &:hover {
     background-color: $default-bg-color;
