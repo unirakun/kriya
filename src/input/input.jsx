@@ -39,7 +39,6 @@ const Input = ({
   const SelectComponent = asynch ? Select.Async : Select
   const select = (
     <SelectComponent
-      simpleValue
       value={value}
       options={options}
       loadOptions={loadOptions}
@@ -80,7 +79,7 @@ Input.propTypes = {
   asynch: PropTypes.bool,
   name: PropTypes.string.isRequired,
   label: PropTypes.string,
-  type: PropTypes.oneOf(['input', 'checkbox', 'textarea', 'radio', 'select', 'selectbox', 'number']),
+  type: PropTypes.oneOf(['input', 'checkbox', 'textarea', 'radio', 'select', 'selectbox', 'number', 'date']),
   disabled: PropTypes.bool,
   required: PropTypes.bool,
   options: PropTypes.arrayOf(PropTypes.shape({

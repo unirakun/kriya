@@ -53,7 +53,7 @@ exports[`common/Input container should pass value of redux form for selectbox 1`
   <div
     className="kriya-select"
   >
-    {"name":"kriya-select","props":{"simpleValue":true,"value":"1","options":[{"value":"o1","label":"l1"},{"value":"o4","label":"l4"},{"value":"o2","label":"l2"},{"value":"o3","label":"l3"}],"className":"","name":"field1","placeholder":"","disabled":false,"anyTouched":false,"asyncValidating":false,"dirty":true,"form":"form1","initialized":false,"invalid":false,"pristine":false,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{}}}
+    {"name":"kriya-select","props":{"value":"1","options":[{"value":"o1","label":"l1"},{"value":"o4","label":"l4"},{"value":"o2","label":"l2"},{"value":"o3","label":"l3"}],"className":"","name":"field1","placeholder":"","disabled":false,"anyTouched":false,"asyncValidating":false,"dirty":true,"form":"form1","initialized":false,"invalid":false,"pristine":false,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{}}}
   </div>
 </div>
 `;
@@ -269,7 +269,7 @@ exports[`common/Input graphical (JSX) types should print a selectbox 1`] = `
   <div
     className="kriya-select"
   >
-    {"name":"kriya-select","props":{"simpleValue":true,"options":[],"className":"","name":"name","placeholder":"","disabled":false,"anyTouched":false,"asyncValidating":false,"dirty":false,"form":"testForm","initialized":false,"invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{}}}
+    {"name":"kriya-select","props":{"options":[],"className":"","name":"name","placeholder":"","disabled":false,"anyTouched":false,"asyncValidating":false,"dirty":false,"form":"testForm","initialized":false,"invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{}}}
   </div>
 </div>
 `;
@@ -422,7 +422,7 @@ exports[`common/Input graphical (JSX) types should print options on selectbox 1`
   <div
     className="kriya-select"
   >
-    {"name":"kriya-select","props":{"simpleValue":true,"options":[{"value":"o1","label":"l1"},{"value":"o4","label":"l4"},{"value":"o2","label":"l2"},{"value":"o3","label":"l3"}],"className":"","name":"name","placeholder":"","disabled":false,"anyTouched":false,"asyncValidating":false,"dirty":false,"form":"testForm","initialized":false,"invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{}}}
+    {"name":"kriya-select","props":{"options":[{"value":"o1","label":"l1"},{"value":"o4","label":"l4"},{"value":"o2","label":"l2"},{"value":"o3","label":"l3"}],"className":"","name":"name","placeholder":"","disabled":false,"anyTouched":false,"asyncValidating":false,"dirty":false,"form":"testForm","initialized":false,"invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{}}}
   </div>
 </div>
 `;
