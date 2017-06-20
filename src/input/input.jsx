@@ -39,7 +39,6 @@ const Input = ({
   const SelectComponent = asynch ? Select.Async : Select
   const select = (
     <SelectComponent
-      simpleValue
       value={value}
       options={options}
       loadOptions={loadOptions}
