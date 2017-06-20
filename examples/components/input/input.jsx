@@ -5,7 +5,7 @@ import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
 import Input from '../../../src/input'
 import Button from '../../../src/button'
-import { options } from '../../constant'
+import { numberOptions, stringOptions } from '../../constant'
 import styles from './input.styles.scss'
 
 const formName = 'INPUT'
@@ -27,11 +27,12 @@ const Form = ({ style, className }) => {
       <div>
         <Input type="input" placeholder="input" name="input" required label="Input label" />
         <Input type="textarea" placeholder="textarea" name="textArea" />
-        <Input type="select" placeholder="select" name="select" options={options} />
+        <Input type="select" placeholder="select" name="select" options={stringOptions} />
       </div>
       <div>
-        <Input type="selectbox" placeholder="selectbox" name="selectbox" options={options} required />
-        <Input type="selectbox" placeholder="selectbox multi" name="selectbox_multi" options={options} multi />
+        <Input type="selectbox" placeholder="selectbox" name="selectbox" options={numberOptions} required />
+        <Input type="selectbox" placeholder="selectbox multi" name="selectbox_multi_string" options={stringOptions} multi />
+        <Input type="selectbox" placeholder="selectbox multi" name="selectbox_multi_number" options={numberOptions} multi />
         <Input type="checkbox" name="checkbox" />
       </div>
       <Button type="submit" name="SUBMIT">Submit</Button>
