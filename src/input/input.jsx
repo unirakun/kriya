@@ -78,7 +78,7 @@ Input.propTypes = {
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   asynch: PropTypes.bool,
   name: PropTypes.string.isRequired,
-  label: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   type: PropTypes.oneOf(['input', 'checkbox', 'textarea', 'radio', 'select', 'selectbox', 'number', 'date']),
   disabled: PropTypes.bool,
   required: PropTypes.bool,
