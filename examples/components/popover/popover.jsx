@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
+import router from 'hoc-little-router'
 import styles from './popover.styles.scss'
 
 const Popover = ({ style, className, onClickAwesome, onClickNormal }) => {
@@ -33,4 +34,4 @@ Popover.defaultProps = {
   className: '',
 }
 
-export default onlyUpdateForPropTypes(Popover)
+export default router('POPOVER')(onlyUpdateForPropTypes(Popover))
