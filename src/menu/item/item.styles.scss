@@ -2,11 +2,12 @@
 
 .item {
   background-color: inherit;
-  border: 1px solid $primary-color-darken-2;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
+  border-left: solid 4px transparent;
+  border-radius: none
+  ;
   color: $default-bg-color;
-  margin-bottom: 1em;
+  font-weight: inherit;
+  text-transform: uppercase;
 
   &:last-child {
     margin-bottom: 0;
@@ -18,11 +19,12 @@
 }
 
 .selected {
-  background-color: $default-bg-color;
+  background-color: $primary-color-darken-2;
   border: 0;
-  color: $secondary-color;
+  border-left: solid 4px $secondary-color;
+  box-shadow: inset 3px 0 10px -5px $font-color-dark;
 
   &:hover {
-    background-color: $default-bg-color;
+    background-color: $primary-color-darken-2;
   }
 }
