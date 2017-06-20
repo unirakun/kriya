@@ -1,6 +1,6 @@
 {
   "name": "kriya",
-  "version": "1.10.1",
+  "version": "1.10.2",
   "main": "index.js",
   "description": "Kriya is a react/redux components library",
   "license": "MIT",
@@ -141,6 +141,6 @@
     "react-ink": "^6.2.0",
     "react-redux": "^5.0.4",
     "redux": "^3.6.0",
-    "redux-form": "^6.7.0"
+    "redux-form": "^6.8.0"
   }
 }
