@@ -18,7 +18,7 @@ const Form = ({ style, className }) => {
   )
 
   return (
-    <form id="navbar-form" style={style} className={styles.form}>
+    <form id="navbar-form" style={style} className={classes}>
       <h1>Examples GROUP HORIZONTAL</h1>
       <Group>
         <Input type="input" name="INPUT" placeholder="input" />

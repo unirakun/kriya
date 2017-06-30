@@ -1,5 +1,6 @@
 import React from 'react'
 import { Menu, MenuItem } from '../components'
+import Button from './components/button'
 import Input from './components/input'
 import Group from './components/group'
 import Popover from './components/popover'
@@ -12,6 +13,7 @@ const App = () => {
     <div className={styles.app}>
       {/* Menu */}
       <Menu className={styles.menu} footer={<div>Footer</div>} header={<div>Header</div>}>
+        <MenuItem name="button" title='BUTTON'>Buttons</MenuItem>
         <MenuItem name="input" title='INPUT'>Inputs</MenuItem>
         <MenuItem name="group" title="GROUP">Group</MenuItem>
         <MenuItem name="popover" title="POPOVER">Popover</MenuItem>
@@ -24,6 +26,8 @@ const App = () => {
       {/* TABS */}
       <TabsScreen />
 
+      {/* INPUT */}
+      <Button />
       {/* INPUT */}
       <Input />
       {/* INPUT IN GROUP */}
