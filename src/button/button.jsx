@@ -39,7 +39,6 @@ const Button = ({
   )
 
   /* define props */
-  const iconProps = { primary, secondary, disabled }
   const linkProps = { href, target: targetBlank ? '_blank' : '' }
   const commonProps = {
     className: classes,
@@ -54,7 +53,7 @@ const Button = ({
   if (ink && !disabled && !flat) childrenComponent.push(<Ink key="ink" />)
   if (iconLeft) {
     childrenComponent.push(
-      <Icon key="l" className={styles.iconLeft} {...iconProps}>
+      <Icon key="l" className={styles.iconLeft} >
         {iconLeft}
       </Icon>,
     )
@@ -62,7 +61,7 @@ const Button = ({
   if (children) childrenComponent.push(children)
   if (iconRight) {
     childrenComponent.push(
-      <Icon key="r" className={styles.iconRight} {...iconProps}>
+      <Icon key="r" className={styles.iconRight} >
         {iconRight}
       </Icon>,
     )
