@@ -1,14 +1,12 @@
 import { put, select, call } from 'redux-saga/effects'
 import { push, getTitle } from 'redux/router'
 
-export function* load() {
-  const title = yield select(getTitle)
-
-  if (title === 'HOME') yield call(goToHome)
-}
-
 export function* goToHome() {
   yield put(push('/'))
+}
+
+export function* goToButton() {
+  yield put(push('/button'))
 }
 
 export function* goToInput() {
@@ -25,4 +23,10 @@ export function* goToPopover() {
 
 export function* goToTabs() {
   yield put(push('/tabs'))
+}
+
+export function* load() {
+  const title = yield select(getTitle)
+
+  if (title === 'HOME') yield call(goToHome)
 }

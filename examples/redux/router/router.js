@@ -2,6 +2,9 @@ export default {
   '/': {
     title: 'HOME',
 
+    '/button': {
+      title: 'BUTTON',
+    },
     '/input': {
       title: 'INPUT',
     },
