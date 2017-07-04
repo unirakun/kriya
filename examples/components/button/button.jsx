@@ -44,8 +44,8 @@ const ButtonExample = ({ style, className }) => {
       </div>
       <h2>ICON Left</h2>
       <div className={styles.item}>
-        <Button name={name} primary iconLeft={'sentiment_dissatisfied'}>Primary</Button>
-        <Button name={name} secondary iconLeft={'sentiment_satisfied'}>secondary</Button>
+        <Button name={name} primary iconLeft="sentiment_dissatisfied">Primary</Button>
+        <Button name={name} secondary iconLeft="sentiment_satisfied">secondary</Button>
       </div>
     </div>
   )
