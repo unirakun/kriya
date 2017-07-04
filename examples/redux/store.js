@@ -3,6 +3,7 @@ import createSagaMiddleware from 'redux-saga'
 import { reducer as form } from 'redux-form'
 import { routerForBrowser, initializeCurrentLocation } from 'redux-little-router'
 import sagas from '../sagas'
+import config from './config'
 import ui from './ui'
 import router from './router'
 
@@ -16,6 +17,7 @@ const {
 
 const store = createStore(
   combineReducers({
+    config,
     form,
     ui,
     router: reducer,

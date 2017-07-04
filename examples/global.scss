@@ -1,4 +1,5 @@
 @import './styles/theme';
+@import './styles/kriya-fonts.css';
 @import '../node_modules/kriya-select/dist/kriya-select.css';
 // import normalize.css
 @import '~normalize.css/normalize.css';
@@ -6,7 +7,6 @@
 // Global config
 html {
   * {
-    color: $font-color-dark;
     font-family: 'Muli', 'Arial', 'Helvetica';
     line-height: 1em;
   }

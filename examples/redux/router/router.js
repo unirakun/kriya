@@ -2,6 +2,9 @@ export default {
   '/': {
     title: 'HOME',
 
+    '/icon': {
+      title: 'ICON',
+    },
     '/button': {
       title: 'BUTTON',
     },

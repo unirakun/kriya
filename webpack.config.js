@@ -85,6 +85,11 @@ module.exports = {
           loader: cssLoaders,
         }),
       },
+      {
+        test: [/(ttf|eot|svg|woff)(\?v=[0-9]\.[0-9]\.[0-9])?/],
+        exclude: [/^\.\.\/\.\.\/resources\/drawings\//],
+        use: ['file-loader'],
+      },
     ],
   },
 }

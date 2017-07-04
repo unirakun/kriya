@@ -1,0 +1,12 @@
+.example {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.item {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
