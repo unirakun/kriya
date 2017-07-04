@@ -5,6 +5,10 @@ export function* goToHome() {
   yield put(push('/'))
 }
 
+export function* goToIcon() {
+  yield put(push('/icon'))
+}
+
 export function* goToButton() {
   yield put(push('/button'))
 }
