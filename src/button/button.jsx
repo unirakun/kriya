@@ -47,13 +47,14 @@ const Button = ({
     title,
     onClick,
   }
+  const iconProps = flat ? { primary, secondary, disabled } : {}
 
   /* content of component (Button or Link) */
   const childrenComponent = []
   if (ink && !disabled && !flat) childrenComponent.push(<Ink key="ink" />)
   if (iconLeft) {
     childrenComponent.push(
-      <Icon key="l" className={styles.iconLeft} >
+      <Icon key="l" className={styles.iconLeft} {...iconProps} >
         {iconLeft}
       </Icon>,
     )
@@ -61,7 +62,7 @@ const Button = ({
   if (children) childrenComponent.push(children)
   if (iconRight) {
     childrenComponent.push(
-      <Icon key="r" className={styles.iconRight} >
+      <Icon key="r" className={styles.iconRight} {...iconProps} >
         {iconRight}
       </Icon>,
     )

@@ -42,10 +42,15 @@ const ButtonExample = ({ style, className }) => {
         <Button name={name} primary flat large>Primary</Button>
         <Button name={name} secondary flat large>secondary</Button>
       </div>
-      <h2>ICON Left</h2>
+      <h2>ICON Left / Right</h2>
       <div className={styles.item}>
         <Button name={name} primary iconLeft="sentiment_dissatisfied">Primary</Button>
-        <Button name={name} secondary iconLeft="sentiment_satisfied">secondary</Button>
+        <Button name={name} secondary iconRight="sentiment_satisfied">secondary</Button>
+      </div>
+      <h2>ICON Flat Left / Right</h2>
+      <div className={styles.item}>
+        <Button name={name} primary flat iconLeft="sentiment_dissatisfied">Primary</Button>
+        <Button name={name} secondary flat iconRight="sentiment_satisfied">secondary</Button>
       </div>
     </div>
   )
