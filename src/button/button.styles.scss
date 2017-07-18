@@ -15,7 +15,7 @@
   padding: $input-radius-size 1.5em;
   position: relative;
   text-decoration: none;
-  transition: $default-transition background-color;
+  transition: $default-transition background-color, .1s ease-out color;
 }
 
 .flat {
@@ -78,11 +78,16 @@
 
   &:hover {
     background-color: $primary-color-darken-1;
+    color: $font-color-light;
   }
 }
 
 .disabled {
   @include disabled;
+
+  &:hover {
+    color: $default-grey-color;
+  }
 }
 
 .large {
