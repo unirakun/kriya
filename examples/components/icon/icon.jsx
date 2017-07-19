@@ -25,6 +25,7 @@ const IconExample = ({ style, className }) => {
         <Icon name={name} primary>sentiment_very_dissatisfied</Icon>
         <Icon name={name} disabled>sentiment_neutral</Icon>
         <Icon name={name} secondary>sentiment_very_satisfied</Icon>
+        <Icon name={name} iconColor>sentiment_very_satisfied</Icon>
       </div>
       <h2>Label Left / Right</h2>
       <div className={styles.item}>
