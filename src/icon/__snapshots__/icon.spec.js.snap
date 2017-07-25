@@ -2,7 +2,7 @@
 
 exports[`common/Icon container should looking for prefix in redux 1`] = `
 <div
-  className="icon colored"
+  className="icon inheritColor"
   style={Object {}}
 >
   <i
@@ -55,7 +55,7 @@ exports[`common/Icon container should looking for prefix in redux 1`] = `
 
 exports[`common/Icon container should use a default prefix (empty one) 1`] = `
 <div
-  className="icon colored"
+  className="icon inheritColor"
   style={Object {}}
 >
   <i
@@ -108,7 +108,7 @@ exports[`common/Icon container should use a default prefix (empty one) 1`] = `
 
 exports[`common/Icon graphical (JSX) should add a title 1`] = `
 <div
-  className="icon colored"
+  className="icon inheritColor"
   style={Object {}}
 >
   <i
@@ -161,7 +161,7 @@ exports[`common/Icon graphical (JSX) should add a title 1`] = `
 
 exports[`common/Icon graphical (JSX) should add custom className 1`] = `
 <div
-  className="icon custom colored"
+  className="icon custom inheritColor"
   style={Object {}}
 >
   <i
@@ -214,7 +214,7 @@ exports[`common/Icon graphical (JSX) should add custom className 1`] = `
 
 exports[`common/Icon graphical (JSX) should add custom style 1`] = `
 <div
-  className="icon colored"
+  className="icon inheritColor"
   style={
     Object {
       "backgroundColor": "red",
@@ -271,7 +271,7 @@ exports[`common/Icon graphical (JSX) should add custom style 1`] = `
 
 exports[`common/Icon graphical (JSX) should create a disabled icon 1`] = `
 <div
-  className="icon disabled colored"
+  className="icon disabled inheritColor"
   style={Object {}}
 >
   <i
@@ -324,7 +324,7 @@ exports[`common/Icon graphical (JSX) should create a disabled icon 1`] = `
 
 exports[`common/Icon graphical (JSX) should create a primary icon 1`] = `
 <div
-  className="icon primary colored"
+  className="icon primary inheritColor"
   style={Object {}}
 >
   <i
@@ -377,7 +377,7 @@ exports[`common/Icon graphical (JSX) should create a primary icon 1`] = `
 
 exports[`common/Icon graphical (JSX) should create a secondary icon 1`] = `
 <div
-  className="icon secondary colored"
+  className="icon secondary inheritColor"
   style={Object {}}
 >
   <i
@@ -430,7 +430,7 @@ exports[`common/Icon graphical (JSX) should create a secondary icon 1`] = `
 
 exports[`common/Icon graphical (JSX) should create an icon with label to left 1`] = `
 <div
-  className="icon colored"
+  className="icon inheritColor"
   style={Object {}}
 >
   <label
@@ -488,7 +488,7 @@ exports[`common/Icon graphical (JSX) should create an icon with label to left 1`
 
 exports[`common/Icon graphical (JSX) should create an icon with label to right 1`] = `
 <div
-  className="icon colored"
+  className="icon inheritColor"
   style={Object {}}
 >
   <i
@@ -546,7 +546,7 @@ exports[`common/Icon graphical (JSX) should create an icon with label to right 1
 
 exports[`common/Icon graphical (JSX) should create an icon without color 1`] = `
 <div
-  className="icon"
+  className="icon inheritColor"
   style={Object {}}
 >
   <i
@@ -599,7 +599,7 @@ exports[`common/Icon graphical (JSX) should create an icon without color 1`] = `
 
 exports[`common/Icon graphical (JSX) should have a default behaviour 1`] = `
 <div
-  className="icon colored"
+  className="icon inheritColor"
   style={Object {}}
 >
   <i
@@ -652,7 +652,7 @@ exports[`common/Icon graphical (JSX) should have a default behaviour 1`] = `
 
 exports[`common/Icon graphical (JSX) should print labels to both sides 1`] = `
 <div
-  className="icon colored"
+  className="icon inheritColor"
   style={Object {}}
 >
   <label
@@ -715,7 +715,7 @@ exports[`common/Icon graphical (JSX) should print labels to both sides 1`] = `
 
 exports[`common/Icon graphical (JSX) should take a prefix 1`] = `
 <div
-  className="icon colored"
+  className="icon inheritColor"
   style={Object {}}
 >
   <i
@@ -768,7 +768,7 @@ exports[`common/Icon graphical (JSX) should take a prefix 1`] = `
 
 exports[`common/Icon graphical (JSX) should take an icon name as children 1`] = `
 <div
-  className="icon colored"
+  className="icon inheritColor"
   style={Object {}}
 >
   <i

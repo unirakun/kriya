@@ -12,7 +12,7 @@ const Icon = ({
   primary, secondary, disabled,
   prefix,
   title,
-  noColor /* set to true to print the native icon color */,
+  iconColor, /* set to true to print the native icon color */
 }) => {
   const classes = classnames(
     styles.icon,
@@ -21,7 +21,7 @@ const Icon = ({
       [styles.primary]: primary,
       [styles.secondary]: secondary,
       [styles.disabled]: disabled,
-      [styles.colored]: !noColor,
+      [styles.inheritColor]: !iconColor,
     },
   )
 
@@ -61,7 +61,7 @@ Icon.propTypes = {
   primary: PropTypes.bool,
   secondary: PropTypes.bool,
   disabled: PropTypes.bool,
-  noColor: PropTypes.bool,
+  iconColor: PropTypes.bool,
   title: PropTypes.string,
 }
 
@@ -73,7 +73,7 @@ Icon.defaultProps = {
   primary: false,
   secondary: false,
   disabled: false,
-  noColor: false,
+  iconColor: false,
   title: undefined,
 }
 
