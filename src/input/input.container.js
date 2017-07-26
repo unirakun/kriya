@@ -18,7 +18,7 @@ const mapDispatchToProps = (dispatch, { form, name, type }) => {
 
   return {
     onChange: value => dispatch(change(form, name, value)),
-    onInputChange: value => dispatch(change(form, name, value)),
+    onInputChange: value => dispatch(change(form, `INPUT_SEARCH_${name}`, value)),
   }
 }
 
