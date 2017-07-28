@@ -1,0 +1,41 @@
+@import '~styles/theme';
+
+.component {
+  position: relative;
+
+  &:hover {
+    .tooltip {
+      opacity: .9;
+      transition: opacity .5s;
+    }
+  }
+}
+
+.tooltip {
+  left: 50%;
+  position: absolute;
+  text-align: justify;
+  transform: translateX(-50%) translateY(-100%);
+}
+
+.left {
+  margin-left: -1.5em;
+  top: 50%;
+  transform: translateX(-100%) translateY(-50%);
+}
+
+.top {
+  margin-top: .5em;
+  top: -50%;
+}
+
+.bottom {
+  margin-top: .5em;
+  transform: translateX(-50%);
+}
+
+.right {
+  margin-left: -.5em;
+  top: 50%;
+  transform: translateX(50%) translateY(-50%);
+}

@@ -1,0 +1,13 @@
+@import '~styles/theme';
+
+.tooltip {
+  background: $font-color-dark;
+  border-radius: .3em;
+  color: $font-color-light;
+  opacity: 0;
+  padding: .5em 1em;
+}
+
+.show {
+  opacity: .9;
+}
