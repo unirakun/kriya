@@ -52,6 +52,13 @@ const ButtonExample = ({ style, className }) => {
         <Button name={name} primary flat iconLeft="sentiment_dissatisfied">Primary</Button>
         <Button name={name} secondary flat iconRight="sentiment_satisfied">secondary</Button>
       </div>
+      <h2>Without text</h2>
+      <div className={styles.item}>
+        <Button name={name} primary iconLeft="sentiment_dissatisfied" />
+        <Button name={name} secondary iconRight="sentiment_satisfied" />
+        <Button name={name} primary flat iconLeft="sentiment_dissatisfied" />
+        <Button name={name} secondary flat iconRight="sentiment_satisfied" />
+      </div>
     </div>
   )
 }

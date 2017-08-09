@@ -94,12 +94,14 @@
   padding: 1em 2em;
 }
 
-.iconLeft {
-  margin-right: .5em;
-}
+.withText {
+  .iconLeft {
+    margin-right: .5em;
+  }
 
-.iconRight {
-  margin-left: 1em;
+  .iconRight {
+    margin-left: 1em;
+  }
 }
 
 .iconLeft,
