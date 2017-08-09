@@ -35,6 +35,7 @@ const Button = ({
       [styles.flat]: flat,
       [styles.primaryFlat]: flat && primary,
       [styles.secondaryFlat]: flat && secondary,
+      [styles.withText]: children,
     },
   )
 
