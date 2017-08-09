@@ -2,7 +2,7 @@
 
 exports[`common/Button graphical (JSX) should add children 1`] = `
 <button
-  className="button"
+  className="button withText"
   disabled={false}
   onClick={[Function]}
   style={Object {}}
