@@ -4,6 +4,7 @@ import router from 'hoc-little-router'
 import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
 import Icon from '../../../src/icon'
+import tooltip from '../../../src/tooltip/hoc'
 import styles from './icon.styles.scss'
 
 const IconExample = ({ style, className }) => {
@@ -34,6 +35,13 @@ const IconExample = ({ style, className }) => {
         <Icon name={name} disabled labelRight="neutral" labelLeft="neutral" >sentiment_neutral</Icon>
         <Icon name={name} secondary labelRight="satisfied">sentiment_satisfied</Icon>
         <Icon name={name} secondary labelRight="very_satisfied">sentiment_very_satisfied</Icon>
+      </div>
+      <h2>with tooltip</h2>
+      <div className={styles.item}>
+        {tooltip({ left: true })('LEFT')(Icon)({ primary: true, children: 'sentiment_neutral' })}
+        {tooltip({ top: true })('TOP')(Icon)({ primary: true, children: 'sentiment_neutral' })}
+        {tooltip({ bottom: true })('BOTTOM')(Icon)({ primary: true, children: 'sentiment_neutral' })}
+        {tooltip({ right: true })('RIGHT')(Icon)({ primary: true, children: 'sentiment_neutral' })}
       </div>
     </div>
   )

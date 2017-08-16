@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`common/Tooltip graphical (JSX) should add children 1`] = `
+<div
+  className="tooltip"
+  style={Object {}}
+>
+  a child
+</div>
+`;
+
+exports[`common/Tooltip graphical (JSX) should add custom className 1`] = `
+<div
+  className="tooltip custom"
+  style={Object {}}
+/>
+`;
+
+exports[`common/Tooltip graphical (JSX) should add custom style 1`] = `
+<div
+  className="tooltip"
+  style={
+    Object {
+      "backgroundColor": "red",
+    }
+  }
+/>
+`;
+
+exports[`common/Tooltip graphical (JSX) should be visible 1`] = `
+<div
+  className="tooltip show"
+  style={Object {}}
+/>
+`;
+
+exports[`common/Tooltip graphical (JSX) should have a default behaviour 1`] = `
+<div
+  className="tooltip"
+  style={Object {}}
+/>
+`;
