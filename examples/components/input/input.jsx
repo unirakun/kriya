@@ -36,6 +36,10 @@ const Form = ({ style, className }) => {
         <Input type="selectbox" placeholder="selectbox multi" name="selectbox_multi_number" options={numberOptions} multi />
         <Input type="checkbox" name="checkbox" />
       </div>
+      <div>
+        <Input type="selectbox" placeholder="selectbox creatable" name="selectbox_creatable" options={stringOptions} creatable promptTextCreator={e => `Ajouter ${e}`} />
+        <Input type="selectbox" placeholder="selectbox creatable" name="selectbox_creatable_multi" options={stringOptions} creatable promptTextCreator={e => `"${e}" va faire parti de la famille`} multi />
+      </div>
       <Button type="submit" name="SUBMIT">Submit</Button>
     </form>
   )

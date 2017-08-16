@@ -24,7 +24,7 @@ const Input = ({
    type, name, label,
    placeholder, disabled,
    required, options, value,
-   asynch, loadOptions,
+   asynch, creatable, loadOptions,
    error,
    ...selectboxProps
  }) => {
@@ -36,7 +36,10 @@ const Input = ({
 
   const commonProps = { name, placeholder, disabled }
 
-  const SelectComponent = asynch ? Select.Async : Select
+  let SelectComponent = Select
+  if (asynch) SelectComponent = Select.Async
+  if (creatable) SelectComponent = Select.Creatable
+
   const select = (
     <SelectComponent
       value={value}
@@ -77,6 +80,7 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   asynch: PropTypes.bool,
+  creatable: PropTypes.bool,
   name: PropTypes.string.isRequired,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   type: PropTypes.oneOf(['input', 'checkbox', 'textarea', 'radio', 'select', 'selectbox', 'number', 'date']),
@@ -97,6 +101,7 @@ Input.defaultProps = {
   label: undefined,
   value: undefined,
   asynch: false,
+  creatable: false,
   disabled: false,
   required: false,
   placeholder: '',
