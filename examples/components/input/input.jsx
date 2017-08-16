@@ -37,8 +37,8 @@ const Form = ({ style, className }) => {
         <Input type="checkbox" name="checkbox" />
       </div>
       <div>
-        <Input type="selectbox" placeholder="selectbox creatable" name="selectbox_creatable" options={stringOptions} creatable promptTextCreator={e => `Ajouter ${e}`} />
-        <Input type="selectbox" placeholder="selectbox creatable" name="selectbox_creatable_multi" options={stringOptions} creatable promptTextCreator={e => `"${e}" va faire parti de la famille`} multi />
+        <Input type="selectbox" placeholder="selectbox creatable" name="selectbox_creatable" options={stringOptions} creatable promptTextCreator={e => `Add ${e}`} />
+        <Input type="selectbox" placeholder="selectbox creatable" name="selectbox_creatable_multi" options={stringOptions} creatable promptTextCreator={e => `"${e}" add to family`} multi />
       </div>
       <Button type="submit" name="SUBMIT">Submit</Button>
     </form>
