@@ -1,0 +1,35 @@
+@import '~styles/theme';
+
+$headerHeight: 2em;
+
+.bottomSheets {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+
+}
+
+.sheets {
+  transform: translateY(calc(100% - #{$headerHeight}));
+  transition: transform .2s;
+
+  &.print {
+    transform: translateY(0);
+  }
+
+}
+
+
+.header {
+  height: $headerHeight;
+}
+
+.content {
+  background-color: $default-bg-color;
+  justify-content: center;
+  box-shadow: 0 0 5px 0 $font-color-dark;
+}

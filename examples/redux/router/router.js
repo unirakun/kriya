@@ -17,6 +17,9 @@ export default {
     '/popover': {
       title: 'POPOVER',
     },
+    '/bottomSheets': {
+      title: 'BOTTOMSHEETS',
+    },
     '/tabs': {
       title: 'TABS',
     },

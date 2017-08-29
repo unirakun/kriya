@@ -25,6 +25,10 @@ export function* goToPopover() {
   yield put(push('/popover'))
 }
 
+export function* goToBottomSheets() {
+  yield put(push('/bottomSheets'))
+}
+
 export function* goToTabs() {
   yield put(push('/tabs'))
 }
