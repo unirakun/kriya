@@ -1,20 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { onlyUpdateForPropTypes } from 'recompose'
-import classnames from 'classnames'
-import styles from './detail.styles.scss'
 
-const Detail = ({ style, className, print, content }) => {
-  const classes = classnames(
-    styles.bottomSheets,
-    className,
-    {
-      [styles.print]: print,
-    },
-  )
+const Detail = ({ style, className, content }) => {
 
   return (
-    <div style={style} className={classes}>
+    <div style={style} className={className}>
       <p>static content</p>
       <p>custom when open action: {content}</p>
     </div>
@@ -24,7 +15,6 @@ const Detail = ({ style, className, print, content }) => {
 Detail.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
-  print: PropTypes.bool.isRequired,
   content: PropTypes.string,
 }
 

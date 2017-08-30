@@ -13,7 +13,7 @@ $header-height: 2em;
 .sheets {
   align-items: center;
   background-color: $default-bg-color;
-  box-shadow: 0 0 5px 0 $font-color-dark;
+  box-shadow: 0 0 .2em 0 $font-color-dark;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
