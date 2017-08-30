@@ -5,6 +5,7 @@ import Icon from './components/icon'
 import Input from './components/input'
 import Group from './components/group'
 import Popover from './components/popover'
+import BottomSheets from './components/bottomSheets'
 import TabsScreen from './components/tabs'
 import { Awesome } from './components/popovers'
 import styles from './app.styles.scss'
@@ -19,6 +20,7 @@ const App = () => {
         <MenuItem name="input" title="INPUT">Inputs</MenuItem>
         <MenuItem name="group" title="GROUP">Group</MenuItem>
         <MenuItem name="popover" title="POPOVER">Popover</MenuItem>
+        <MenuItem name="bottomSheets" title="BOTTOMSHEETS">Bottom Sheets</MenuItem>
         <MenuItem name="tabs" title="TABS">Tabs</MenuItem>
       </Menu>
 
@@ -38,6 +40,8 @@ const App = () => {
       <Group />
       {/* POPOVERS ACTION */}
       <Popover />
+      {/* BottomSheets */}
+      <BottomSheets />
     </div>
   )
 }

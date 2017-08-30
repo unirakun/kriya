@@ -1,0 +1,295 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`common/BottomSheets container should pass contents 1`] = `
+<div
+  className="bottomSheets"
+  style={Object {}}
+>
+  <div
+    className="sheets"
+  >
+    <div
+      className="header"
+      onClick={undefined}
+    />
+    <hr
+      className="separator"
+    />
+    <div
+      className="content"
+    >
+      <div
+        descriptions="descriptions"
+      >
+        custom_component_child{"print":false}
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`common/BottomSheets container should pass onClose callback when closable 1`] = `
+<div
+  className="bottomSheets"
+  style={Object {}}
+>
+  <div
+    className="sheets"
+  >
+    <div
+      className="header"
+      onClick={[Function]}
+    />
+    <hr
+      className="separator"
+    />
+    <div
+      className="content"
+    >
+      <div>
+        custom_component_child{"print":false}
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`common/BottomSheets container should pass print=false when the BottomSheets is not listed in redux 1`] = `
+<div
+  className="bottomSheets"
+  style={Object {}}
+>
+  <div
+    className="sheets"
+  >
+    <div
+      className="header"
+      onClick={undefined}
+    />
+    <hr
+      className="separator"
+    />
+    <div
+      className="content"
+    >
+      <div>
+        custom_component_child{"print":false}
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`common/BottomSheets container should pass print=true when the BottomSheets IS listed in redux 1`] = `
+<div
+  className="bottomSheets"
+  style={Object {}}
+>
+  <div
+    className="sheets print"
+  >
+    <div
+      className="header"
+      onClick={undefined}
+    />
+    <hr
+      className="separator"
+    />
+    <div
+      className="content"
+    >
+      <div>
+        custom_component_child{"print":true}
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`common/BottomSheets graphical (JSX) should add children 1`] = `
+<div
+  className="bottomSheets"
+  style={Object {}}
+>
+  <div
+    className="sheets"
+  >
+    <div
+      className="header"
+      onClick={undefined}
+    />
+    <hr
+      className="separator"
+    />
+    <div
+      className="content"
+    >
+      <div>
+        custom_2{"print":false}
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`common/BottomSheets graphical (JSX) should add custom className 1`] = `
+<div
+  className="bottomSheets custom"
+  style={Object {}}
+>
+  <div
+    className="sheets"
+  >
+    <div
+      className="header"
+      onClick={undefined}
+    />
+    <hr
+      className="separator"
+    />
+    <div
+      className="content"
+    >
+      <div>
+        custom_component_child{"print":false}
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`common/BottomSheets graphical (JSX) should add custom style 1`] = `
+<div
+  className="bottomSheets"
+  style={
+    Object {
+      "backgroundColor": "red",
+    }
+  }
+>
+  <div
+    className="sheets"
+  >
+    <div
+      className="header"
+      onClick={undefined}
+    />
+    <hr
+      className="separator"
+    />
+    <div
+      className="content"
+    >
+      <div>
+        custom_component_child{"print":false}
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`common/BottomSheets graphical (JSX) should be print when asked for and passed it to child 1`] = `
+<div
+  className="bottomSheets"
+  style={Object {}}
+>
+  <div
+    className="sheets print"
+  >
+    <div
+      className="header"
+      onClick={undefined}
+    />
+    <hr
+      className="separator"
+    />
+    <div
+      className="content"
+    >
+      <div>
+        custom_component_child{"print":true}
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`common/BottomSheets graphical (JSX) should have a default behaviour 1`] = `
+<div
+  className="bottomSheets"
+  style={Object {}}
+>
+  <div
+    className="sheets"
+  >
+    <div
+      className="header"
+      onClick={undefined}
+    />
+    <hr
+      className="separator"
+    />
+    <div
+      className="content"
+    >
+      <div>
+        custom_component_child{"print":false}
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`common/BottomSheets graphical (JSX) should pass contents to child 1`] = `
+<div
+  className="bottomSheets"
+  style={Object {}}
+>
+  <div
+    className="sheets"
+  >
+    <div
+      className="header"
+      onClick={undefined}
+    />
+    <hr
+      className="separator"
+    />
+    <div
+      className="content"
+    >
+      <div
+        description="description"
+      >
+        custom_component_child{"print":false}
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`common/BottomSheets graphical (JSX) should pass toggle function to child 1`] = `
+<div
+  className="bottomSheets"
+  style={Object {}}
+>
+  <div
+    className="sheets"
+  >
+    <div
+      className="header"
+      onClick={[Function]}
+    />
+    <hr
+      className="separator"
+    />
+    <div
+      className="content"
+    >
+      <div>
+        custom_component_child{"print":false}
+      </div>
+    </div>
+  </div>
+</div>
+`;

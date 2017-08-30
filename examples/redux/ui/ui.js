@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
-import tabs from './tabs'
+import { reducer as bottomSheets } from '../../../src/bottomSheets'
 import { reducer as popover } from '../../../src/popover'
+import tabs from './tabs'
 
 export default combineReducers({
-  tabs,
+  bottomSheets,
   popover,
+  tabs,
 })

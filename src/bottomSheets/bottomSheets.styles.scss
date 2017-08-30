@@ -1,0 +1,47 @@
+@import '~styles/theme';
+
+$header-height: 2em;
+
+.bottomSheets {
+  bottom: 0;
+  left: 0;
+  margin: 0 2em;
+  position: fixed;
+  right: 0;
+  z-index: 100;
+}
+
+.sheets {
+  align-items: center;
+  background-color: $default-bg-color;
+  box-shadow: 0 0 .2em 0 $font-color-dark;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  transform: translateY(calc(100% - #{$header-height}));
+  transition: transform .2s;
+
+  &.print {
+    transform: translateY(0);
+  }
+
+}
+
+.header {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: $header-height;
+  width: 100%;
+}
+
+.content {
+  background-color: $default-bg-color;
+  justify-content: center;
+}
+
+.separator {
+  border: 0;
+  border-bottom: solid 1px $default-grey-color;
+  width: 100%;
+}

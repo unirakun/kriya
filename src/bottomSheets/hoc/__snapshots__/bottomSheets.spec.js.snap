@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`common/BottomSheets/hoc should pass config to the bottomSheets component 1`] = `
+<div>
+  {"code":"a code"}
+  -
+  <div
+    title="child"
+  >
+    {}
+  </div>
+</div>
+`;
+
+exports[`common/BottomSheets/hoc should pass props to the wrapped component 1`] = `
+<div>
+  {}
+  -
+  <div
+    title="child"
+  >
+    {"prop":"a prop","and":"an other"}
+  </div>
+</div>
+`;
