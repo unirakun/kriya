@@ -4,13 +4,10 @@ import { onlyUpdateForPropTypes } from 'recompose'
 import classnames from 'classnames'
 import styles from './header.styles.scss'
 
-const Detail = ({ style, className, print }) => {
+const Header = ({ style, className }) => {
   const classes = classnames(
     styles.header,
     className,
-    {
-      [styles.print]: print,
-    },
   )
 
   return (
@@ -20,15 +17,14 @@ const Detail = ({ style, className, print }) => {
   )
 }
 
-Detail.propTypes = {
+Header.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
-  print: PropTypes.bool.isRequired,
 }
 
-Detail.defaultProps = {
+Header.defaultProps = {
   style: {},
   className: '',
 }
 
-export default onlyUpdateForPropTypes(Detail)
+export default onlyUpdateForPropTypes(Header)
