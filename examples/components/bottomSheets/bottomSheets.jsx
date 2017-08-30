@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
 import router from 'hoc-little-router'
-import Detail from './detail'
+import Awesome from './awesome'
 import styles from './bottomSheets.styles.scss'
 
 const BottomSheets = ({ style, className, onClick }) => {
@@ -19,7 +19,7 @@ const BottomSheets = ({ style, className, onClick }) => {
     >
       <div className={styles.awesome} name="AWESOME" onClick={onClick}>OPEN BOTTOMSHEETS</div>
       {/* BOTTOM SHEETS container */}
-      <Detail />
+      <Awesome />
     </div>
   )
 }

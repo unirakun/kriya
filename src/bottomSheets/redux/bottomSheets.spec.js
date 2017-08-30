@@ -2,7 +2,7 @@
 /* eslint-env jest */
 import reducer from './bottomSheets'
 import { get } from './bottomSheets.selectors'
-import { open, close } from './bottomSheets.actions'
+import { open, close, toggle } from './bottomSheets.actions'
 
 const state = {
   ui: {
@@ -35,6 +35,11 @@ describe('bottomSheets/redux', () => {
     it('should add open a bottomSheets', () =>
       expect(reducer(state.ui.bottomSheets, open('pop2')))
       .toEqual({ ...state.ui.bottomSheets, pop2: { print: true } })
+    )
+
+    it('should toggle a bottomSheets', () =>
+      expect(reducer(state.ui.bottomSheets, toggle('pop1')))
+      .toEqual({ ...state.ui.bottomSheets, pop1: { ...state.ui.bottomSheets.pop1, print: false } })
     )
 
     it('should close a bottomSheets', () =>

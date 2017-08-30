@@ -12,7 +12,7 @@ import { mount } from 'enzyme'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import snap from 'snap'
-import { close, CLOSE_POPOVER } from './redux'
+import { toggle, TOGGLE_BOTTOMSHEETS } from './redux'
 import BottomSheets from './bottomSheets'
 import BottomSheetsContainer from './bottomSheets.container'
 
@@ -28,15 +28,15 @@ describe('common/BottomSheets', () => {
     it('should add children', snapshot({ children: <Child2 /> }))
     it('should have a default behaviour', snapshot({}))
     it('should be print when asked for and passed it to child', snapshot({ print: true }))
-    it('should pass onClose function to child', snapshot({ onClose: () => {} }))
+    it('should pass toggle function to child', snapshot({ toggle: () => {} }))
     it('should pass contents to child', snapshot({ contents: { description: 'description' } }))
-    it('should call onClose when clicked', () => {
+    it('should call toggle when clicked', () => {
       const onClick = jest.fn()
       const wrapper = mount(
-        <BottomSheets children={<Child />} onClose={onClick} />,
+        <BottomSheets children={<Child />} toggle={onClick} />,
       )
 
-      wrapper.find('div').first().simulate('click')
+      wrapper.find('.header').first().simulate('click')
       expect(onClick.mock.calls.length).toBe(1)
     })
   })
@@ -60,7 +60,7 @@ describe('common/BottomSheets', () => {
     it('should pass print=true when the BottomSheets IS listed in redux', () => snapContainer({ pop1: { print: true } }, { code: 'pop1' }))
     it('should pass onClose callback when closable', () => snapContainer({}, { code: 'pop1', closable: true }))
     it('should pass contents', () => snapContainer({}, { code: 'pop1', contents: { descriptions: 'descriptions' } }))
-    it(`should call ${CLOSE_POPOVER} when clicked`, () => {
+    it(`should call ${TOGGLE_BOTTOMSHEETS} when clicked on header`, () => {
       const dispatch = jest.fn()
       const store = createStore(() => ({ ui: { bottomSheets: { code: 'pop1' } } }))
       store.dispatch = dispatch
@@ -74,10 +74,10 @@ describe('common/BottomSheets', () => {
         </Provider>,
       )
 
-      wrapper.find('div').first().simulate('click')
+      wrapper.find('.header').first().simulate('click')
 
       expect(dispatch.mock.calls.length).toBe(1)
-      expect(dispatch.mock.calls[0]).toEqual([close('pop1')])
+      expect(dispatch.mock.calls[0]).toEqual([toggle('pop1')])
     })
   })
 })

@@ -1,10 +1,10 @@
 import { connect } from 'react-redux'
-import { toggle } from '../../../src/bottomSheets/redux/bottomSheets.actions'
+import { open } from '../../../src/bottomSheets/redux/bottomSheets.actions'
 import Component from './bottomSheets'
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onClick: () => dispatch(toggle('awesome_detail', { description: 'U R AWESOME!' })),
+    onClick: () => dispatch(open('awesome_detail', { content: 'U R AWESOME!' })),
   }
 }
 

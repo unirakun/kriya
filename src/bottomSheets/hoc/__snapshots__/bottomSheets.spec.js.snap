@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`common/Popover/hoc should pass config to the popover component 1`] = `
+exports[`common/BottomSheets/hoc should pass config to the bottomSheets component 1`] = `
 <div>
   {"code":"a code"}
   -
@@ -12,7 +12,7 @@ exports[`common/Popover/hoc should pass config to the popover component 1`] = `
 </div>
 `;
 
-exports[`common/Popover/hoc should pass props to the wrapped component 1`] = `
+exports[`common/BottomSheets/hoc should pass props to the wrapped component 1`] = `
 <div>
   {}
   -

@@ -12,7 +12,7 @@ export default (state = initState, { type, payload } = initAction) => {
     case TOGGLE_BOTTOMSHEETS:
       return {
         ...state,
-        [payload]: { ...state[payload], print: !(state[payload] && state[payload].print) }
+        [payload]: { ...state[payload], print: !(state[payload] && state[payload].print) },
       }
     default: return state
   }

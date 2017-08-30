@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { close, get } from './redux'
+import { toggle, get } from './redux'
 import Component from './bottomSheets'
 
 const mapStateToProps = (state, { code }) => {
@@ -12,7 +12,7 @@ const mapDispatchToProps = (dispatch, { closable, code }) => {
   if (!closable) return {}
 
   return {
-    onClose: () => dispatch(close(code)),
+    toggle: () => dispatch(toggle(code)),
   }
 }
 
