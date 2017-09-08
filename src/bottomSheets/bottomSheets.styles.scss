@@ -3,28 +3,25 @@
 $header-height: 2em;
 
 .bottomSheets {
-  bottom: 0;
-  left: 0;
-  margin: 0 2em;
-  position: fixed;
-  right: 0;
+  align-self: center;
+  position: relative;
   z-index: 100;
 }
 
 .sheets {
   align-items: center;
   background-color: $default-bg-color;
+  bottom: 0;
   box-shadow: 0 0 .2em 0 $font-color-dark;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  transform: translateY(calc(100% - #{$header-height}));
+  position: fixed;
+  transform: translateY(calc(100% - #{$header-height})) translateX(-50%);
   transition: transform .2s;
 
   &.print {
-    transform: translateY(0);
+    transform: translateY(0) translateX(-50%);
   }
-
 }
 
 .header {
