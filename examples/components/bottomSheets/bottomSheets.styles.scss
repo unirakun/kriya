@@ -1,7 +1,9 @@
 @import '~styles/theme';
 
 .bottomSheets {
+  display: flex;
   flex: 1;
+  flex-direction: column;
 }
 
 .awesome {
