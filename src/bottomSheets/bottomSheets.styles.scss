@@ -16,7 +16,7 @@ $header-height: 2em;
   display: flex;
   flex-direction: column;
   position: fixed;
-  transform: translateY(calc(100% - #{$header-height})) translateX(-50%);
+  transform: translateY(100%) translateY(-#{$header-height}) translateX(-50%);
   transition: transform .2s;
 
   &.print {
