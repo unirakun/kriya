@@ -5,9 +5,24 @@
   position: relative;
   width: 15em;
 
+  &.showLabel {
+    label {
+      opacity: 1;
+    }
+  }
+
   label {
-    display: inline-block;
+    color: $default-grey-color;
+    display: flex;
+    flex-direction: row;
+    font-size: .7em;
     margin-bottom: $input-radius-size;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+
+    .mandatory {
+      color: red;
+    }
   }
 
   select,

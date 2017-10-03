@@ -23,13 +23,16 @@ const Input = ({
    className, style,
    type, name, label,
    placeholder, disabled,
-   required, options, value,
+   required, options, value, hiddenLabel,
    asynch, creatable, loadOptions,
    error,
    ...selectboxProps
  }) => {
   const classes = classnames(
     styles.input,
+    {
+      [styles.showLabel]: !hiddenLabel,
+    },
     styles[`type-${type}`],
     className,
   )
@@ -67,7 +70,9 @@ const Input = ({
 
   return (
     <div className={classes} style={style}>
-      {label && <label htmlFor={name}>{label}{required && '*'}</label>}
+      {label && <label htmlFor={name}>
+        {label}{required && <div className={styles.mandatory}>&nbsp;*</div>}
+      </label>}
       {type === 'selectbox' ? select : field}
       {type === 'select' && <i className={classnames(styles.arrow, 'mdv-expand_more')} />}
     </div>
@@ -78,6 +83,7 @@ Input.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   placeholder: PropTypes.string,
+  hiddenLabel: PropTypes.bool,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   asynch: PropTypes.bool,
   creatable: PropTypes.bool,
@@ -101,6 +107,7 @@ Input.defaultProps = {
   label: undefined,
   value: undefined,
   asynch: false,
+  hiddenLabel: false,
   creatable: false,
   disabled: false,
   required: false,
