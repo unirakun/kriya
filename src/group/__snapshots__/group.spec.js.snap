@@ -1,19 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`common/Group should add children 1`] = `
-<div
-  className="group horizontal"
-  style={Object {}}
->
-  a child
-</div>
-`;
-
 exports[`common/Group should add custom className 1`] = `
 <div
   className="group custom horizontal"
   style={Object {}}
-/>
+>
+  <div
+    className="input"
+    withoutLabel={true}
+  >
+    {"name":"input","props":{"prop1":"test"}}
+  </div>
+</div>
 `;
 
 exports[`common/Group should add custom style 1`] = `
@@ -24,19 +22,54 @@ exports[`common/Group should add custom style 1`] = `
       "backgroundColor": "red",
     }
   }
-/>
+>
+  <div
+    className="input"
+    withoutLabel={true}
+  >
+    {"name":"input","props":{"prop1":"test"}}
+  </div>
+</div>
 `;
 
 exports[`common/Group should add vertical class when vertical group 1`] = `
 <div
   className="group vertical"
   style={Object {}}
-/>
+>
+  <div
+    className="input"
+    withoutLabel={true}
+  >
+    {"name":"input","props":{"prop1":"test"}}
+  </div>
+</div>
+`;
+
+exports[`common/Group should add withLabel props 1`] = `
+<div
+  className="group horizontal"
+  style={Object {}}
+>
+  <div
+    className="input"
+    withoutLabel={false}
+  >
+    {"name":"input","props":{"prop1":"test"}}
+  </div>
+</div>
 `;
 
 exports[`common/Group should have a default behaviour 1`] = `
 <div
   className="group horizontal"
   style={Object {}}
-/>
+>
+  <div
+    className="input"
+    withoutLabel={true}
+  >
+    {"name":"input","props":{"prop1":"test"}}
+  </div>
+</div>
 `;

@@ -4,7 +4,7 @@ import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
 import styles from '../../src/group/group.styles.scss'
 
-const Group = ({ style, className, children, vertical }) => {
+const Group = ({ style, className, children, vertical, withLabel }) => {
   const classes = classnames(
     styles.group,
     className,
@@ -13,9 +13,13 @@ const Group = ({ style, className, children, vertical }) => {
       [styles.horizontal]: !vertical,
     },
   )
+
+  const addProps = c => ({ ...c, props: { ...c.props, withoutLabel: !withLabel } })
+  const childrenWithProps = Array.isArray(children) ? children.map(addProps) : addProps(children)
+
   return (
     <div style={style} className={classes}>
-      {children}
+      {childrenWithProps}
     </div>
   )
 }
@@ -23,15 +27,16 @@ const Group = ({ style, className, children, vertical }) => {
 Group.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   vertical: PropTypes.bool,
+  withLabel: PropTypes.bool,
 }
 
 Group.defaultProps = {
   style: {},
   className: '',
-  children: undefined,
   vertical: false,
+  withLabel: false,
 }
 
 export default onlyUpdateForPropTypes(Group)

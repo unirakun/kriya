@@ -21,7 +21,7 @@
     transition: opacity .5s ease-in-out;
 
     .mandatory {
-      color: red;
+      color: $error-color;
     }
   }
 
