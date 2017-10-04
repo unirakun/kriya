@@ -27,6 +27,7 @@ const Form = ({ style, className }) => {
       {/* form input */}
       <div>
         <Input type="input" placeholder="input" name="input" required label="Input label" />
+        <Input type="input" placeholder="input2" name="input2" />
         <Input type="textarea" placeholder="textarea" name="textArea" />
         <Input type="select" placeholder="select" name="select" options={stringOptions} />
       </div>
@@ -40,7 +41,7 @@ const Form = ({ style, className }) => {
         <Input type="selectbox" placeholder="selectbox creatable" name="selectbox_creatable" options={stringOptions} creatable promptTextCreator={e => `Add ${e}`} />
         <Input type="selectbox" placeholder="selectbox creatable" name="selectbox_creatable_multi" options={stringOptions} creatable promptTextCreator={e => `"${e}" add to family`} multi />
       </div>
-      <Button type="submit" name="SUBMIT">Submit</Button>
+      <Button type="submit" primary name="SUBMIT">Submit</Button>
     </form>
   )
 }

@@ -90,6 +90,29 @@ describe('common/Input', () => {
       expect(tree).toMatchSnapshot()
     }
 
+    it('show placeholder on label when value is not empty', () => snapContainer({}, {
+      form: 'form1',
+      name: 'field1',
+      placeholder: 'placeholder',
+      type: 'input',
+    }))
+
+    it('hidden label when withoutLabel is true', () => snapContainer({}, {
+      form: 'form1',
+      name: 'field1',
+      withoutLabel: true,
+      label: 'label',
+      type: 'input',
+    }))
+
+    it('show label when withoutLabel is false', () => snapContainer({}, {
+      form: 'form1',
+      name: 'field1',
+      withoutLabel: false,
+      label: 'label',
+      type: 'input',
+    }))
+
     it('should pass value of redux form for select', () => snapContainer({}, {
       form: 'form1',
       name: 'field1',

@@ -3,13 +3,15 @@ import { change, formValueSelector, getFormSubmitErrors } from 'redux-form'
 import { formInjector } from '../helpers'
 import Component from './input'
 
-const mapStateToProps = (state, { form, name, type }) => {
-  if (type !== 'selectbox') return {}
-
+const mapStateToProps = (state, { form, name, placeholder, label, withoutLabel }) => {
   const submitErrors = getFormSubmitErrors(form)(state)
+  const value = formValueSelector(form)(state, name)
+
   return {
-    value: formValueSelector(form)(state, name),
+    value,
     error: submitErrors ? submitErrors[name] : undefined,
+    label: !withoutLabel && (label || placeholder),
+    hiddenLabel: !label && (!value || (Array.isArray(value) && value.length === 0)),
   }
 }
 
