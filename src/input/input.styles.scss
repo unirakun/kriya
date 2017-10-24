@@ -25,6 +25,18 @@
     }
   }
 
+  .errorMsg {
+    align-items: flex-end;
+    color: $error-color;
+    display: flex;
+    flex-direction: column;
+    font-size: .7em;
+    height: .7em;
+    margin-top: $input-radius-size;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+  }
+
   select,
   :global(.Select) {
     appearance: none;
@@ -148,7 +160,13 @@
   }
 }
 
+.error ~ .errorMsg {
+  opacity: 1;
+}
+
 .field,
+textarea,
+select,
 :global(.Select-control) {
   border: $border-size solid $default-grey-color;
   border-radius: $input-radius-size;

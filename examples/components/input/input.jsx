@@ -7,6 +7,7 @@ import { onlyUpdateForPropTypes } from 'recompose'
 import Input from '../../../src/input'
 import Button from '../../../src/button'
 import { numberOptions, stringOptions } from '../../constant'
+import validate from './input.validate'
 import styles from './input.styles.scss'
 
 const formName = 'INPUT'
@@ -56,4 +57,4 @@ Form.defaultProps = {
   className: '',
 }
 
-export default router('INPUT')(reduxForm({ form: formName })(onlyUpdateForPropTypes(Form)))
+export default router('INPUT')(reduxForm({ form: formName, validate })(onlyUpdateForPropTypes(Form)))

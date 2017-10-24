@@ -43,6 +43,10 @@ describe('common/Input', () => {
       }))
     })
 
+    describe('error', () => {
+      it('should print an error', () => snap({ error: 'my error' }))
+    })
+
     it('should print an icon when this is a select', () => snap({ type: 'select' }))
     it('should print the placeholder', () => snap({ type: 'input', placeholder: 'My placeholder' }))
     it('should be disabled', () => snap({ type: 'input', disabled: true }))
