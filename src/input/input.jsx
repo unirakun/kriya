@@ -58,7 +58,7 @@ const Input = ({
   if (required) validate.push(validateRequired)
   const field = (
     <Field
-      className={type === 'checkbox' ? '' : styles.field}
+      className={classnames({ [styles.error]: !!error, [styles.field]: type !== 'checkbox' })}
       component={getComponent(type)}
       {...commonProps}
       validate={validate}
@@ -75,6 +75,7 @@ const Input = ({
       </label>}
       {type === 'selectbox' ? select : field}
       {type === 'select' && <i className={classnames(styles.arrow, 'mdv-expand_more')} />}
+      <div className={styles.msg}>{error}</div>
     </div>
   )
 }
