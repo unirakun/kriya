@@ -75,7 +75,7 @@ const Input = ({
       </label>}
       {type === 'selectbox' ? select : field}
       {type === 'select' && <i className={classnames(styles.arrow, 'mdv-expand_more')} />}
-      <div className={styles.msg}>{error}</div>
+      <div className={styles.errorMsg}>{error}</div>
     </div>
   )
 }

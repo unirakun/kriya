@@ -25,7 +25,7 @@
     }
   }
 
-  .msg {
+  .errorMsg {
     align-items: flex-end;
     color: $error-color;
     display: flex;
@@ -160,7 +160,7 @@
   }
 }
 
-.error ~ .msg {
+.error ~ .errorMsg {
   opacity: 1;
 }
 
