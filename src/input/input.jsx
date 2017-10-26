@@ -96,7 +96,7 @@ Input.propTypes = {
   creatable: PropTypes.bool,
   name: PropTypes.string.isRequired,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  type: PropTypes.oneOf(['input', 'checkbox', 'textarea', 'radio', 'select', 'selectbox', 'number', 'date']),
+  type: PropTypes.oneOf(['input', 'checkbox', 'textarea', 'radio', 'select', 'selectbox', 'number', 'date', 'password']),
   disabled: PropTypes.bool,
   required: PropTypes.bool,
   options: PropTypes.arrayOf(PropTypes.shape({
