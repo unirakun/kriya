@@ -1,0 +1,21 @@
+@import '~styles/theme';
+
+.bottomSheets {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.awesome {
+  background: $secondary-color;
+  color: #ffffff;
+  padding: 1em;
+  margin: 1em;
+}
+
+.normal {
+  background: $primary-color;
+  color: #ffffff;
+  padding: 1em;
+  margin: 1em;
+}

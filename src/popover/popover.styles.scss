@@ -4,14 +4,14 @@
   align-items: center;
   background-color: $popover-background-color;
   display: flex;
-  height: 100vh;
+  height: 100%;
   justify-content: center;
   left: 0;
   opacity: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   transition: opacity $default-transition;
-  width: 100vw;
+  width: 100%;
   z-index: -10;
 }
 

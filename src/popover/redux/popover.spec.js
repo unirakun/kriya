@@ -4,29 +4,24 @@ import reducer from './popover'
 import { getPopover } from './popover.selectors'
 import { openPopover, closePopover } from './popover.actions'
 
+const state = {
+  ui: {
+    popover: {
+      pop1: { print: true, contents: { content: 'content' } },
+      pop2: { print: true },
+    },
+  },
+}
+
 describe('popover/redux', () => {
   describe('selectors', () => {
-    const state = {
-      ui: {
-        popover: {
-          pop1: true,
-          pop2: false,
-        },
-      },
-    }
-
     it('should return popover', () =>
       expect(getPopover(state))
-      .toEqual({ pop1: true, pop2: false })
+      .toEqual(state.ui.popover)
     )
   })
 
   describe('reducer', () => {
-    const state = {
-      pop1: true,
-      pop2: false,
-    }
-
     it('should initialize', () =>
       expect(reducer())
       .toEqual({})
@@ -38,13 +33,13 @@ describe('popover/redux', () => {
     )
 
     it('should add open a popover', () =>
-      expect(reducer(state, openPopover('pop2')))
-      .toEqual({ ...state, pop2: true })
+      expect(reducer(state.ui.popover, openPopover('pop2')))
+      .toEqual({ ...state.ui.popover, pop2: { print: true } })
     )
 
     it('should close a popover', () =>
-      expect(reducer(state, closePopover('pop1')))
-      .toEqual({ pop2: false })
+      expect(reducer(state.ui.popover, closePopover('pop1')))
+      .toEqual({ ...state.ui.popover, pop1: { ...state.ui.popover.pop1, print: false } })
     )
   })
 })

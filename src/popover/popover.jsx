@@ -4,7 +4,7 @@ import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
 import styles from '../../src/popover/popover.styles.scss'
 
-const Popover = ({ style, className, children, onClose, print }) => {
+const Popover = ({ style, className, children, onClose, print, contents }) => {
   const classes = classnames(
     styles.popover,
     className,
@@ -16,7 +16,7 @@ const Popover = ({ style, className, children, onClose, print }) => {
   return (
     // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <div style={style} className={classes} onClick={onClose}>
-      {React.cloneElement(children, { print, onClose })}
+      {React.cloneElement(children, { print, onClose, ...contents })}
     </div>
   )
 }
@@ -27,6 +27,7 @@ Popover.propTypes = {
   children: PropTypes.node.isRequired,
   onClose: PropTypes.func,
   print: PropTypes.bool,
+  contents: PropTypes.object,
 }
 
 Popover.defaultProps = {
@@ -34,6 +35,7 @@ Popover.defaultProps = {
   className: '',
   onClose: undefined,
   print: false,
+  contents: undefined,
 }
 
 export default onlyUpdateForPropTypes(Popover)

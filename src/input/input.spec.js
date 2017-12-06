@@ -43,6 +43,10 @@ describe('common/Input', () => {
       }))
     })
 
+    describe('error', () => {
+      it('should print an error', () => snap({ error: 'my error' }))
+    })
+
     it('should print an icon when this is a select', () => snap({ type: 'select' }))
     it('should print the placeholder', () => snap({ type: 'input', placeholder: 'My placeholder' }))
     it('should be disabled', () => snap({ type: 'input', disabled: true }))
@@ -89,6 +93,29 @@ describe('common/Input', () => {
       const tree = component.toJSON()
       expect(tree).toMatchSnapshot()
     }
+
+    it('show placeholder on label when value is not empty', () => snapContainer({}, {
+      form: 'form1',
+      name: 'field1',
+      placeholder: 'placeholder',
+      type: 'input',
+    }))
+
+    it('hidden label when withoutLabel is true', () => snapContainer({}, {
+      form: 'form1',
+      name: 'field1',
+      withoutLabel: true,
+      label: 'label',
+      type: 'input',
+    }))
+
+    it('show label when withoutLabel is false', () => snapContainer({}, {
+      form: 'form1',
+      name: 'field1',
+      withoutLabel: false,
+      label: 'label',
+      type: 'input',
+    }))
 
     it('should pass value of redux form for select', () => snapContainer({}, {
       form: 'form1',

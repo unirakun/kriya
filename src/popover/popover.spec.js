@@ -16,8 +16,8 @@ import { closePopover, CLOSE_POPOVER } from './redux'
 import Popover from './popover'
 import PopoverContainer from './popover.container'
 
-const Child = ({ print, onClose, ...props }) => <div {...props}>{`custom_component_child${JSON.stringify({ print, onClose })}`}</div>
-const Child2 = ({ print, onClose, ...props }) => <div {...props}>{`custom_2${JSON.stringify({ print, onClose })}`}</div>
+const Child = ({ print, onClose, contents, ...props }) => <div {...props}>{`custom_component_child${JSON.stringify({ print, onClose, contents })}`}</div>
+const Child2 = ({ print, onClose, contents, ...props }) => <div {...props}>{`custom_2${JSON.stringify({ print, onClose, contents })}`}</div>
 
 const snapshot = props => snap(Popover)({ children: <Child />, ...props })
 
@@ -29,6 +29,7 @@ describe('common/Popover', () => {
     it('should have a default behaviour', snapshot({}))
     it('should be print when asked for and passed it to child', snapshot({ print: true }))
     it('should pass onClose function to child', snapshot({ onClose: () => {} }))
+    it('should pass contents to child', snapshot({ contents: { description: 'description' } }))
     it('should call onClose when clicked', () => {
       const onClick = jest.fn()
       const wrapper = mount(
@@ -55,9 +56,10 @@ describe('common/Popover', () => {
       expect(tree).toMatchSnapshot()
     }
 
-    it('should pass print=false when the popover is not listed in redux', () => snapContainer({ pop1: true }, { code: 'pop2' }))
-    it('should pass print=true when the popover IS listed in redux', () => snapContainer({ pop1: true }, { code: 'pop1' }))
+    it('should pass print=false when the popover is not listed in redux', () => snapContainer({ pop1: { print: true } }, { code: 'pop2' }))
+    it('should pass print=true when the popover IS listed in redux', () => snapContainer({ pop1: { print: true } }, { code: 'pop1' }))
     it('should pass onClose callback when closable', () => snapContainer({}, { code: 'pop1', closable: true }))
+    it('should pass contents', () => snapContainer({}, { code: 'pop1', contents: { descriptions: 'descriptions' } }))
     it(`should call ${CLOSE_POPOVER} when clicked`, () => {
       const dispatch = jest.fn()
       const store = createStore(() => ({ ui: { popover: { code: 'pop1' } } }))

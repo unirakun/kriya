@@ -1,0 +1,20 @@
+@import '~styles/theme';
+
+.popover {
+  align-items: center;
+  background-color: $secondary-color;
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  justify-content: center;
+  max-height: 15em;
+  max-width: 50em;
+  padding: 2em;
+  transform: translateX(-100vw);
+  transition: transform $default-transition;
+  width: 60vw;
+}
+
+.print {
+  transform: translateX(0);
+}

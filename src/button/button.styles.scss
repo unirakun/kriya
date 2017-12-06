@@ -15,7 +15,7 @@
   padding: $input-radius-size 1.5em;
   position: relative;
   text-decoration: none;
-  transition: $default-transition background-color;
+  transition: $default-transition background-color, .1s ease-out color;
 }
 
 .flat {
@@ -78,21 +78,33 @@
 
   &:hover {
     background-color: $primary-color-darken-1;
+    color: $font-color-light;
   }
 }
 
 .disabled {
   @include disabled;
+
+  &:hover {
+    color: $default-grey-color;
+  }
 }
 
 .large {
   padding: 1em 2em;
 }
 
-.iconLeft {
-  margin-right: .5em;
+.withText {
+  .iconLeft {
+    margin-right: .5em;
+  }
+
+  .iconRight {
+    margin-left: 1em;
+  }
 }
 
+.iconLeft,
 .iconRight {
-  margin-left: 1em;
+  color: inherit;
 }

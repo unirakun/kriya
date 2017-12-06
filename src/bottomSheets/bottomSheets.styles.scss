@@ -1,0 +1,44 @@
+@import '~styles/theme';
+
+$header-height: 2em;
+
+.bottomSheets {
+  align-self: center;
+  position: relative;
+  z-index: 100;
+}
+
+.sheets {
+  align-items: center;
+  background-color: $default-bg-color;
+  bottom: 0;
+  box-shadow: 0 0 .2em 0 $font-color-dark;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  transform: translateY(100%) translateY(-#{$header-height}) translateX(-50%);
+  transition: transform .2s;
+
+  &.print {
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+.header {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: $header-height;
+  width: 100%;
+}
+
+.content {
+  background-color: $default-bg-color;
+  justify-content: center;
+}
+
+.separator {
+  border: 0;
+  border-bottom: solid 1px $default-grey-color;
+  width: 100%;
+}

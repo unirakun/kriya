@@ -1,8 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`common/Input container hidden label when withoutLabel is true 1`] = `
+<div
+  className="input showLabel type-input"
+  style={Object {}}
+>
+  <input
+    className="field"
+    name="field1"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    type="input"
+    value="1"
+  />
+  <div
+    className="errorMsg"
+  />
+</div>
+`;
+
 exports[`common/Input container should pass value of redux form for select 1`] = `
 <div
-  className="input type-select"
+  className="input showLabel type-select"
   style={Object {}}
 >
   <select
@@ -42,32 +65,121 @@ exports[`common/Input container should pass value of redux form for select 1`] =
   <i
     className="arrow mdv-expand_more"
   />
+  <div
+    className="errorMsg"
+  />
 </div>
 `;
 
 exports[`common/Input container should pass value of redux form for selectbox 1`] = `
 <div
-  className="input type-selectbox"
+  className="input showLabel type-selectbox"
   style={Object {}}
 >
   <div
     className="kriya-select"
   >
-    {"name":"kriya-select","props":{"simpleValue":true,"value":"1","options":[{"value":"o1","label":"l1"},{"value":"o4","label":"l4"},{"value":"o2","label":"l2"},{"value":"o3","label":"l3"}],"className":"","name":"field1","placeholder":"","disabled":false,"anyTouched":false,"asyncValidating":false,"dirty":true,"form":"form1","initialized":false,"invalid":false,"pristine":false,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{}}}
+    {"name":"kriya-select","props":{"value":"1","options":[{"value":"o1","label":"l1"},{"value":"o4","label":"l4"},{"value":"o2","label":"l2"},{"value":"o3","label":"l3"}],"className":"","name":"field1","placeholder":"","disabled":false,"anyTouched":false,"asyncValidating":false,"dirty":true,"form":"form1","initialized":false,"invalid":false,"pristine":false,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{}}}
   </div>
+  <div
+    className="errorMsg"
+  />
+</div>
+`;
+
+exports[`common/Input container show label when withoutLabel is false 1`] = `
+<div
+  className="input showLabel type-input"
+  style={Object {}}
+>
+  <label
+    htmlFor="field1"
+  >
+    label
+  </label>
+  <input
+    className="field"
+    name="field1"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    type="input"
+    value="1"
+  />
+  <div
+    className="errorMsg"
+  />
+</div>
+`;
+
+exports[`common/Input container show placeholder on label when value is not empty 1`] = `
+<div
+  className="input showLabel type-input"
+  style={Object {}}
+>
+  <label
+    htmlFor="field1"
+  >
+    placeholder
+  </label>
+  <input
+    className="field"
+    name="field1"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder="placeholder"
+    type="input"
+    value="1"
+  />
+  <div
+    className="errorMsg"
+  />
+</div>
+`;
+
+exports[`common/Input graphical (JSX) error should print an error 1`] = `
+<div
+  className="input showLabel type-input"
+  style={Object {}}
+>
+  <input
+    className="field"
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    type="input"
+    value=""
+  />
+  <div
+    className="errorMsg"
+  />
 </div>
 `;
 
 exports[`common/Input graphical (JSX) labels should print a * on label when input is required 1`] = `
 <div
-  className="input type-input"
+  className="input showLabel type-input"
   style={Object {}}
 >
   <label
     htmlFor="name"
   >
     my label
-    *
+    <div
+      className="mandatory"
+    >
+       *
+    </div>
   </label>
   <input
     className="field"
@@ -80,13 +192,16 @@ exports[`common/Input graphical (JSX) labels should print a * on label when inpu
     placeholder=""
     type="input"
     value=""
+  />
+  <div
+    className="errorMsg"
   />
 </div>
 `;
 
 exports[`common/Input graphical (JSX) labels should print a label 1`] = `
 <div
-  className="input type-input"
+  className="input showLabel type-input"
   style={Object {}}
 >
   <label
@@ -106,12 +221,15 @@ exports[`common/Input graphical (JSX) labels should print a label 1`] = `
     type="input"
     value=""
   />
+  <div
+    className="errorMsg"
+  />
 </div>
 `;
 
 exports[`common/Input graphical (JSX) should add custom className 1`] = `
 <div
-  className="input type-input custom"
+  className="input showLabel type-input custom"
   style={Object {}}
 >
   <input
@@ -126,12 +244,15 @@ exports[`common/Input graphical (JSX) should add custom className 1`] = `
     type="input"
     value=""
   />
+  <div
+    className="errorMsg"
+  />
 </div>
 `;
 
 exports[`common/Input graphical (JSX) should add custom style 1`] = `
 <div
-  className="input type-input"
+  className="input showLabel type-input"
   style={
     Object {
       "backgroundColor": "red",
@@ -150,12 +271,15 @@ exports[`common/Input graphical (JSX) should add custom style 1`] = `
     type="input"
     value=""
   />
+  <div
+    className="errorMsg"
+  />
 </div>
 `;
 
 exports[`common/Input graphical (JSX) should be disabled 1`] = `
 <div
-  className="input type-input"
+  className="input showLabel type-input"
   style={Object {}}
 >
   <input
@@ -169,13 +293,16 @@ exports[`common/Input graphical (JSX) should be disabled 1`] = `
     placeholder=""
     type="input"
     value=""
+  />
+  <div
+    className="errorMsg"
   />
 </div>
 `;
 
 exports[`common/Input graphical (JSX) should have a default behaviour 1`] = `
 <div
-  className="input type-input"
+  className="input showLabel type-input"
   style={Object {}}
 >
   <input
@@ -190,12 +317,15 @@ exports[`common/Input graphical (JSX) should have a default behaviour 1`] = `
     type="input"
     value=""
   />
+  <div
+    className="errorMsg"
+  />
 </div>
 `;
 
 exports[`common/Input graphical (JSX) should print an icon when this is a select 1`] = `
 <div
-  className="input type-select"
+  className="input showLabel type-select"
   style={Object {}}
 >
   <select
@@ -214,12 +344,15 @@ exports[`common/Input graphical (JSX) should print an icon when this is a select
   <i
     className="arrow mdv-expand_more"
   />
+  <div
+    className="errorMsg"
+  />
 </div>
 `;
 
 exports[`common/Input graphical (JSX) should print the placeholder 1`] = `
 <div
-  className="input type-input"
+  className="input showLabel type-input"
   style={Object {}}
 >
   <input
@@ -234,12 +367,15 @@ exports[`common/Input graphical (JSX) should print the placeholder 1`] = `
     type="input"
     value=""
   />
+  <div
+    className="errorMsg"
+  />
 </div>
 `;
 
 exports[`common/Input graphical (JSX) types should print a select 1`] = `
 <div
-  className="input type-select"
+  className="input showLabel type-select"
   style={Object {}}
 >
   <select
@@ -258,25 +394,31 @@ exports[`common/Input graphical (JSX) types should print a select 1`] = `
   <i
     className="arrow mdv-expand_more"
   />
+  <div
+    className="errorMsg"
+  />
 </div>
 `;
 
 exports[`common/Input graphical (JSX) types should print a selectbox 1`] = `
 <div
-  className="input type-selectbox"
+  className="input showLabel type-selectbox"
   style={Object {}}
 >
   <div
     className="kriya-select"
   >
-    {"name":"kriya-select","props":{"simpleValue":true,"options":[],"className":"","name":"name","placeholder":"","disabled":false,"anyTouched":false,"asyncValidating":false,"dirty":false,"form":"testForm","initialized":false,"invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{}}}
+    {"name":"kriya-select","props":{"options":[],"className":"","name":"name","placeholder":"","disabled":false,"anyTouched":false,"asyncValidating":false,"dirty":false,"form":"testForm","initialized":false,"invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{}}}
   </div>
+  <div
+    className="errorMsg"
+  />
 </div>
 `;
 
 exports[`common/Input graphical (JSX) types should print a textarea 1`] = `
 <div
-  className="input type-textarea"
+  className="input showLabel type-textarea"
   style={Object {}}
 >
   <textarea
@@ -292,12 +434,15 @@ exports[`common/Input graphical (JSX) types should print a textarea 1`] = `
     type="textarea"
     value=""
   />
+  <div
+    className="errorMsg"
+  />
 </div>
 `;
 
 exports[`common/Input graphical (JSX) types should print an input (checkbox) 1`] = `
 <div
-  className="input type-checkbox"
+  className="input showLabel type-checkbox"
   style={Object {}}
 >
   <div
@@ -305,12 +450,15 @@ exports[`common/Input graphical (JSX) types should print an input (checkbox) 1`]
   >
     {"name":"checkbox","props":{"input":{"name":"name","value":"","checked":false},"meta":{"active":false,"asyncValidating":false,"autofilled":false,"dirty":false,"form":"testForm","invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"touched":false,"valid":true,"visited":false},"className":"","placeholder":"","disabled":false,"type":"checkbox","children":null}}
   </div>
+  <div
+    className="errorMsg"
+  />
 </div>
 `;
 
 exports[`common/Input graphical (JSX) types should print an input (input) 1`] = `
 <div
-  className="input type-input"
+  className="input showLabel type-input"
   style={Object {}}
 >
   <input
@@ -325,12 +473,15 @@ exports[`common/Input graphical (JSX) types should print an input (input) 1`] = 
     type="input"
     value=""
   />
+  <div
+    className="errorMsg"
+  />
 </div>
 `;
 
 exports[`common/Input graphical (JSX) types should print an input (number) 1`] = `
 <div
-  className="input type-number"
+  className="input showLabel type-number"
   style={Object {}}
 >
   <input
@@ -345,16 +496,19 @@ exports[`common/Input graphical (JSX) types should print an input (number) 1`] =
     type="number"
     value=""
   />
+  <div
+    className="errorMsg"
+  />
 </div>
 `;
 
 exports[`common/Input graphical (JSX) types should print an input (radio) 1`] = `
 <div
-  className="input type-radio"
+  className="input showLabel type-radio"
   style={Object {}}
 >
   <input
-    checked={false}
+    checked={true}
     className="field"
     name="name"
     onBlur={[Function]}
@@ -366,12 +520,15 @@ exports[`common/Input graphical (JSX) types should print an input (radio) 1`] = 
     type="radio"
     value={undefined}
   />
+  <div
+    className="errorMsg"
+  />
 </div>
 `;
 
 exports[`common/Input graphical (JSX) types should print options on select 1`] = `
 <div
-  className="input type-select"
+  className="input showLabel type-select"
   style={Object {}}
 >
   <select
@@ -411,25 +568,31 @@ exports[`common/Input graphical (JSX) types should print options on select 1`] =
   <i
     className="arrow mdv-expand_more"
   />
+  <div
+    className="errorMsg"
+  />
 </div>
 `;
 
 exports[`common/Input graphical (JSX) types should print options on selectbox 1`] = `
 <div
-  className="input type-selectbox"
+  className="input showLabel type-selectbox"
   style={Object {}}
 >
   <div
     className="kriya-select"
   >
-    {"name":"kriya-select","props":{"simpleValue":true,"options":[{"value":"o1","label":"l1"},{"value":"o4","label":"l4"},{"value":"o2","label":"l2"},{"value":"o3","label":"l3"}],"className":"","name":"name","placeholder":"","disabled":false,"anyTouched":false,"asyncValidating":false,"dirty":false,"form":"testForm","initialized":false,"invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{}}}
+    {"name":"kriya-select","props":{"options":[{"value":"o1","label":"l1"},{"value":"o4","label":"l4"},{"value":"o2","label":"l2"},{"value":"o3","label":"l3"}],"className":"","name":"name","placeholder":"","disabled":false,"anyTouched":false,"asyncValidating":false,"dirty":false,"form":"testForm","initialized":false,"invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"submitSucceeded":false,"valid":true,"pure":true,"array":{}}}
   </div>
+  <div
+    className="errorMsg"
+  />
 </div>
 `;
 
 exports[`common/Input graphical (JSX) types shouldnt print options (not select) 1`] = `
 <div
-  className="input type-input"
+  className="input showLabel type-input"
   style={Object {}}
 >
   <input
@@ -443,6 +606,9 @@ exports[`common/Input graphical (JSX) types shouldnt print options (not select) 
     placeholder=""
     type="input"
     value=""
+  />
+  <div
+    className="errorMsg"
   />
 </div>
 `;

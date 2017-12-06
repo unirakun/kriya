@@ -25,23 +25,28 @@ const Input = ({
    className, style,
    type, name, label,
    placeholder, disabled,
-   required, options, value,
-   asynch, loadOptions,
+   required, options, value, hiddenLabel,
+   asynch, creatable, loadOptions,
    error,
    ...selectboxProps
  }) => {
   const classes = classnames(
     styles.input,
+    {
+      [styles.showLabel]: !hiddenLabel,
+    },
     styles[`type-${type}`],
     className,
   )
 
   const commonProps = { name, placeholder, disabled }
 
-  const SelectComponent = asynch ? Select.Async : Select
+  let SelectComponent = Select
+  if (asynch) SelectComponent = Select.Async
+  if (creatable) SelectComponent = Select.Creatable
+
   const select = (
     <SelectComponent
-      simpleValue
       value={value}
       options={options}
       loadOptions={loadOptions}
@@ -55,7 +60,7 @@ const Input = ({
   if (required) validate.push(validateRequired)
   const field = (
     <Field
-      className={type === 'checkbox' ? '' : styles.field}
+      className={classnames({ [styles.error]: !!error, [styles.field]: type !== 'checkbox' })}
       component={getComponent(type)}
       {...commonProps}
       validate={validate}
@@ -67,9 +72,12 @@ const Input = ({
 
   return (
     <div className={classes} style={style}>
-      {label && <label htmlFor={name}>{label}{required && '*'}</label>}
+      {label && <label htmlFor={name}>
+        {label}{required && <div className={styles.mandatory}>&nbsp;*</div>}
+      </label>}
       {type === 'selectbox' ? select : field}
       {type === 'select' && <i className={classnames(styles.arrow, 'mdv-expand_more')} />}
+      <div className={styles.errorMsg}>{error}</div>
     </div>
   )
 }
@@ -78,11 +86,19 @@ Input.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   placeholder: PropTypes.string,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  hiddenLabel: PropTypes.bool,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.bool,
+    PropTypes.array,
+    PropTypes.object,
+  ]),
   asynch: PropTypes.bool,
+  creatable: PropTypes.bool,
   name: PropTypes.string.isRequired,
-  label: PropTypes.string,
-  type: PropTypes.oneOf(['input', 'checkbox', 'textarea', 'radio', 'select', 'selectbox', 'number']),
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  type: PropTypes.oneOf(['input', 'checkbox', 'textarea', 'radio', 'select', 'selectbox', 'number', 'date', 'password']),
   disabled: PropTypes.bool,
   required: PropTypes.bool,
   options: PropTypes.arrayOf(PropTypes.shape({
@@ -100,6 +116,8 @@ Input.defaultProps = {
   label: undefined,
   value: undefined,
   asynch: false,
+  hiddenLabel: false,
+  creatable: false,
   disabled: false,
   required: false,
   placeholder: '',

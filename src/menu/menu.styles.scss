@@ -15,11 +15,16 @@ $padding: 2em;
   flex-direction: column;
   height: calc(100vh - #{2 * $padding});
   padding: $padding;
+  position: relative;
 }
 
 .items {
   display: flex;
   flex-direction: column;
+  left: 0;
+  position: absolute;
+  top: 7em;
+  width: 100%;
 }
 
 .footer {
@@ -27,7 +32,7 @@ $padding: 2em;
 }
 
 .sep {
-  border-bottom: 1px solid $primary-color-darken-2;
+  border-bottom: 1px solid $default-bg-color;
   margin: 2em 0;
   width: 70%;
 }

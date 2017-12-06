@@ -1,0 +1,5 @@
+{
+  "name": "kriya/hoc",
+  "private": true,
+  "main": "../lib/hoc.js"
+}

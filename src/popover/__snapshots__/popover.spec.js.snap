@@ -1,5 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`common/Popover container should pass contents 1`] = `
+<div
+  className="popover"
+  onClick={undefined}
+  style={Object {}}
+>
+  <div
+    descriptions="descriptions"
+  >
+    custom_component_child{"print":false}
+  </div>
+</div>
+`;
+
 exports[`common/Popover container should pass onClose callback when closable 1`] = `
 <div
   className="popover"
@@ -95,6 +109,20 @@ exports[`common/Popover graphical (JSX) should have a default behaviour 1`] = `
   style={Object {}}
 >
   <div>
+    custom_component_child{"print":false}
+  </div>
+</div>
+`;
+
+exports[`common/Popover graphical (JSX) should pass contents to child 1`] = `
+<div
+  className="popover"
+  onClick={undefined}
+  style={Object {}}
+>
+  <div
+    description="description"
+  >
     custom_component_child{"print":false}
   </div>
 </div>

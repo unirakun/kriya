@@ -12,7 +12,8 @@ const Icon = ({
   primary, secondary, disabled,
   prefix,
   title,
-  noColor /* set to true to print the native icon color */,
+  nbPath,
+  iconColor, /* set to true to print the native icon color */
 }) => {
   const classes = classnames(
     styles.icon,
@@ -21,7 +22,7 @@ const Icon = ({
       [styles.primary]: primary,
       [styles.secondary]: secondary,
       [styles.disabled]: disabled,
-      [styles.colored]: !noColor,
+      [styles.inheritColor]: !iconColor,
     },
   )
 
@@ -32,7 +33,7 @@ const Icon = ({
   const iconComponent = (
     <i name={iconCode} className={iconCode} title={title}>
       {
-        Array.from(new Array(13), (x, i) => i + 1)
+        Array.from(new Array(nbPath), (x, i) => i + 1)
           .map(i => <span key={i} className={`path${i}`} />)
       }
     </i>
@@ -61,8 +62,9 @@ Icon.propTypes = {
   primary: PropTypes.bool,
   secondary: PropTypes.bool,
   disabled: PropTypes.bool,
-  noColor: PropTypes.bool,
+  iconColor: PropTypes.bool,
   title: PropTypes.string,
+  nbPath: PropTypes.number,
 }
 
 Icon.defaultProps = {
@@ -73,8 +75,9 @@ Icon.defaultProps = {
   primary: false,
   secondary: false,
   disabled: false,
-  noColor: false,
+  iconColor: false,
   title: undefined,
+  nbPath: 13, /* choose arbitrary */
 }
 
 export default onlyUpdateForPropTypes(Icon)

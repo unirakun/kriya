@@ -1,6 +1,6 @@
 {
   "name": "kriya",
-  "version": "1.6.0",
+  "version": "2.5.1",
   "main": "index.js",
   "description": "Kriya is a react/redux components library",
   "license": "MIT",
@@ -109,19 +109,22 @@
     "extract-text-webpack-plugin": "^2.0.0-rc.2",
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.26.0",
+    "hoc-little-router": "^1.0.0",
     "identity-obj-proxy": "^3.0.0",
     "intl": "^1.2.5",
     "jest": "^19.0.2",
-    "npm-run-all": "^4.0.2",
     "node-sass": "^4.3.0",
     "normalize.css": "^5.0.0",
+    "npm-run-all": "^4.0.2",
     "postcss-loader": "^1.2.2",
-    "react-addons-test-utils": "^15.4.2",
-    "react-hot-loader": "3.0.0-beta.6",
     "react": "^15.5.4",
+    "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.5.4",
+    "react-hot-loader": "3.0.0-beta.6",
     "react-test-renderer": "^15.4.2",
     "recompose": "^0.22.0",
+    "redux-little-router": "13.1.2",
+    "redux-saga": "^0.14.3",
     "sass-lint": "^1.10.2",
     "sass-loader": "^4.1.1",
     "sinon": "^2.1.0",
@@ -141,6 +144,6 @@
     "react-ink": "^6.2.0",
     "react-redux": "^5.0.4",
     "redux": "^3.6.0",
-    "redux-form": "^6.7.0"
+    "redux-form": "^7.1.1"
   }
 }
