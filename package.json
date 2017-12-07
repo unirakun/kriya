@@ -1,6 +1,6 @@
 {
   "name": "kriya",
-  "version": "2.5.1",
+  "version": "2.5.2",
   "main": "index.js",
   "description": "Kriya is a react/redux components library",
   "license": "MIT",
@@ -138,7 +138,7 @@
     "recompose": "^0.22.0"
   },
   "dependencies": {
-    "kriya-select": "^1.0.2",
+    "kriya-select": "^1.0.3",
     "prop-types": "^15.5.8",
     "react-img-fallback": "^1.0.0",
     "react-ink": "^6.2.0",

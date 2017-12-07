@@ -3616,9 +3616,9 @@ klaw@^1.0.0:
   optionalDependencies:
     graceful-fs "^4.1.9"
 
-kriya-select@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/kriya-select/-/kriya-select-1.0.2.tgz#495914f6f17a72ae647d851f4c3686e38c022d08"
+kriya-select@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/kriya-select/-/kriya-select-1.0.3.tgz#5a6b85cf20d5cec9fb7d42a1a23ed6babf8a7280"
   dependencies:
     classnames "^2.2.4"
     create-react-class "^15.5.2"
