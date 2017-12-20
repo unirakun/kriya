@@ -23,5 +23,8 @@ export default {
     '/tabs': {
       title: 'TABS',
     },
+    '/toast': {
+      title: 'TOAST',
+    },
   },
 }

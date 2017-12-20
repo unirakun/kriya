@@ -8,6 +8,8 @@ import Popover from './components/popover'
 import BottomSheets from './components/bottomSheets'
 import TabsScreen from './components/tabs'
 import { Awesome } from './components/popovers'
+import Toast from './components/toast'
+import Toasts from './components/toasts'
 import styles from './app.styles.scss'
 
 const App = () => {
@@ -22,10 +24,13 @@ const App = () => {
         <MenuItem name="popover" title="POPOVER">Popover</MenuItem>
         <MenuItem name="bottomSheets" title="BOTTOMSHEETS">Bottom Sheets</MenuItem>
         <MenuItem name="tabs" title="TABS">Tabs</MenuItem>
+        <MenuItem name="toast" title="TOAST">Toast</MenuItem>
       </Menu>
 
       {/* POPOVERS */}
       <Awesome />
+      {/* Toasts */}
+      <Toasts />
 
       {/* TABS */}
       <TabsScreen />
@@ -42,6 +47,8 @@ const App = () => {
       <Popover />
       {/* BottomSheets */}
       <BottomSheets />
+      {/* TOAST */}
+      <Toast />
     </div>
   )
 }
