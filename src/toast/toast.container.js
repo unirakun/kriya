@@ -1,22 +1,19 @@
 import { connect } from 'react-redux'
+import addDelayBeforeRemove from './hoc'
 import Component from './toast'
+import { getToast, remove } from './redux'
 
-import { getCurrentToast, close, remove } from './redux'
-
-const mapStateToProps = (state, { position }) => {
+const mapStateToProps = (state) => {
   return {
-    ...getCurrentToast(state),
-    position,
+    ...getToast(state),
   }
 }
 const mapDisptachToProps = (dispatch) => {
   return {
-    close: (handler) => {
+    remove: (handler) => {
       if (handler) handler()
-      dispatch(close())
-      return setTimeout(() => dispatch(remove()), 1000)
+      return dispatch(remove())
     },
   }
 }
-
-export default connect(mapStateToProps, mapDisptachToProps)(Component)
+export default connect(mapStateToProps, mapDisptachToProps)(addDelayBeforeRemove(3000)(Component))

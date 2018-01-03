@@ -3,7 +3,7 @@
 .toast {
   align-items: center;
   background: $default-bg-black-color;
-  box-shadow: 0 1px 6px 4px $box-shadow-color, 0 3px 6px $box-shadow-color;
+  box-shadow: 0 .05em .25em .25em $box-shadow-color, 0 .05em .25em $box-shadow-color;
   display: flex;
   justify-content: space-between;
   min-height: 4em;
@@ -11,6 +11,13 @@
   transition: transform 1s;
   width: 100%;
   z-index: 1000;
+
+  @media screen and (min-width: $tablet) {
+    left: 0;
+    margin: 0 auto;
+    right: 0;
+    width: 50%;
+  }
 
   &.top {
     top: 0;

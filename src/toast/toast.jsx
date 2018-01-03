@@ -4,29 +4,20 @@ import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
 import styles from '../../src/toast/toast.styles.scss'
 
-const Toast = ({ style, className, title, button, print, close, delay, position, type }) => {
-  let timeout = null
-  const classes = classnames(styles.toast, className, {
-    [styles.top]: position === 'top',
-    [styles.bottom]: position === 'bottom',
-    [styles.print]: print,
-    [styles.success]: type === 'success',
-    [styles.warning]: type === 'warning',
-    [styles.error]: type === 'error',
-  })
+const onClick = (fn, handler) => () => fn(handler)
 
-  if (print) timeout = setTimeout(close, delay)
-
-  const onClose = (handler) => {
-    clearTimeout(timeout)
-    return close(handler)
-  }
+const Toast = ({ style, className, title, button, print, position, type, remove }) => {
+  const classes = classnames(
+    styles.toast,
+    className,
+    styles[position],
+    styles[type],
+    { [styles.print]: print })
 
   return (
     <div style={style} className={classes}>
       <span className={styles.text}>{title}</span>
-      {button &&
-      <button onClick={() => onClose(button.handler)}>
+      {button && button.text && <button onClick={onClick(remove, button.handler)}>
         {button.text}
       </button>}
     </div>
@@ -39,8 +30,7 @@ Toast.propTypes = {
   print: PropTypes.bool,
   title: PropTypes.string,
   button: PropTypes.object,
-  close: PropTypes.func,
-  delay: PropTypes.number,
+  remove: PropTypes.func,
   position: PropTypes.oneOf(['top', 'bottom']),
   type: PropTypes.oneOf(['', 'success', 'warning', 'error']),
 }
@@ -51,10 +41,9 @@ Toast.defaultProps = {
   print: false,
   title: '',
   button: {},
-  close: undefined,
-  delay: 3000,
   position: 'bottom',
   type: '',
+  remove: undefined,
 }
 
 export default onlyUpdateForPropTypes(Toast)

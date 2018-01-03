@@ -1,15 +1,15 @@
 import { connect } from 'react-redux'
 import Component from './toast'
-import { open } from '../../../src/toast/redux'
+import { create } from '../../../src/toast/redux'
 
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onClick: ({ title, type, button }) => dispatch(open({
-      title,
-      type,
-      button,
-    })),
+    onClickDefault: () => dispatch(create({ code: 'toast1', title: 'Default' })),
+    onClickSuccess: () => dispatch(create({ code: 'toast2', title: 'Success', type: 'success' })),
+    onClickWarning: () => dispatch(create({ code: 'toast3', title: 'Warning', type: 'warning' })),
+    onClickError: () => dispatch(create({ code: 'toast4', title: 'Error', type: 'error' })),
+    onClickButton: () => dispatch(create({ code: 'toast5', title: 'With Button', button: { text: 'cancel', handler: () => console.log('my action') } })),
   }
 }
 

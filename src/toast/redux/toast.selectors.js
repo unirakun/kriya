@@ -1,1 +1,1 @@
-export const getCurrentToast = state => state.ui.toast[0]
+export const getToast = state => state.ui.toast

@@ -1,17 +1,18 @@
 @import '~styles/theme';
+
 .example {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 1em;
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1em;
 }
 
-.button{
-    background: $secondary-color;
-    color: #ffffff;
-    padding: 1em;
-    margin: 1em;
-    width: 50%;
-    cursor: pointer;
+.button {
+  background: $secondary-color;
+  color: $default-bg-color;
+  cursor: pointer;
+  margin: 1em;
+  padding: 1em;
+  width: 50%;
 }

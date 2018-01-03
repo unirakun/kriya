@@ -5,7 +5,15 @@ import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
 import styles from './toast.styles.scss'
 
-const ToastExample = ({ style, className, onClick }) => {
+
+const ToastExample = ({
+  style,
+  className,
+  onClickDefault,
+  onClickError,
+  onClickButton,
+  onClickSuccess,
+  onClickWarning }) => {
   const classes = classnames(
     styles.example,
     className,
@@ -13,11 +21,11 @@ const ToastExample = ({ style, className, onClick }) => {
 
   return (
     <div style={style} className={classes} >
-      <div className={styles.button} onClick={() => onClick({ title: 'Default' })}>default</div>
-      <div className={styles.button} onClick={() => onClick({ title: 'Success', type: 'success' })}>success</div>
-      <div className={styles.button} onClick={() => onClick({ title: 'Warning', type: 'warning' })}>warning</div>
-      <div className={styles.button} onClick={() => onClick({ title: 'Error', type: 'error' })}>error</div>
-      <div className={styles.button} onClick={() => onClick({ title: 'With handler', button: { text: 'handler', handler: () => alert('custom handler') } })}>with button and handler</div>
+      <div className={styles.button} onClick={onClickDefault}>default</div>
+      <div className={styles.button} onClick={onClickSuccess}>success</div>
+      <div className={styles.button} onClick={onClickWarning}>warning</div>
+      <div className={styles.button} onClick={onClickError}>error</div>
+      <div className={styles.button} onClick={onClickButton}>button</div>
     </div>
   )
 }
@@ -25,7 +33,11 @@ const ToastExample = ({ style, className, onClick }) => {
 ToastExample.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
-  onClick: PropTypes.func.isRequired,
+  onClickDefault: PropTypes.func.isRequired,
+  onClickSuccess: PropTypes.func.isRequired,
+  onClickError: PropTypes.func.isRequired,
+  onClickWarning: PropTypes.func.isRequired,
+  onClickButton: PropTypes.func.isRequired,
 }
 
 ToastExample.defaultProps = {

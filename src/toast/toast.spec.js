@@ -12,7 +12,7 @@ import { createStore } from 'redux'
 import renderer from 'react-test-renderer'
 import { Provider } from 'react-redux'
 import Toast from './toast'
-import { CLOSE_TOAST, close, REMOVE_TOAST, remove } from './redux'
+import { REMOVE_TOAST, remove } from './redux'
 import ToastContainer from './toast.container'
 
 const snapshot = props => snap(Toast)({ children: [], ...props })
@@ -48,29 +48,14 @@ describe('common/Toast', () => {
       expect(tree).toMatchSnapshot()
     }
     it("should pass position when it's defined in props", () => snapContainer([], { position: 'top' }))
-    it(`should call ${CLOSE_TOAST} and ${REMOVE_TOAST} when button is pressed`, () => {
-      jest.useFakeTimers()
+    it(`should call ${REMOVE_TOAST} when button is pressed`, () => {
       const dispatch = jest.fn()
-      const store = createStore(() => ({ ui: { toast: [{ print: true, title: 'toast', button: { text: 'button' } }] } }))
+      const store = createStore(() => ({ ui: { toast: { code: 'toast1', print: true, title: 'toast', button: { text: 'button' } } } }))
       store.dispatch = dispatch
       const component = createContainer(store)
       component.find('button').first().simulate('click')
-      jest.runAllTimers()
-      expect(dispatch.mock.calls.length).toBe(2)
-      expect(dispatch.mock.calls[0]).toEqual([close()])
-      expect(dispatch.mock.calls[1]).toEqual([remove()])
-    })
-    it(`should call ${CLOSE_TOAST} and ${REMOVE_TOAST} when delay is done`, () => {
-      jest.useFakeTimers()
-      const dispatch = jest.fn()
-      const store = createStore(() => ({ ui: { toast: [{ print: true, title: 'toast' }] } }))
-      store.dispatch = dispatch
-      createContainer(store)
-      jest.runAllTimers()
-      expect(dispatch.mock.calls.length).toBe(2)
-      expect(dispatch.mock.calls[0]).toEqual([close()])
-      expect(dispatch.mock.calls[1]).toEqual([remove()])
-      jest.clearAllTimers()
+      expect(dispatch.mock.calls.length).toBe(1)
+      expect(dispatch.mock.calls[0]).toEqual([remove()])
     })
   })
 })

@@ -10,9 +10,6 @@ exports[`common/Toast container should pass position when it's defined in props 
   >
     
   </span>
-  <button
-    onClick={[Function]}
-  />
 </div>
 `;
 
@@ -26,9 +23,6 @@ exports[`common/Toast graphical (JSX) should add button 1`] = `
   >
     
   </span>
-  <button
-    onClick={[Function]}
-  />
 </div>
 `;
 
@@ -42,9 +36,6 @@ exports[`common/Toast graphical (JSX) should add button and handler 1`] = `
   >
     
   </span>
-  <button
-    onClick={[Function]}
-  />
 </div>
 `;
 
@@ -58,9 +49,6 @@ exports[`common/Toast graphical (JSX) should add custom className 1`] = `
   >
     
   </span>
-  <button
-    onClick={[Function]}
-  />
 </div>
 `;
 
@@ -74,9 +62,6 @@ exports[`common/Toast graphical (JSX) should add custom delay 1`] = `
   >
     
   </span>
-  <button
-    onClick={[Function]}
-  />
 </div>
 `;
 
@@ -90,9 +75,6 @@ exports[`common/Toast graphical (JSX) should add custom position 1`] = `
   >
     
   </span>
-  <button
-    onClick={[Function]}
-  />
 </div>
 `;
 
@@ -110,9 +92,6 @@ exports[`common/Toast graphical (JSX) should add custom style 1`] = `
   >
     
   </span>
-  <button
-    onClick={[Function]}
-  />
 </div>
 `;
 
@@ -126,9 +105,6 @@ exports[`common/Toast graphical (JSX) should add custom type 1`] = `
   >
     
   </span>
-  <button
-    onClick={[Function]}
-  />
 </div>
 `;
 
@@ -142,9 +118,6 @@ exports[`common/Toast graphical (JSX) should add title 1`] = `
   >
     my awesome title
   </span>
-  <button
-    onClick={[Function]}
-  />
 </div>
 `;
 
@@ -158,9 +131,6 @@ exports[`common/Toast graphical (JSX) should have a default behaviour 1`] = `
   >
     
   </span>
-  <button
-    onClick={[Function]}
-  />
 </div>
 `;
 
@@ -174,8 +144,5 @@ exports[`common/Toast graphical (JSX) should print toast 1`] = `
   >
     
   </span>
-  <button
-    onClick={[Function]}
-  />
 </div>
 `;
