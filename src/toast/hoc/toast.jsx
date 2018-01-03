@@ -1,18 +1,29 @@
-import { lifecycle } from 'recompose'
+import React, { Component } from 'react'
 
-let timer = null
-
-export const addDelay = (prevProps, props, defaultDelay) => {
+export const addDelay = (prevProps, props, defaultDelay, timer) => {
   const { print, code, remove, delay } = props
-  if ((prevProps.code !== code) && print) {
+  if (prevProps.code !== code && print) {
     if (timer) clearTimeout(timer)
-    timer = setTimeout(remove, delay || defaultDelay)
+    return setTimeout(remove, delay || defaultDelay)
+  }
+  return timer
+}
+
+const addDelayBeforeRemove = defaultDelay => (WrappedComponent) => {
+  return class extends Component {
+
+    componentDidUpdate(prevProps) {
+      this.timer = addDelay(prevProps, this.props, defaultDelay, this.timer)
+    }
+
+    componentWillUnmount() {
+      clearTimeout(this.timer)
+    }
+
+    render() {
+      return <WrappedComponent {...this.props} />
+    }
   }
 }
 
-export default defaultDelay => Component => lifecycle({
-  componentDidUpdate(prevProps) {
-    return addDelay(prevProps, this.props, defaultDelay)
-  },
-})(Component)
-
+export default addDelayBeforeRemove
