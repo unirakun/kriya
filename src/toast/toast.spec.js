@@ -48,13 +48,15 @@ describe('common/Toast', () => {
       expect(tree).toMatchSnapshot()
     }
     it("should pass position when it's defined in props", () => snapContainer([], { position: 'top' }))
-    it(`should call ${REMOVE_TOAST} when button is pressed`, () => {
+    it(`should call handler and ${REMOVE_TOAST} when button is pressed`, () => {
       const dispatch = jest.fn()
-      const store = createStore(() => ({ ui: { toast: { code: 'toast1', print: true, title: 'toast', button: { text: 'button' } } } }))
+      const handler = jest.fn()
+      const store = createStore(() => ({ ui: { toast: { code: 'toast1', print: true, title: 'toast', button: { text: 'button', handler } } } }))
       store.dispatch = dispatch
       const component = createContainer(store)
       component.find('button').first().simulate('click')
       expect(dispatch.mock.calls.length).toBe(1)
+      expect(handler.mock.calls.length).toBe(1)
       expect(dispatch.mock.calls[0]).toEqual([remove()])
     })
   })
