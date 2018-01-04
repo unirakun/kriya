@@ -26,12 +26,12 @@ const createContainer = (store, props) => {
 
 describe('common/Button', () => {
   describe('graphical (JSX)', () => {
-    it('should have a default behaviour', snapshot({}))
-    it('should add custom className', snapshot({ className: 'custom' }))
-    it('should add custom style', snapshot({ style: { color: 'blue' } }))
+    it('should have a default behaviour', snapshot())
+    it('should add custom className', snapshot({ text: 'my button', className: 'custom' }))
+    it('should add custom style', snapshot({ text: 'my button', style: { color: 'blue' } }))
     it('should add text', snapshot({ text: 'my button' }))
-    it('should add handler', snapshot({ onClick: () => 'ok' }))
-    it('should add custom type', snapshot({ type: 'warning' }))
+    it('should add handler', snapshot({ text: 'my button', onClick: () => 'ok' }))
+    it('should add custom type', snapshot({ text: 'my button', type: 'warning' }))
   })
   describe('container', () => {
     it('should call onClick and remove when button is pressed', () => {
