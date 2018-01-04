@@ -35,35 +35,21 @@
   }
 
   &.success {
-    button,
     .text {
       color: $primary-color;
     }
   }
 
   &.error {
-    button,
     .text {
       color: $error-color;
     }
   }
 
   &.warning {
-    button,
     .text {
       color: $warning-color;
     }
-  }
-
-  button {
-    background: transparent;
-    border: 0;
-    color: $primary-color;
-    cursor: pointer;
-    font-weight: 700;
-    outline: none;
-    padding-right: 1.5em;
-    text-transform: uppercase;
   }
 }
 

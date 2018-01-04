@@ -26,7 +26,7 @@ exports[`common/Toast graphical (JSX) should add button 1`] = `
 </div>
 `;
 
-exports[`common/Toast graphical (JSX) should add button and handler 1`] = `
+exports[`common/Toast graphical (JSX) should add button and onClick 1`] = `
 <div
   className="toast bottom"
   style={Object {}}

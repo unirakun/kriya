@@ -9,7 +9,7 @@ const mapDispatchToProps = (dispatch) => {
     onClickSuccess: () => dispatch(create({ code: 'toast2', title: 'Success', type: 'success' })),
     onClickWarning: () => dispatch(create({ code: 'toast3', title: 'Warning', type: 'warning' })),
     onClickError: () => dispatch(create({ code: 'toast4', title: 'Error', type: 'error' })),
-    onClickButton: () => dispatch(create({ code: 'toast5', title: 'With Button', button: { text: 'cancel', handler: () => console.log('my action') } })),
+    onClickButton: () => dispatch(create({ code: 'toast5', title: 'With Button', button: { text: 'cancel', onClick: () => console.log('my action') } })),
   }
 }
 

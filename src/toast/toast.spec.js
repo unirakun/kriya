@@ -31,7 +31,7 @@ describe('common/Toast', () => {
     it('should add custom style', snapshot({ style: { backgroundColor: 'red' } }))
     it('should add title', snapshot({ title: 'my awesome title' }))
     it('should add button', snapshot({ button: { title: 'my button' } }))
-    it('should add button and handler', snapshot({ button: { title: 'my button', handler: () => 'ok' } }))
+    it('should add button and onClick', snapshot({ button: { title: 'my button', onClick: () => 'ok' } }))
     it('should add custom delay', snapshot({ delay: 1000 }))
     it('should add custom type', snapshot({ type: 'warning' }))
     it('should add custom position', snapshot({ position: 'top' }))
@@ -47,16 +47,16 @@ describe('common/Toast', () => {
       const tree = component.toJSON()
       expect(tree).toMatchSnapshot()
     }
-    it("should pass position when it's defined in props", () => snapContainer([], { position: 'top' }))
-    it(`should call handler and ${REMOVE_TOAST} when button is pressed`, () => {
+    it("should pass position when it's defined in props", () => snapContainer({}, { position: 'top' }))
+    it(`should call onClick and ${REMOVE_TOAST} when button is pressed`, () => {
       const dispatch = jest.fn()
-      const handler = jest.fn()
-      const store = createStore(() => ({ ui: { toast: { code: 'toast1', print: true, title: 'toast', button: { text: 'button', handler } } } }))
+      const onClick = jest.fn()
+      const store = createStore(() => ({ ui: { toast: { code: 'toast1', print: true, title: 'toast', button: { text: 'button', onClick } } } }))
       store.dispatch = dispatch
       const component = createContainer(store)
       component.find('button').first().simulate('click')
       expect(dispatch.mock.calls.length).toBe(1)
-      expect(handler.mock.calls.length).toBe(1)
+      expect(onClick.mock.calls.length).toBe(1)
       expect(dispatch.mock.calls[0]).toEqual([remove()])
     })
   })
