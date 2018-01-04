@@ -5,6 +5,7 @@ import { onlyUpdateForPropTypes } from 'recompose'
 import styles from '../../../src/toast/button/button.styles.scss'
 
 const Button = ({ style, className, text, onClick, type }) => {
+  if (!text) return null
   const classes = classnames(
     styles.button,
     styles[type],

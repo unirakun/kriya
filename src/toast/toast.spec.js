@@ -7,6 +7,7 @@
 /* eslint-env jest */
 import React from 'react'
 import snap from 'snap'
+import mockComponent from '__mocks__/component'
 import { mount } from 'enzyme'
 import { createStore } from 'redux'
 import renderer from 'react-test-renderer'
@@ -14,6 +15,8 @@ import { Provider } from 'react-redux'
 import Toast from './toast'
 import { REMOVE_TOAST, remove } from './redux'
 import ToastContainer from './toast.container'
+
+jest.mock('./button', () => mockComponent('button'))
 
 const snapshot = props => snap(Toast)({ children: [], ...props })
 const createContainer = (store) => {
@@ -48,15 +51,13 @@ describe('common/Toast', () => {
       expect(tree).toMatchSnapshot()
     }
     it("should pass position when it's defined in props", () => snapContainer({}, { position: 'top' }))
-    it(`should call onClick and ${REMOVE_TOAST} when button is pressed`, () => {
+    it(`should dispatch ${REMOVE_TOAST} when remove is called`, () => {
       const dispatch = jest.fn()
-      const onClick = jest.fn()
-      const store = createStore(() => ({ ui: { toast: { code: 'toast1', print: true, title: 'toast', button: { text: 'button', onClick } } } }))
+      const store = createStore(() => ({ ui: { toast: { code: 'toast1', print: true, title: 'toast' } } }))
       store.dispatch = dispatch
-      const component = createContainer(store)
-      component.find('button').first().simulate('click')
+      const container = createContainer(store)
+      container.find(Toast).props().remove()
       expect(dispatch.mock.calls.length).toBe(1)
-      expect(onClick.mock.calls.length).toBe(1)
       expect(dispatch.mock.calls[0]).toEqual([remove()])
     })
   })

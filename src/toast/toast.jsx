@@ -17,7 +17,7 @@ const Toast = ({ style, className, title, button, print, position, type }) => {
   return (
     <div style={style} className={classes}>
       <span className={styles.text}>{title}</span>
-      {button && button.text && (
+      {button && (
         <Button {...button} type={type} />
       )}
     </div>

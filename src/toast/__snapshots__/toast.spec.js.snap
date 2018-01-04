@@ -10,6 +10,11 @@ exports[`common/Toast container should pass position when it's defined in props 
   >
     
   </span>
+  <div
+    className="button"
+  >
+    {"name":"button","props":{"type":""}}
+  </div>
 </div>
 `;
 
@@ -23,6 +28,11 @@ exports[`common/Toast graphical (JSX) should add button 1`] = `
   >
     
   </span>
+  <div
+    className="button"
+  >
+    {"name":"button","props":{"title":"my button","type":""}}
+  </div>
 </div>
 `;
 
@@ -36,6 +46,11 @@ exports[`common/Toast graphical (JSX) should add button and onClick 1`] = `
   >
     
   </span>
+  <div
+    className="button"
+  >
+    {"name":"button","props":{"title":"my button","type":""}}
+  </div>
 </div>
 `;
 
@@ -49,6 +64,11 @@ exports[`common/Toast graphical (JSX) should add custom className 1`] = `
   >
     
   </span>
+  <div
+    className="button"
+  >
+    {"name":"button","props":{"type":""}}
+  </div>
 </div>
 `;
 
@@ -62,6 +82,11 @@ exports[`common/Toast graphical (JSX) should add custom delay 1`] = `
   >
     
   </span>
+  <div
+    className="button"
+  >
+    {"name":"button","props":{"type":""}}
+  </div>
 </div>
 `;
 
@@ -75,6 +100,11 @@ exports[`common/Toast graphical (JSX) should add custom position 1`] = `
   >
     
   </span>
+  <div
+    className="button"
+  >
+    {"name":"button","props":{"type":""}}
+  </div>
 </div>
 `;
 
@@ -92,6 +122,11 @@ exports[`common/Toast graphical (JSX) should add custom style 1`] = `
   >
     
   </span>
+  <div
+    className="button"
+  >
+    {"name":"button","props":{"type":""}}
+  </div>
 </div>
 `;
 
@@ -105,6 +140,11 @@ exports[`common/Toast graphical (JSX) should add custom type 1`] = `
   >
     
   </span>
+  <div
+    className="button"
+  >
+    {"name":"button","props":{"type":"warning"}}
+  </div>
 </div>
 `;
 
@@ -118,6 +158,11 @@ exports[`common/Toast graphical (JSX) should add title 1`] = `
   >
     my awesome title
   </span>
+  <div
+    className="button"
+  >
+    {"name":"button","props":{"type":""}}
+  </div>
 </div>
 `;
 
@@ -131,6 +176,11 @@ exports[`common/Toast graphical (JSX) should have a default behaviour 1`] = `
   >
     
   </span>
+  <div
+    className="button"
+  >
+    {"name":"button","props":{"type":""}}
+  </div>
 </div>
 `;
 
@@ -144,5 +194,10 @@ exports[`common/Toast graphical (JSX) should print toast 1`] = `
   >
     
   </span>
+  <div
+    className="button"
+  >
+    {"name":"button","props":{"type":""}}
+  </div>
 </div>
 `;
