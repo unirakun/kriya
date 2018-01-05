@@ -16,5 +16,5 @@ const mapDisptachToProps = (dispatch) => {
 }
 export default compose(
   connect(mapStateToProps, mapDisptachToProps),
-  addDelayBeforeRemove(10000000),
+  addDelayBeforeRemove(3000),
 )(Component)
