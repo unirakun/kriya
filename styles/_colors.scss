@@ -12,16 +12,20 @@ $secondary-color: #558dff !default;
 $default-bg-color: #fff !default;
 $default-bg-grey-color: #f5f5f5 !default;
 $disable-bg-color: #f5f5f5 !default;
+$default-bg-black-color: #111111 !default;
 
 // Checkbox colors
 $checkbox-back-bg: #818181 !default;
 $checkbox-ball-bg: #f5f5f5 !default;
 
 // Others colors
+$font-color-default: #2f4f4f !default;
 $font-color-dark: #373b43 !default;
 $font-color-light: #fff !default;
 $default-grey-color: #ccc !default;
 $popover-background-color: rgba(0, 0, 0, .64) !default;
 $error-color: #f06252 !default;
+$warning-color: #eba014 !default;
 $default-fg-grey-color: #a5abb6 !default;
 $hovered-color: #c5c5c5;
+$box-shadow-color: rgba(0, 0, 0, .16);

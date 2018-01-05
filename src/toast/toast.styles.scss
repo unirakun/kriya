@@ -1,0 +1,60 @@
+@import '~styles/theme';
+
+.toast {
+  align-items: center;
+  background: $default-bg-black-color;
+  box-shadow: 0 .05em .25em .15em $box-shadow-color, 0 .05em .25em $box-shadow-color;
+  display: flex;
+  justify-content: space-between;
+  min-height: 4em;
+  position: fixed;
+  transition: transform 1s;
+  width: 100%;
+  z-index: 1000;
+
+  @media screen and (min-width: $tablet) {
+    left: 0;
+    margin: 0 auto;
+    right: 0;
+    width: 50%;
+  }
+
+  &.top {
+    top: 0;
+    transform: translateY(-100vh);
+  }
+
+  &.bottom {
+    bottom: 0;
+    transform: translateY(100vh);
+  }
+
+  &.print {
+    transform: translateY(0);
+    transition: transform 300ms;
+  }
+
+  &.success {
+    .text {
+      color: $primary-color;
+    }
+  }
+
+  &.error {
+    .text {
+      color: $error-color;
+    }
+  }
+
+  &.warning {
+    .text {
+      color: $warning-color;
+    }
+  }
+}
+
+.text {
+  color: $default-bg-color;
+  font-weight: 700;
+  padding-left: 1.5em;
+}

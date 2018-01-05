@@ -1,5 +1,12 @@
-import { put, select, call } from 'redux-saga/effects'
-import { push, getTitle } from 'redux/router'
+import {
+  put,
+  select,
+  call,
+} from 'redux-saga/effects'
+import {
+  push,
+  getTitle,
+} from 'redux/router'
 
 export function* goToHome() {
   yield put(push('/'))
@@ -37,4 +44,8 @@ export function* load() {
   const title = yield select(getTitle)
 
   if (title === 'HOME') yield call(goToHome)
+}
+
+export function* goToToast() {
+  yield put(push('/toast'))
 }

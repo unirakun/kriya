@@ -7,14 +7,14 @@
 // Global config
 html {
   * {
-    color: darkslategrey;
+    color: $font-color-default;
     font-family: 'Muli', 'Arial', 'Helvetica';
     line-height: 1em;
   }
 }
 
 body {
-  background-color: white;
+  background-color: $default-bg-color;
 }
 
 // Own normalize
