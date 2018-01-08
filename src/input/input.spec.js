@@ -48,14 +48,13 @@ describe('common/Input', () => {
     })
 
     it('should print an icon when this is a select', () => snap({ type: 'select' }))
-    it('should print the placeholder', () => snap({ type: 'input', placeholder: 'My placeholder' }))
-    it('should be disabled', () => snap({ type: 'input', disabled: true }))
+    it('should print the placeholder', () => snap({ type: 'text', placeholder: 'My placeholder' }))
+    it('should be disabled', () => snap({ type: 'text', disabled: true }))
 
     describe('types', () => {
       it('should print a textarea', () => snap({ type: 'textarea' }))
       it('should print a select', () => snap({ type: 'select' }))
       it('should print a selectbox', () => snap({ type: 'selectbox' }))
-      it('should print an input (input)', () => snap({ type: 'input' }))
       it('should print an input (checkbox)', () => snap({ type: 'checkbox' }))
       it('should print an input (radio)', () => snap({ type: 'radio' }))
       it('should print an input (number)', () => snap({ type: 'number' }))
@@ -68,7 +67,7 @@ describe('common/Input', () => {
       ]
       it('should print options on select', () => snap({ type: 'select', options }))
       it('should print options on selectbox', () => snap({ type: 'selectbox', options }))
-      it('shouldnt print options (not select)', () => snap({ type: 'input', options }))
+      it('shouldnt print options (not select)', () => snap({ type: 'text', options }))
     })
   })
   describe('container', () => {
@@ -98,7 +97,7 @@ describe('common/Input', () => {
       form: 'form1',
       name: 'field1',
       placeholder: 'placeholder',
-      type: 'input',
+      type: 'text',
     }))
 
     it('hidden label when withoutLabel is true', () => snapContainer({}, {
@@ -106,7 +105,7 @@ describe('common/Input', () => {
       name: 'field1',
       withoutLabel: true,
       label: 'label',
-      type: 'input',
+      type: 'text',
     }))
 
     it('show label when withoutLabel is false', () => snapContainer({}, {
@@ -114,7 +113,7 @@ describe('common/Input', () => {
       name: 'field1',
       withoutLabel: false,
       label: 'label',
-      type: 'input',
+      type: 'text',
     }))
 
     it('should pass value of redux form for select', () => snapContainer({}, {
