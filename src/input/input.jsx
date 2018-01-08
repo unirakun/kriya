@@ -19,14 +19,36 @@ const getComponent = (type) => {
 
 const validateRequired = value => (value ? undefined : 'required')
 
+const types = [
+  'checkbox',
+  'color',
+  'date',
+  'datetime-local',
+  'email',
+  'month',
+  'number',
+  'password',
+  'radio',
+  'range',
+  'search',
+  'select',
+  'selectbox',
+  'tel',
+  'text',
+  'textarea',
+  'time',
+  'url',
+  'week',
+]
+
 const Input = ({
-   className, style,
-   type, name, label,
-   placeholder, disabled,
-   required, options, value, hiddenLabel,
-   asynch, creatable, loadOptions,
-   error,
-   ...selectboxProps
+  className, style,
+  type, name, label,
+  placeholder, disabled,
+  required, options, value, hiddenLabel,
+  asynch, creatable, loadOptions,
+  error,
+  ...selectboxProps
  }) => {
   const classes = classnames(
     styles.input,
@@ -96,7 +118,7 @@ Input.propTypes = {
   creatable: PropTypes.bool,
   name: PropTypes.string.isRequired,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  type: PropTypes.oneOf(['input', 'checkbox', 'textarea', 'radio', 'select', 'selectbox', 'number', 'date', 'password']),
+  type: PropTypes.oneOf(types),
   disabled: PropTypes.bool,
   required: PropTypes.bool,
   options: PropTypes.arrayOf(PropTypes.shape({
@@ -110,7 +132,7 @@ Input.propTypes = {
 }
 
 Input.defaultProps = {
-  type: 'input',
+  type: 'text',
   label: undefined,
   value: undefined,
   asynch: false,

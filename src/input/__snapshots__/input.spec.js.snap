@@ -2,7 +2,7 @@
 
 exports[`common/Input container hidden label when withoutLabel is true 1`] = `
 <div
-  className="input showLabel type-input"
+  className="input showLabel type-text"
   style={Object {}}
 >
   <input
@@ -14,7 +14,7 @@ exports[`common/Input container hidden label when withoutLabel is true 1`] = `
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    type="input"
+    type="text"
     value="1"
   />
   <div
@@ -89,7 +89,7 @@ exports[`common/Input container should pass value of redux form for selectbox 1`
 
 exports[`common/Input container show label when withoutLabel is false 1`] = `
 <div
-  className="input showLabel type-input"
+  className="input showLabel type-text"
   style={Object {}}
 >
   <label
@@ -106,7 +106,7 @@ exports[`common/Input container show label when withoutLabel is false 1`] = `
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    type="input"
+    type="text"
     value="1"
   />
   <div
@@ -117,7 +117,7 @@ exports[`common/Input container show label when withoutLabel is false 1`] = `
 
 exports[`common/Input container show placeholder on label when value is not empty 1`] = `
 <div
-  className="input showLabel type-input"
+  className="input showLabel type-text"
   style={Object {}}
 >
   <label
@@ -134,7 +134,7 @@ exports[`common/Input container show placeholder on label when value is not empt
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder="placeholder"
-    type="input"
+    type="text"
     value="1"
   />
   <div
@@ -145,7 +145,7 @@ exports[`common/Input container show placeholder on label when value is not empt
 
 exports[`common/Input graphical (JSX) error should print an error 1`] = `
 <div
-  className="input showLabel type-input"
+  className="input showLabel type-text"
   style={Object {}}
 >
   <input
@@ -157,7 +157,7 @@ exports[`common/Input graphical (JSX) error should print an error 1`] = `
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    type="input"
+    type="text"
     value=""
   />
   <div
@@ -168,7 +168,7 @@ exports[`common/Input graphical (JSX) error should print an error 1`] = `
 
 exports[`common/Input graphical (JSX) labels should print a * on label when input is required 1`] = `
 <div
-  className="input showLabel type-input"
+  className="input showLabel type-text"
   style={Object {}}
 >
   <label
@@ -190,7 +190,7 @@ exports[`common/Input graphical (JSX) labels should print a * on label when inpu
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    type="input"
+    type="text"
     value=""
   />
   <div
@@ -201,7 +201,7 @@ exports[`common/Input graphical (JSX) labels should print a * on label when inpu
 
 exports[`common/Input graphical (JSX) labels should print a label 1`] = `
 <div
-  className="input showLabel type-input"
+  className="input showLabel type-text"
   style={Object {}}
 >
   <label
@@ -218,7 +218,7 @@ exports[`common/Input graphical (JSX) labels should print a label 1`] = `
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    type="input"
+    type="text"
     value=""
   />
   <div
@@ -229,7 +229,7 @@ exports[`common/Input graphical (JSX) labels should print a label 1`] = `
 
 exports[`common/Input graphical (JSX) should add custom className 1`] = `
 <div
-  className="input showLabel type-input custom"
+  className="input showLabel type-text custom"
   style={Object {}}
 >
   <input
@@ -241,7 +241,7 @@ exports[`common/Input graphical (JSX) should add custom className 1`] = `
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    type="input"
+    type="text"
     value=""
   />
   <div
@@ -252,7 +252,7 @@ exports[`common/Input graphical (JSX) should add custom className 1`] = `
 
 exports[`common/Input graphical (JSX) should add custom style 1`] = `
 <div
-  className="input showLabel type-input"
+  className="input showLabel type-text"
   style={
     Object {
       "backgroundColor": "red",
@@ -268,7 +268,7 @@ exports[`common/Input graphical (JSX) should add custom style 1`] = `
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    type="input"
+    type="text"
     value=""
   />
   <div
@@ -279,7 +279,7 @@ exports[`common/Input graphical (JSX) should add custom style 1`] = `
 
 exports[`common/Input graphical (JSX) should be disabled 1`] = `
 <div
-  className="input showLabel type-input"
+  className="input showLabel type-text"
   style={Object {}}
 >
   <input
@@ -291,7 +291,7 @@ exports[`common/Input graphical (JSX) should be disabled 1`] = `
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    type="input"
+    type="text"
     value=""
   />
   <div
@@ -302,7 +302,7 @@ exports[`common/Input graphical (JSX) should be disabled 1`] = `
 
 exports[`common/Input graphical (JSX) should have a default behaviour 1`] = `
 <div
-  className="input showLabel type-input"
+  className="input showLabel type-text"
   style={Object {}}
 >
   <input
@@ -314,7 +314,7 @@ exports[`common/Input graphical (JSX) should have a default behaviour 1`] = `
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    type="input"
+    type="text"
     value=""
   />
   <div
@@ -352,7 +352,7 @@ exports[`common/Input graphical (JSX) should print an icon when this is a select
 
 exports[`common/Input graphical (JSX) should print the placeholder 1`] = `
 <div
-  className="input showLabel type-input"
+  className="input showLabel type-text"
   style={Object {}}
 >
   <input
@@ -364,7 +364,7 @@ exports[`common/Input graphical (JSX) should print the placeholder 1`] = `
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder="My placeholder"
-    type="input"
+    type="text"
     value=""
   />
   <div
@@ -450,29 +450,6 @@ exports[`common/Input graphical (JSX) types should print an input (checkbox) 1`]
   >
     {"name":"checkbox","props":{"input":{"name":"name","value":"","checked":false},"meta":{"active":false,"asyncValidating":false,"autofilled":false,"dirty":false,"form":"testForm","invalid":false,"pristine":true,"submitting":false,"submitFailed":false,"touched":false,"valid":true,"visited":false},"className":"","placeholder":"","disabled":false,"type":"checkbox","children":null}}
   </div>
-  <div
-    className="errorMsg"
-  />
-</div>
-`;
-
-exports[`common/Input graphical (JSX) types should print an input (input) 1`] = `
-<div
-  className="input showLabel type-input"
-  style={Object {}}
->
-  <input
-    className="field"
-    name="name"
-    onBlur={[Function]}
-    onChange={[Function]}
-    onDragStart={[Function]}
-    onDrop={[Function]}
-    onFocus={[Function]}
-    placeholder=""
-    type="input"
-    value=""
-  />
   <div
     className="errorMsg"
   />
@@ -592,7 +569,7 @@ exports[`common/Input graphical (JSX) types should print options on selectbox 1`
 
 exports[`common/Input graphical (JSX) types shouldnt print options (not select) 1`] = `
 <div
-  className="input showLabel type-input"
+  className="input showLabel type-text"
   style={Object {}}
 >
   <input
@@ -604,7 +581,7 @@ exports[`common/Input graphical (JSX) types shouldnt print options (not select) 
     onDrop={[Function]}
     onFocus={[Function]}
     placeholder=""
-    type="input"
+    type="text"
     value=""
   />
   <div
