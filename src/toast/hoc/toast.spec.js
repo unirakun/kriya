@@ -8,13 +8,14 @@
 
 import { addDelay } from './toast'
 
+const props = remove => ({ title: 'title', type: 'success', print: true, remove })
+
 describe('HOC', () => {
   it('should call remove when delay is done', () => {
     jest.useFakeTimers()
     const remove = jest.fn()
     const prevProps = {}
-    const props = { code: 'newToast', remove, print: true }
-    addDelay(prevProps, props, 3000)
+    addDelay(prevProps, props(remove), 3000)
     jest.runAllTimers()
     expect(remove.mock.calls.length).toBe(1)
     jest.clearAllTimers()
@@ -22,9 +23,7 @@ describe('HOC', () => {
   it('should not call remove if the current toast is already print', () => {
     jest.useFakeTimers()
     const remove = jest.fn()
-    const prevProps = { code: 'toast1', remove, print: true }
-    const props = { code: 'toast1', remove, print: true }
-    addDelay(prevProps, props, 3000)
+    addDelay(props(remove), props(remove), 3000)
     jest.runAllTimers()
     expect(remove.mock.calls.length).toBe(0)
     jest.clearAllTimers()
@@ -33,9 +32,8 @@ describe('HOC', () => {
     jest.useFakeTimers()
     const handler = jest.fn()
     const remove = jest.fn()
-    const prevProps = { code: 'toast1', remove, print: true }
-    const props = { code: 'toast2', remove, print: true }
-    addDelay(prevProps, props, 3000, setTimeout(handler, 5000))
+    const prevProps = props(remove)
+    addDelay(prevProps, { ...props(remove), title: 'title2' }, 3000, setTimeout(handler, 5000))
     jest.runAllTimers()
     expect(clearTimeout).toHaveBeenCalledTimes(1)
     expect(handler).toHaveBeenCalledTimes(0)

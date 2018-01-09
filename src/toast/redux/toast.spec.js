@@ -7,7 +7,7 @@ import { create, remove } from './toast.actions'
 const state = {
   ui: {
     toast: {
-      code: 'toast1', print: true, title: 'my toast with button', button: { text: 'my button', handler: () => 'test' }
+      print: true, title: 'my toast with button', button: { text: 'my button', handler: () => 'test' }
     }
   }
 }
@@ -30,8 +30,8 @@ describe('toast/redux', () => {
         .toBe(state)
     )
     it('should create a toast', () =>
-      expect(reducer(state.ui.toast, create({ code: 'toast1', title: 'new toast', type: 'error' })))
-        .toEqual({ code: 'toast1', title: 'new toast', type: 'error', print: true })
+      expect(reducer(state.ui.toast, create.error('new toast')))
+        .toEqual({ title: 'new toast', type: 'error', print: true })
     )
     it('should remove a toast', () =>
       expect(reducer(state.ui.toast, remove()))
