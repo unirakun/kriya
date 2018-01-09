@@ -53,7 +53,7 @@ describe('common/Toast', () => {
     it("should pass position when it's defined in props", () => snapContainer({}, { position: 'top' }))
     it(`should dispatch ${REMOVE_TOAST} when remove is called`, () => {
       const dispatch = jest.fn()
-      const store = createStore(() => ({ ui: { toast: { code: 'toast1', print: true, title: 'toast' } } }))
+      const store = createStore(() => ({ ui: { toast: { print: true, title: 'toast' } } }))
       store.dispatch = dispatch
       const container = createContainer(store)
       container.find(Toast).props().remove()

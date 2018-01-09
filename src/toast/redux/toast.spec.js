@@ -29,7 +29,11 @@ describe('toast/redux', () => {
       expect(reducer(state, { type: 'UNKNOWN' }))
         .toBe(state)
     )
-    it('should create a toast', () =>
+    it('should create a toast with type option', () =>
+      expect(reducer(state.ui.toast, create('success toast', { type: 'success' })))
+        .toEqual({ title: 'success toast', type: 'success', print: true })
+    )
+    it('should create a toast with factory', () =>
       expect(reducer(state.ui.toast, create.error('new toast')))
         .toEqual({ title: 'new toast', type: 'error', print: true })
     )

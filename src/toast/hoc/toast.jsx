@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
 export const addDelay = (prevProps, props, defaultDelay, timer) => {
-  const { print, title, type, remove, delay } = props
-  if ((prevProps.title !== title || prevProps.type !== type) && print) {
+  const { title, type, remove, delay } = props
+  if (prevProps.title !== title || prevProps.type !== type) {
     if (timer) clearTimeout(timer)
     return setTimeout(remove, delay || defaultDelay)
   }

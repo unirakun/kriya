@@ -5,12 +5,8 @@ const action = type =>
   ({ type: CREATE_TOAST, payload: { title, type, ...options } })
 
 export const create = (title, options) => action()(title, options)
-Object.assign(create, {
-  success: action('success'),
-  warning: action('warning'),
-  error: action('error'),
-})
-
+const types = ['success', 'warning', 'error']
+types.forEach((type) => { create[type] = action(type) })
 
 export const REMOVE_TOAST = 'REMOVE_TOAST'
 export const remove = () => ({ type: REMOVE_TOAST })
