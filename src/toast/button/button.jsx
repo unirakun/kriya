@@ -23,7 +23,7 @@ Button.propTypes = {
   className: PropTypes.string,
   text: PropTypes.string,
   onClick: PropTypes.func,
-  type: PropTypes.oneOf(['', 'success', 'warning', 'error']),
+  type: PropTypes.oneOf(['default', 'success', 'warning', 'error']),
 }
 
 Button.defaultProps = {
@@ -31,7 +31,7 @@ Button.defaultProps = {
   className: '',
   text: '',
   onClick: undefined,
-  type: '',
+  type: 'default',
 }
 
 export default onlyUpdateForPropTypes(Button)

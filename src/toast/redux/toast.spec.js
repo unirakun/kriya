@@ -37,6 +37,10 @@ describe('toast/redux', () => {
       expect(reducer(state.ui.toast, create.error('new toast')))
         .toEqual({ title: 'new toast', type: 'error', print: true })
     )
+    it('should create a default toast with factory', () =>
+      expect(reducer(state.ui.toast, create('default toast')))
+        .toEqual({ title: 'default toast', print: true })
+    )
     it('should remove a toast', () =>
       expect(reducer(state.ui.toast, remove()))
         .toEqual({})

@@ -2,7 +2,7 @@
 
 exports[`common/Button graphical (JSX) should add custom className 1`] = `
 <button
-  className="button custom"
+  className="button default custom"
   onClick={undefined}
   style={Object {}}
 >
@@ -12,7 +12,7 @@ exports[`common/Button graphical (JSX) should add custom className 1`] = `
 
 exports[`common/Button graphical (JSX) should add custom style 1`] = `
 <button
-  className="button"
+  className="button default"
   onClick={undefined}
   style={
     Object {
@@ -36,7 +36,7 @@ exports[`common/Button graphical (JSX) should add custom type 1`] = `
 
 exports[`common/Button graphical (JSX) should add handler 1`] = `
 <button
-  className="button"
+  className="button default"
   onClick={[Function]}
   style={Object {}}
 >
@@ -46,7 +46,7 @@ exports[`common/Button graphical (JSX) should add handler 1`] = `
 
 exports[`common/Button graphical (JSX) should add text 1`] = `
 <button
-  className="button"
+  className="button default"
   onClick={undefined}
   style={Object {}}
 >
