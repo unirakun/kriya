@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
 import styles from '../../src/toast/toast.styles.scss'
-import Button from './button'
+import Button from '../button'
 
 const Toast = ({ style, className, title, button, print, position, type }) => {
   const classes = classnames(
@@ -18,7 +18,7 @@ const Toast = ({ style, className, title, button, print, position, type }) => {
     <div style={style} className={classes}>
       <span className={styles.text}>{title}</span>
       {button && (
-        <Button {...button} type={type} />
+        <Button name={`TOAST_${type}`} primary flat {...button}>{button.text}</Button>
       )}
     </div>
   )

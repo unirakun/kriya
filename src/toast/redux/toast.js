@@ -5,10 +5,8 @@ export const initAction = { type: 'UNKNOWN' }
 
 export default (state = initState, { type, payload } = initAction) => {
   switch (type) {
-    case CREATE_TOAST:
-      return { ...payload, print: true }
-    case REMOVE_TOAST:
-      return initState
+    case CREATE_TOAST: return payload
+    case REMOVE_TOAST: return initState
     default: return state
   }
 }
