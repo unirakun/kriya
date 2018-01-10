@@ -6,6 +6,7 @@ import { onlyUpdateForPropTypes } from 'recompose'
 import Select from 'kriya-select'
 import Checkbox from './checkbox'
 import KriyaField from './field'
+import Datepicker from './datepicker'
 import styles from '../../src/input/input.styles.scss'
 
 const getComponent = (type) => {
@@ -13,6 +14,7 @@ const getComponent = (type) => {
     case 'select': return 'select'
     case 'textarea': return 'textarea'
     case 'checkbox': return Checkbox
+    case 'date': return Datepicker
     default: return KriyaField
   }
 }

@@ -1,0 +1,27 @@
+@import '~styles/theme';
+
+.datepicker {
+  align-items: stretch;
+  background-color: $default-bg-color;
+  border: .01em solid $secondary-color;
+  box-shadow: 0 0 1em -0.2em $default-grey-color;
+  color: $font-color-light;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 10;
+
+  h2 {
+    background-color: $secondary-color;
+    color: $font-color-light;
+    margin: 0;
+    padding: 1em;
+  }
+}
+
+.days {
+  tr, td {
+    margin: 0;
+    padding: 0;
+  }
+}

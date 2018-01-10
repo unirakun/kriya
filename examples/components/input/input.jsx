@@ -30,7 +30,8 @@ const Form = ({ style, className }) => {
         <Input placeholder="input" name="input" required label="Input label" />
         <Input type="text" placeholder="input2" name="input2" />
         <Input type="textarea" placeholder="textarea" name="textArea" />
-        <Input type="select" placeholder="select" name="select" options={stringOptions} />
+        <Input type="select" placeholder="select" name="select" options={stringOptions} />          
+        <Input type="date" placeholder="date" name="date" />
       </div>
       <div>
         <Input type="selectbox" placeholder="selectbox" name="selectbox" options={numberOptions} required />
