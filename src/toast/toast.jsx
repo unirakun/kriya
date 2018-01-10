@@ -31,7 +31,7 @@ Toast.propTypes = {
   title: PropTypes.string,
   button: PropTypes.object,
   position: PropTypes.oneOf(['top', 'bottom']),
-  type: PropTypes.oneOf(['', 'success', 'warning', 'error']),
+  type: PropTypes.oneOf(['default', 'success', 'warning', 'error']),
 }
 
 Toast.defaultProps = {
@@ -39,9 +39,9 @@ Toast.defaultProps = {
   className: '',
   print: false,
   title: '',
-  button: {},
+  button: undefined,
   position: 'bottom',
-  type: '',
+  type: 'default',
 }
 
 export default onlyUpdateForPropTypes(Toast)
