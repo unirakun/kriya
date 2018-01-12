@@ -22,6 +22,7 @@ const addDelayBeforeRemove = defaultDelay => (WrappedComponent) => {
     }
 
     render() {
+      // title is required, so if title is undefined, toast is hide
       return <WrappedComponent {...this.props} print={!!this.props.title} />
     }
   }
