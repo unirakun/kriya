@@ -4,7 +4,7 @@ import { onlyUpdateForPropTypes } from 'recompose'
 import classnames from 'classnames'
 import styles from '../../../src/input/input.styles.scss'
 
-const Field = ({ input, placeholder, type, meta: { touched, error, submitFailed } }) => {
+const Field = ({ input, placeholder, type, meta: { touched, error, submitFailed }, ...props }) => {
   const classes = classnames(
     styles.field,
     {
@@ -13,7 +13,7 @@ const Field = ({ input, placeholder, type, meta: { touched, error, submitFailed 
   )
 
   return (
-    <input className={classes} {...input} placeholder={placeholder} type={type} />
+    <input className={classes} {...input} placeholder={placeholder} type={type} {...props} />
   )
 }
 
