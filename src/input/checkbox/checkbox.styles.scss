@@ -44,3 +44,7 @@ $ball-height: $height * 1.5;
     transform: translate($ball-height);
   }
 }
+
+.disabled {
+  cursor: not-allowed;
+}
