@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 export const addDelay = (prevProps, props, defaultDelay, timer) => {
   const { title, type, remove, delay } = props
@@ -10,7 +11,7 @@ export const addDelay = (prevProps, props, defaultDelay, timer) => {
 }
 
 const addDelayBeforeRemove = defaultDelay => (WrappedComponent) => {
-  return class extends Component {
+  class WrapperToast extends Component {
 
     componentDidUpdate(prevProps) {
       this.timer = addDelay(prevProps, this.props, defaultDelay, this.timer)
@@ -21,9 +22,20 @@ const addDelayBeforeRemove = defaultDelay => (WrappedComponent) => {
     }
 
     render() {
-      return <WrappedComponent {...this.props} />
+      // title is required, so if title is undefined, toast is hide
+      return <WrappedComponent {...this.props} print={!!this.props.title} />
     }
   }
+
+  WrapperToast.propTypes = {
+    title: PropTypes.string,
+  }
+
+  WrapperToast.defaultProps = {
+    title: undefined,
+  }
+
+  return WrapperToast
 }
 
 export default addDelayBeforeRemove

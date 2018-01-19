@@ -26,7 +26,7 @@ exports[`common/Toast graphical (JSX) should add button 1`] = `
   <div
     className="button"
   >
-    {"name":"button","props":{"title":"my button","type":"default"}}
+    {"name":"button","props":{"name":"TOAST_default","primary":true,"flat":true,"title":"my button"}}
   </div>
 </div>
 `;
@@ -44,7 +44,25 @@ exports[`common/Toast graphical (JSX) should add button and onClick 1`] = `
   <div
     className="button"
   >
-    {"name":"button","props":{"title":"my button","type":"default"}}
+    {"name":"button","props":{"name":"TOAST_default","primary":true,"flat":true,"title":"my button"}}
+  </div>
+</div>
+`;
+
+exports[`common/Toast graphical (JSX) should add button and onClick and extends name 1`] = `
+<div
+  className="toast bottom default"
+  style={Object {}}
+>
+  <span
+    className="text"
+  >
+    
+  </span>
+  <div
+    className="button"
+  >
+    {"name":"button","props":{"name":"TOAST_NAME","primary":true,"flat":true,"title":"my button"}}
   </div>
 </div>
 `;

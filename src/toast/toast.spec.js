@@ -16,7 +16,7 @@ import Toast from './toast'
 import { REMOVE_TOAST, remove } from './redux'
 import ToastContainer from './toast.container'
 
-jest.mock('./button', () => mockComponent('button'))
+jest.mock('../button', () => mockComponent('button'))
 
 const snapshot = props => snap(Toast)({ children: [], ...props })
 const createContainer = (store) => {
@@ -35,6 +35,7 @@ describe('common/Toast', () => {
     it('should add title', snapshot({ title: 'my awesome title' }))
     it('should add button', snapshot({ button: { title: 'my button' } }))
     it('should add button and onClick', snapshot({ button: { title: 'my button', onClick: () => 'ok' } }))
+    it('should add button and onClick and extends name', snapshot({ button: { title: 'my button', onClick: () => 'ok', name: 'TOAST_NAME' } }))
     it('should add custom delay', snapshot({ delay: 1000 }))
     it('should add custom type', snapshot({ type: 'warning' }))
     it('should add custom position', snapshot({ position: 'top' }))
@@ -53,7 +54,7 @@ describe('common/Toast', () => {
     it("should pass position when it's defined in props", () => snapContainer({}, { position: 'top' }))
     it(`should dispatch ${REMOVE_TOAST} when remove is called`, () => {
       const dispatch = jest.fn()
-      const store = createStore(() => ({ ui: { toast: { print: true, title: 'toast' } } }))
+      const store = createStore(() => ({ ui: { toast: { title: 'toast' } } }))
       store.dispatch = dispatch
       const container = createContainer(store)
       container.find(Toast).props().remove()

@@ -7,7 +7,8 @@ import { create, remove } from './toast.actions'
 const state = {
   ui: {
     toast: {
-      print: true, title: 'my toast with button', button: { text: 'my button', handler: () => 'test' }
+      title: 'my toast with button',
+      button: { text: 'my button', handler: () => 'test' },
     }
   }
 }
@@ -31,15 +32,15 @@ describe('toast/redux', () => {
     )
     it('should create a toast with type option', () =>
       expect(reducer(state.ui.toast, create('success toast', { type: 'success' })))
-        .toEqual({ title: 'success toast', type: 'success', print: true })
+        .toEqual({ title: 'success toast', type: 'success' })
     )
     it('should create a toast with factory', () =>
       expect(reducer(state.ui.toast, create.error('new toast')))
-        .toEqual({ title: 'new toast', type: 'error', print: true })
+        .toEqual({ title: 'new toast', type: 'error' })
     )
     it('should create a default toast with factory', () =>
       expect(reducer(state.ui.toast, create('default toast')))
-        .toEqual({ title: 'default toast', print: true })
+        .toEqual({ title: 'default toast' })
     )
     it('should remove a toast', () =>
       expect(reducer(state.ui.toast, remove()))

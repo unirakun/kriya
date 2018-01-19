@@ -92,6 +92,23 @@ describe('common/Button', () => {
       expect(dispatch.mock.calls.length).toBe(1)
       expect(dispatch.mock.calls[0]).toEqual([{ type: 'BTN_CLICKED_link' }])
     })
+
+    it('should dispatch click event and onCick function', () => {
+      const store = createStore(() => ({}))
+      const dispatch = jest.fn()
+      store.dispatch = dispatch
+
+      const wrapper = mount(
+        <Provider store={store}>
+          <ButtonContainer name="CLICK" onClick={() => 'CUSTOM_CLICK'} />
+        </Provider>,
+      )
+
+      wrapper.find('button').simulate('click')
+
+      expect(dispatch.mock.calls.length).toBe(1)
+      expect(dispatch.mock.calls[0]).toEqual([{ type: 'BTN_CLICKED_CLICK' }])
+    })
   })
 })
 

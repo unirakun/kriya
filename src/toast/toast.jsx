@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
 import styles from '../../src/toast/toast.styles.scss'
-import Button from './button'
+import Button from '../button'
 
-const Toast = ({ style, className, title, button, print, position, type }) => {
+const Toast = ({ style, className, title, button, print, position, type, onClick }) => {
   const classes = classnames(
     styles.toast,
     className,
@@ -18,7 +18,15 @@ const Toast = ({ style, className, title, button, print, position, type }) => {
     <div style={style} className={classes}>
       <span className={styles.text}>{title}</span>
       {button && (
-        <Button {...button} type={type} />
+        <Button
+          name={`TOAST_${type}`}
+          primary
+          flat
+          {...button}
+          onClick={onClick && onClick(button)}
+        >
+          {button.text}
+        </Button>
       )}
     </div>
   )
@@ -32,6 +40,7 @@ Toast.propTypes = {
   button: PropTypes.object,
   position: PropTypes.oneOf(['top', 'bottom']),
   type: PropTypes.oneOf(['default', 'success', 'warning', 'error']),
+  onClick: PropTypes.func,
 }
 
 Toast.defaultProps = {
@@ -42,6 +51,7 @@ Toast.defaultProps = {
   button: undefined,
   position: 'bottom',
   type: 'default',
+  onClick: undefined,
 }
 
 export default onlyUpdateForPropTypes(Toast)

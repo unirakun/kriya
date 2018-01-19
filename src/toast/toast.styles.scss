@@ -51,6 +51,12 @@
       color: $warning-color;
     }
   }
+
+  & > button {
+    font-weight: 700;
+    padding-right: 1.5em;
+    text-transform: uppercase;
+  }
 }
 
 .text {
