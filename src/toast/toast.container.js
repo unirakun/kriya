@@ -8,13 +8,10 @@ const mapStateToProps = (state) => {
   return getToast(state)
 }
 
-const mapDisptachToProps = (dispatch, { button }) => {
+const mapDisptachToProps = (dispatch) => {
   return {
     remove: () => dispatch(remove()),
-    onClick: () => {
-      button.onClick()
-      dispatch(remove())
-    },
+    onClick: button => () => dispatch(remove()) && button.onClick(),
   }
 }
 

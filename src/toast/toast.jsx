@@ -20,9 +20,10 @@ const Toast = ({ style, className, title, button, print, position, type, onClick
       {button && (
         <Button
           name={`TOAST_${type}`}
-          onClick={onClick}
           primary
           flat
+          {...button}
+          onClick={onClick && onClick(button)}
         >
           {button.text}
         </Button>

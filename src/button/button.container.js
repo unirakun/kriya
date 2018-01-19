@@ -5,7 +5,7 @@ import Component from './button'
 const mapDispatchToProps = (dispatch, { name, href, type, onClick }) => {
   return {
     onClick: (e) => {
-      onClick && onClick()
+      if (onClick) onClick()
       if (!href && type !== 'submit') e.preventDefault()
       e.stopPropagation()
       dispatch({ type: `BTN_CLICKED_${name}` })
