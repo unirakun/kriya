@@ -49,6 +49,21 @@ exports[`common/Input/Checkbox should be checked 1`] = `
 </div>
 `;
 
+exports[`common/Input/Checkbox should be disabled 1`] = `
+<div
+  className="checkbox disabled"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <div
+    className="back"
+  />
+  <div
+    className="ball"
+  />
+</div>
+`;
+
 exports[`common/Input/Checkbox should have a default behaviour 1`] = `
 <div
   className="checkbox"

@@ -1,17 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { onlyUpdateForPropTypes } from 'recompose'
 import classnames from 'classnames'
 import styles from '../../../src/input/checkbox/checkbox.styles.scss'
 
-const Checkbox = ({ style, className, input }) => {
+const Checkbox = ({ style, className, input, disabled }) => {
   const classes = classnames(
     styles.checkbox,
     className,
-    { [styles.checked]: input.checked },
+    { [styles.checked]: input.checked, [styles.disabled]: disabled },
   )
 
   const onClick = () => {
-    input.onChange(!input.checked)
+    if (!disabled) input.onChange(!input.checked)
   }
 
   return (
@@ -29,12 +30,14 @@ Checkbox.propTypes = {
     checked: PropTypes.bool,
     onChange: PropTypes.func,
   }).isRequired,
+  disabled: PropTypes.bool,
 }
 
 Checkbox.defaultProps = {
   style: {},
   className: '',
   input: {},
+  disabled: false,
 }
 
-export default Checkbox
+export default onlyUpdateForPropTypes(Checkbox)

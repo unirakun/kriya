@@ -29,6 +29,7 @@ describe('common/Input/Checkbox', () => {
     it('should swap checked onClick', () => onClickTest(true))
     it('should swap checked onClick', () => onClickTest(false))
   })
+  it('should be disabled', snapshot({ disabled: true }))
 })
 
 /* eslint-enable import/no-extraneous-dependencies, react/jsx-filename-extension */
