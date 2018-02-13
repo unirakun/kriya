@@ -17,7 +17,7 @@ const getComponent = (type) => {
   }
 }
 
-const validateRequired = value => (value ? undefined : 'required')
+const validateRequired = requiredMessage => value => (value ? undefined : requiredMessage || 'required')
 
 const types = [
   'checkbox',
@@ -47,7 +47,7 @@ const Input = ({
   placeholder, disabled,
   required, options, value, hiddenLabel,
   asynch, creatable, loadOptions,
-  error, validate,
+  error, requiredMessage,
   ...selectboxProps
  }) => {
   const classes = classnames(
@@ -76,7 +76,8 @@ const Input = ({
     />
   )
 
-  if (required) validate.push(validateRequired)
+  const validate = []
+  if (required) validate.push(validateRequired(requiredMessage))
   const field = (
     <Field
       className={classnames({ [styles.error]: !!error, [styles.field]: type !== 'checkbox' })}
@@ -128,7 +129,7 @@ Input.propTypes = {
   onInputChange: PropTypes.func,
   loadOptions: PropTypes.func,
   error: PropTypes.any,
-  validate: PropTypes.array,
+  requiredMessage: PropTypes.string,
 }
 
 Input.defaultProps = {
@@ -148,7 +149,7 @@ Input.defaultProps = {
   onInputChange: undefined,
   loadOptions: undefined,
   error: false,
-  validate: [],
+  requiredMessage: '',
 }
 
 export default onlyUpdateForPropTypes(Input)
