@@ -47,7 +47,7 @@ const Input = ({
   placeholder, disabled,
   required, options, value, hiddenLabel,
   asynch, creatable, loadOptions,
-  error,
+  error, validate,
   ...selectboxProps
  }) => {
   const classes = classnames(
@@ -76,7 +76,6 @@ const Input = ({
     />
   )
 
-  const validate = []
   if (required) validate.push(validateRequired)
   const field = (
     <Field
@@ -129,6 +128,7 @@ Input.propTypes = {
   onInputChange: PropTypes.func,
   loadOptions: PropTypes.func,
   error: PropTypes.any,
+  validate: PropTypes.array,
 }
 
 Input.defaultProps = {
@@ -148,6 +148,7 @@ Input.defaultProps = {
   onInputChange: undefined,
   loadOptions: undefined,
   error: false,
+  validate: [],
 }
 
 export default onlyUpdateForPropTypes(Input)
