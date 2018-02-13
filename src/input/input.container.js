@@ -1,15 +1,18 @@
 import { connect } from 'react-redux'
-import { change, formValueSelector, getFormSyncErrors } from 'redux-form'
+import { change, formValueSelector, getFormSyncErrors, getFormMeta } from 'redux-form'
 import { formInjector } from '../helpers'
 import Component from './input'
 
-const mapStateToProps = (state, { form, name, placeholder, label, withoutLabel }) => {
+const mapStateToProps = (state, { form, name, placeholder, label, withoutLabel, forceTouch }) => {
   const error = getFormSyncErrors(form)(state)
   const value = formValueSelector(form)(state, name)
 
+  const meta = getFormMeta(form)(state)
+  const isTouched = forceTouch || (meta && meta[name] && meta[name].touched)
+
   return {
     value,
-    error: error ? error[name] : undefined,
+    error: isTouched && error ? error[name] : undefined,
     label: !withoutLabel && (label || placeholder),
     hiddenLabel: !label && (!value || (Array.isArray(value) && value.length === 0)),
   }
