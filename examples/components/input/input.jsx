@@ -18,6 +18,9 @@ const Form = ({ style, className }) => {
     className,
   )
 
+  const inputValidate = [value => (value ? undefined : 'You don\'t really have a brain, do you?')]
+  const textAreaValidate = [value => (value ? undefined : 'Rethorical question, don\'t answer it.')]
+
   return (
     <form
       className={classes}
@@ -26,6 +29,7 @@ const Form = ({ style, className }) => {
     >
       <h1>Examples INPUT</h1>
       {/* form input */}
+      <h2>General examples</h2>
       <div>
         <Input placeholder="input" name="input" required label="Input label" />
         <Input type="text" placeholder="input2" name="input2" />
@@ -41,6 +45,16 @@ const Form = ({ style, className }) => {
       <div>
         <Input type="selectbox" placeholder="selectbox creatable" name="selectbox_creatable" options={stringOptions} creatable promptTextCreator={e => `Add ${e}`} />
         <Input type="selectbox" placeholder="selectbox creatable" name="selectbox_creatable_multi" options={stringOptions} creatable promptTextCreator={e => `"${e}" add to family`} multi />
+      </div>
+      <h2>Required INPUT</h2>
+      <div>
+        <Input name="defaultRequiredInput" label="Default required input" placeholder="Any idea?" required />
+        <Input name="customRequiredInput" label="Custom required input" placeholder="Thoughts??" required validate={inputValidate} />
+        <Input name="defaultRequiredTextarea" label="Default required Text area" placeholder="Anything???" type="textarea" required />
+        <Input name="customRequiredTextarea" label="Custom required Text area" placeholder="Can you even think???!" type="textarea" required validate={textAreaValidate} />
+      </div>
+      <div>
+        <Input name="customRequiredSelectbox" label="Custom required Select box" placeholder="Can you even think???!" type="selectbox" required validate={[console.log]} options={stringOptions} />
       </div>
       <Button type="submit" primary name="SUBMIT">Submit</Button>
     </form>
