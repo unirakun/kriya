@@ -39,6 +39,16 @@ const types = [
   'week',
 ]
 
+/**
+ * To customize the default 'required' message, or in order to add the field level validation
+ * you have to pass a `validate` prop to the Input component, which will override it.
+ *
+ * NB: `redux-form` perform 'unregister_field' then 'register_field'
+ * whenever the validate prop changes.
+ * So, to avoid breaking the validation process (form or field level),
+ * `validate` props should be declared as constants outside of any Component.
+ * You can look at the example part of this project to see how it's done.
+ */
 const validateRequired = [value => (value ? undefined : 'required')]
 const defaultValidate = []
 
