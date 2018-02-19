@@ -40,6 +40,7 @@ const types = [
 ]
 
 const validateRequired = [value => (value ? undefined : 'required')]
+const defaultValidate = []
 
 const Input = ({
   className, style,
@@ -81,7 +82,7 @@ const Input = ({
       className={classnames({ [styles.error]: !!error, [styles.field]: type !== 'checkbox' })}
       component={getComponent(type)}
       {...commonProps}
-      validate={validate || (required ? validateRequired : [])}
+      validate={validate || (required ? validateRequired : defaultValidate)}
       type={type}
     >
       {type === 'select' ? options.map(o => <option key={o.value} value={o.value}>{o.label}</option>) : null}
