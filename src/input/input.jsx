@@ -17,8 +17,6 @@ const getComponent = (type) => {
   }
 }
 
-const validateRequired = requiredMessage => value => (value ? undefined : requiredMessage || 'required')
-
 const types = [
   'checkbox',
   'color',
@@ -41,13 +39,26 @@ const types = [
   'week',
 ]
 
+/**
+ * To customize the default 'required' message, or in order to add the field level validation
+ * you have to pass a `validate` prop to the Input component, which will override it.
+ *
+ * NB: `redux-form` perform 'unregister_field' then 'register_field'
+ * whenever the validate prop changes.
+ * So, to avoid breaking the validation process (form or field level),
+ * `validate` props should be declared as constants outside of any Component.
+ * You can look at the example part of this project to see how it's done.
+ */
+const validateRequired = [value => (value ? undefined : 'required')]
+const defaultValidate = []
+
 const Input = ({
   className, style,
   type, name, label,
   placeholder, disabled,
   required, options, value, hiddenLabel,
   asynch, creatable, loadOptions,
-  error, requiredMessage,
+  error, validate,
   ...selectboxProps
  }) => {
   const classes = classnames(
@@ -76,14 +87,12 @@ const Input = ({
     />
   )
 
-  const validate = []
-  if (required) validate.push(validateRequired(requiredMessage))
   const field = (
     <Field
       className={classnames({ [styles.error]: !!error, [styles.field]: type !== 'checkbox' })}
       component={getComponent(type)}
       {...commonProps}
-      validate={validate}
+      validate={validate || (required ? validateRequired : defaultValidate)}
       type={type}
     >
       {type === 'select' ? options.map(o => <option key={o.value} value={o.value}>{o.label}</option>) : null}
@@ -129,7 +138,7 @@ Input.propTypes = {
   onInputChange: PropTypes.func,
   loadOptions: PropTypes.func,
   error: PropTypes.any,
-  requiredMessage: PropTypes.string,
+  validate: PropTypes.array,
 }
 
 Input.defaultProps = {
@@ -149,7 +158,7 @@ Input.defaultProps = {
   onInputChange: undefined,
   loadOptions: undefined,
   error: false,
-  requiredMessage: '',
+  validate: undefined,
 }
 
 export default onlyUpdateForPropTypes(Input)
