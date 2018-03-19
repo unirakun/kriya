@@ -4,7 +4,9 @@ import { onlyUpdateForPropTypes } from 'recompose'
 import classnames from 'classnames'
 import styles from '../../../src/input/input.styles.scss'
 
-const Field = ({ input, placeholder, type, meta: { touched, error, submitFailed }, ...rest }) => {
+const Field = ({
+  input, placeholder, type,
+  onPaste, meta: { touched, error, submitFailed }, ...rest }) => {
   const classes = classnames(
     styles.field,
     {
@@ -13,7 +15,14 @@ const Field = ({ input, placeholder, type, meta: { touched, error, submitFailed 
   )
 
   return (
-    <input className={classes} {...input} placeholder={placeholder} type={type} {...rest} />
+    <input
+      className={classes}
+      {...input}
+      placeholder={placeholder}
+      type={type}
+      {...rest}
+      onPaste={onPaste}
+    />
   )
 }
 
@@ -26,10 +35,12 @@ Field.propTypes = {
     error: PropTypes.string,
     submitFailed: PropTypes.bool,
   }).isRequired,
+  onPaste: PropTypes.func,
 }
 
 Field.defaultProps = {
   placeholder: undefined,
+  onPaste: undefined,
 }
 
 export default onlyUpdateForPropTypes(Field)

@@ -6,6 +6,7 @@ import renderer from 'react-test-renderer'
 import { reduxForm } from 'redux-form'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
+import { mount } from 'enzyme'
 import mockComponent from '__mocks__/component'
 import Input from './input'
 import InputContainer from './input.container'
@@ -17,14 +18,19 @@ jest.mock('./checkbox', () => mockComponent('checkbox'))
 const Decorated = reduxForm({ form: 'testForm' })(Input)
 const DecoratedContainer = reduxForm({ form: 'formCont' })(InputContainer)
 
-const snap = ({ name = 'name', ...rest }) => {
-  const store = createStore(() => ({}))
-  const component = renderer.create(
-    <Provider store={store}>
-      <Decorated {...rest} name={name} />
-    </Provider>,
-  )
 
+const createInput = (props) => {
+  const store = createStore(() => ({}))
+  return (
+    <Provider store={store}>
+      <Decorated {...props} />
+    </Provider>
+  )
+}
+
+const snap = (props) => {
+  const input = createInput({ name: 'name', ...props })
+  const component = renderer.create(input)
   const tree = component.toJSON()
   expect(tree).toMatchSnapshot()
 }
@@ -139,6 +145,15 @@ describe('common/Input', () => {
       ],
       type: 'selectbox',
     }))
+  })
+  describe('callbacks', () => {
+    it('should call onPaste function', () => {
+      const onPaste = jest.fn()
+      const input = createInput({ name: 'test', onPaste })
+      const wrapper = mount(input)
+      wrapper.find('input').first().simulate('paste')
+      expect(onPaste.mock.calls.length).toBe(1)
+    })
   })
 })
 
