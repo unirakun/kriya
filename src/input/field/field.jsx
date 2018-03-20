@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { onlyUpdateForPropTypes } from 'recompose'
 import classnames from 'classnames'
 import styles from '../../../src/input/input.styles.scss'
 
@@ -13,7 +12,13 @@ const Field = ({ input, placeholder, type, meta: { touched, error, submitFailed 
   )
 
   return (
-    <input className={classes} {...input} placeholder={placeholder} type={type} {...rest} />
+    <input
+      className={classes}
+      {...input}
+      placeholder={placeholder}
+      type={type}
+      {...rest}
+    />
   )
 }
 
@@ -32,4 +37,4 @@ Field.defaultProps = {
   placeholder: undefined,
 }
 
-export default onlyUpdateForPropTypes(Field)
+export default Field
