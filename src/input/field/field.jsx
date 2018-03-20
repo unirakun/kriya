@@ -31,12 +31,10 @@ Field.propTypes = {
     error: PropTypes.string,
     submitFailed: PropTypes.bool,
   }).isRequired,
-  onPaste: PropTypes.func,
 }
 
 Field.defaultProps = {
   placeholder: undefined,
-  onPaste: undefined,
 }
 
 export default Field
