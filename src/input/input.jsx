@@ -58,7 +58,7 @@ const Input = ({
   placeholder, disabled,
   required, options, value, hiddenLabel,
   asynch, creatable, loadOptions,
-  error, validate, onPaste,
+  error, validate, onPaste, normalize,
   ...selectboxProps
  }) => {
   const classes = classnames(
@@ -95,6 +95,7 @@ const Input = ({
       validate={validate || (required ? validateRequired : defaultValidate)}
       type={type}
       onPaste={onPaste}
+      normalize={normalize}
     >
       {type === 'select' ? options.map(o => <option key={o.value} value={o.value}>{o.label}</option>) : null}
     </Field>
@@ -141,6 +142,7 @@ Input.propTypes = {
   error: PropTypes.any,
   validate: PropTypes.array,
   onPaste: PropTypes.func,
+  normalize: PropTypes.func,
 }
 
 Input.defaultProps = {
@@ -162,6 +164,7 @@ Input.defaultProps = {
   error: false,
   validate: undefined,
   onPaste: undefined,
+  normalize: undefined,
 }
 
 export default onlyUpdateForPropTypes(Input)

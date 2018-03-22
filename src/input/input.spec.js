@@ -154,6 +154,14 @@ describe('common/Input', () => {
       wrapper.find('input').first().simulate('paste')
       expect(onPaste.mock.calls.length).toBe(1)
     })
+
+    it('should call normalize function', () => {
+      const normalize = jest.fn()
+      const input = createInput({ name: 'test', normalize })
+      const wrapper = mount(input)
+      wrapper.find('input').first().simulate('change', { target: { value: 'test' } })
+      expect(normalize.mock.calls.length).toBe(1)
+    })
   })
 })
 
