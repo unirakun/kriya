@@ -18,22 +18,22 @@ const IconExample = ({ style, className }) => {
       {/* form input */}
       <h2>default</h2>
       <div className={styles.item}>
-        <Icon name={name}>sentiment_neutral</Icon>
+        <Icon name={name} alt="neutral">sentiment_neutral</Icon>
       </div>
-      <h2>primary / disabled / secondary </h2>
+      <h2>primary / disabled / secondary / iconColor</h2>
       <div className={styles.item}>
-        <Icon name={name} primary>sentiment_very_dissatisfied</Icon>
-        <Icon name={name} disabled>sentiment_neutral</Icon>
-        <Icon name={name} secondary>sentiment_very_satisfied</Icon>
-        <Icon name={name} iconColor>sentiment_very_satisfied</Icon>
+        <Icon name={name} primary alt="very dissatisfied">sentiment_very_dissatisfied</Icon>
+        <Icon name={name} disabled alt="neutral">sentiment_neutral</Icon>
+        <Icon name={name} secondary alt="very satisfied">sentiment_very_satisfied</Icon>
+        <Icon name={name} iconColor alt="very satisfied">sentiment_very_satisfied</Icon>
       </div>
       <h2>Label Left / Right</h2>
       <div className={styles.item}>
-        <Icon name={name} primary labelLeft="very_dissatisfied">sentiment_very_dissatisfied</Icon>
+        <Icon name={name} primary labelLeft="very dissatisfied">sentiment_very_dissatisfied</Icon>
         <Icon name={name} primary labelLeft="dissatisfied">sentiment_dissatisfied</Icon>
-        <Icon name={name} disabled labelRight="neutral" labelLeft="neutral" >sentiment_neutral</Icon>
+        <Icon name={name} disabled labelRight="neutral" labelLeft="neutral" alt="all neutral">sentiment_neutral</Icon>
         <Icon name={name} secondary labelRight="satisfied">sentiment_satisfied</Icon>
-        <Icon name={name} secondary labelRight="very_satisfied">sentiment_very_satisfied</Icon>
+        <Icon name={name} secondary labelRight="very satisfied">sentiment_very_satisfied</Icon>
       </div>
     </div>
   )
