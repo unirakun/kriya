@@ -4,7 +4,7 @@ import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
 import styles from '../../src/icon/icon.styles.scss'
 
-const labelFactory = htmlFor => label => <label htmlFor={htmlFor}>{label}</label>
+const labelFactory = code => label => <span id={code} aria-hidden="true">{label}</span>
 
 const Icon = ({
   style, className, children,
@@ -14,6 +14,7 @@ const Icon = ({
   title,
   nbPath,
   iconColor, /* set to true to print the native icon color */
+  alt, /* alternative text to vocalise the icon (only if no labelLeft or labelRight) */
 }) => {
   const classes = classnames(
     styles.icon,
@@ -31,7 +32,12 @@ const Icon = ({
   // Icon from icomoon have different path (up to 13) to handle colors
   // We inject all of them
   const iconComponent = (
-    <i name={iconCode} className={iconCode} title={title}>
+    <i
+      name={iconCode}
+      className={iconCode}
+      title={title}
+      aria-hidden="true"
+    >
       {
         Array.from(new Array(nbPath), (x, i) => i + 1)
           .map(i => <span key={i} className={`path${i}`} />)
@@ -40,14 +46,15 @@ const Icon = ({
   )
 
   // Label component
-  const label = labelFactory(iconCode)
+  const label = labelFactory(iconCode, alt)
 
   // Final component
   return (
     <div style={style} className={classes}>
-      {labelLeft && label(labelLeft)}
+      {!alt && labelLeft && label(labelLeft)}
       {iconComponent}
-      {labelRight && label(labelRight)}
+      {!alt && labelRight && label(labelRight)}
+      {alt && <span className={styles.srOnly}>{alt}</span>}
     </div>
   )
 }
@@ -65,6 +72,7 @@ Icon.propTypes = {
   iconColor: PropTypes.bool,
   title: PropTypes.string,
   nbPath: PropTypes.number,
+  alt: PropTypes.string,
 }
 
 Icon.defaultProps = {
@@ -78,6 +86,7 @@ Icon.defaultProps = {
   iconColor: false,
   title: undefined,
   nbPath: 13, /* choose arbitrary */
+  alt: undefined,
 }
 
 export default onlyUpdateForPropTypes(Icon)
