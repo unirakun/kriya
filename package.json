@@ -11,7 +11,8 @@
     "lint:sass": "sass-lint -v -q",
     "lint": "npm-run-all --parallel lint:*",
     "test": "jest",
-    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "ci": "run-p lint coveralls"
   },
   "jest": {
     "transform": {
