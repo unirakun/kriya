@@ -21,13 +21,13 @@ const Form = ({ style, className }) => {
     <form id="navbar-form" style={style} className={classes}>
       <h1>Examples GROUP HORIZONTAL</h1>
       <Group>
-        <Input type="input" name="INPUT" placeholder="input" />
+        <Input name="INPUT" placeholder="input" />
         <Input type="selectbox" options={options} name="SELECTBOX" placeholder="selectbox" clearable={false} />
         <Button name="BUTTON" primary submit>Button</Button>
       </Group>
       <h1>Examples GROUP VERTICAL</h1>
       <Group vertical>
-        <Input type="input" name="INPUT" placeholder="input" />
+        <Input name="INPUT" placeholder="input" />
         <Input type="selectbox" options={options} name="SELECTBOX" placeholder="selectbox" clearable={false} />
         <Button name="BUTTON" primary submit>Button</Button>
       </Group>

@@ -7,7 +7,6 @@ exports[`common/Button graphical (JSX) should add children 1`] = `
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 >
   <div
     className="Ink"
@@ -25,7 +24,6 @@ exports[`common/Button graphical (JSX) should add custom className 1`] = `
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 >
   <div
     className="Ink"
@@ -46,7 +44,6 @@ exports[`common/Button graphical (JSX) should add custom style 1`] = `
     }
   }
   title=""
-  type={undefined}
 >
   <div
     className="Ink"
@@ -80,7 +77,6 @@ exports[`common/Button graphical (JSX) should create a disabled button 1`] = `
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 />
 `;
 
@@ -91,7 +87,6 @@ exports[`common/Button graphical (JSX) should create a flat button 1`] = `
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 />
 `;
 
@@ -102,7 +97,6 @@ exports[`common/Button graphical (JSX) should create a flat primary button 1`] =
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 />
 `;
 
@@ -113,7 +107,6 @@ exports[`common/Button graphical (JSX) should create a flat secondary button 1`]
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 />
 `;
 
@@ -124,7 +117,6 @@ exports[`common/Button graphical (JSX) should create a large button 1`] = `
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 >
   <div
     className="Ink"
@@ -141,7 +133,6 @@ exports[`common/Button graphical (JSX) should create a primary button 1`] = `
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 >
   <div
     className="Ink"
@@ -158,7 +149,6 @@ exports[`common/Button graphical (JSX) should create a secondary button 1`] = `
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 >
   <div
     className="Ink"
@@ -175,7 +165,6 @@ exports[`common/Button graphical (JSX) should create button with left icon  1`] 
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 >
   <div
     className="Ink"
@@ -197,7 +186,6 @@ exports[`common/Button graphical (JSX) should create button with link 1`] = `
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 >
   <div
     className="Ink"
@@ -232,7 +220,6 @@ exports[`common/Button graphical (JSX) should create button with right and left 
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 >
   <div
     className="Ink"
@@ -259,7 +246,6 @@ exports[`common/Button graphical (JSX) should create button with right icon  1`]
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 >
   <div
     className="Ink"
@@ -281,7 +267,6 @@ exports[`common/Button graphical (JSX) should have a default behaviour 1`] = `
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 >
   <div
     className="Ink"
@@ -298,6 +283,5 @@ exports[`common/Button graphical (JSX) shouldnt print ink behaviour 1`] = `
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 />
 `;

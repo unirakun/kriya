@@ -3,7 +3,6 @@
 exports[`common/Icon graphical (JSX) should add custom className 1`] = `
 <div
   className="avatar custom"
-  onClick={undefined}
   style={Object {}}
 >
   <div
@@ -17,7 +16,6 @@ exports[`common/Icon graphical (JSX) should add custom className 1`] = `
 exports[`common/Icon graphical (JSX) should add custom style 1`] = `
 <div
   className="avatar"
-  onClick={undefined}
   style={
     Object {
       "backgroundColor": "red",
@@ -35,13 +33,11 @@ exports[`common/Icon graphical (JSX) should add custom style 1`] = `
 exports[`common/Icon graphical (JSX) should create a picture avatar 1`] = `
 <div
   className="avatar"
-  onClick={undefined}
   style={Object {}}
 >
   <img
     alt="avatar"
     className="img"
-    onClick={undefined}
     onError={[Function]}
     src="picture"
     style={Object {}}
@@ -52,7 +48,6 @@ exports[`common/Icon graphical (JSX) should create a picture avatar 1`] = `
 exports[`common/Icon graphical (JSX) should create female avatar 1`] = `
 <div
   className="avatar"
-  onClick={undefined}
   style={Object {}}
 >
   <div
@@ -66,7 +61,6 @@ exports[`common/Icon graphical (JSX) should create female avatar 1`] = `
 exports[`common/Icon graphical (JSX) should create male avatar 1`] = `
 <div
   className="avatar"
-  onClick={undefined}
   style={Object {}}
 >
   <div
@@ -80,7 +74,6 @@ exports[`common/Icon graphical (JSX) should create male avatar 1`] = `
 exports[`common/Icon graphical (JSX) should have a default behaviour 1`] = `
 <div
   className="avatar"
-  onClick={undefined}
   style={Object {}}
 >
   <div

@@ -10,7 +10,6 @@ exports[`common/BottomSheets container should pass contents 1`] = `
   >
     <div
       className="header"
-      onClick={undefined}
     />
     <hr
       className="separator"
@@ -64,7 +63,6 @@ exports[`common/BottomSheets container should pass print=false when the BottomSh
   >
     <div
       className="header"
-      onClick={undefined}
     />
     <hr
       className="separator"
@@ -90,7 +88,6 @@ exports[`common/BottomSheets container should pass print=true when the BottomShe
   >
     <div
       className="header"
-      onClick={undefined}
     />
     <hr
       className="separator"
@@ -116,7 +113,6 @@ exports[`common/BottomSheets graphical (JSX) should add children 1`] = `
   >
     <div
       className="header"
-      onClick={undefined}
     />
     <hr
       className="separator"
@@ -142,7 +138,6 @@ exports[`common/BottomSheets graphical (JSX) should add custom className 1`] = `
   >
     <div
       className="header"
-      onClick={undefined}
     />
     <hr
       className="separator"
@@ -172,7 +167,6 @@ exports[`common/BottomSheets graphical (JSX) should add custom style 1`] = `
   >
     <div
       className="header"
-      onClick={undefined}
     />
     <hr
       className="separator"
@@ -198,7 +192,6 @@ exports[`common/BottomSheets graphical (JSX) should be print when asked for and 
   >
     <div
       className="header"
-      onClick={undefined}
     />
     <hr
       className="separator"
@@ -224,7 +217,6 @@ exports[`common/BottomSheets graphical (JSX) should have a default behaviour 1`]
   >
     <div
       className="header"
-      onClick={undefined}
     />
     <hr
       className="separator"
@@ -250,7 +242,6 @@ exports[`common/BottomSheets graphical (JSX) should pass contents to child 1`] =
   >
     <div
       className="header"
-      onClick={undefined}
     />
     <hr
       className="separator"

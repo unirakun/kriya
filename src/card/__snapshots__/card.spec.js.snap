@@ -3,7 +3,6 @@
 exports[`common/Card graphical (JSX) should add custom className 1`] = `
 <div
   className="card custom"
-  onClick={undefined}
   style={Object {}}
 />
 `;
@@ -11,7 +10,6 @@ exports[`common/Card graphical (JSX) should add custom className 1`] = `
 exports[`common/Card graphical (JSX) should add custom style 1`] = `
 <div
   className="card"
-  onClick={undefined}
   style={
     Object {
       "backgroundColor": "red",
@@ -23,7 +21,6 @@ exports[`common/Card graphical (JSX) should add custom style 1`] = `
 exports[`common/Card graphical (JSX) should have a default behaviour 1`] = `
 <div
   className="card"
-  onClick={undefined}
   style={Object {}}
 />
 `;
@@ -31,7 +28,6 @@ exports[`common/Card graphical (JSX) should have a default behaviour 1`] = `
 exports[`common/Card graphical (JSX) should print the children 1`] = `
 <div
   className="card"
-  onClick={undefined}
   style={Object {}}
 >
   <div>
@@ -44,7 +40,6 @@ exports[`common/Card graphical (JSX) should print the children 1`] = `
 exports[`common/Card graphical (JSX) should print the children with a closed prop 1`] = `
 <div
   className="card closed"
-  onClick={undefined}
   style={Object {}}
 >
   <div>
@@ -57,7 +52,6 @@ exports[`common/Card graphical (JSX) should print the children with a closed pro
 exports[`common/Card graphical (JSX) should print the closed element 1`] = `
 <div
   className="card closed"
-  onClick={undefined}
   style={Object {}}
 >
   close elm
