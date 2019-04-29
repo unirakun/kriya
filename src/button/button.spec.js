@@ -11,6 +11,7 @@ import Button from './button'
 import ButtonContainer from './button.container'
 
 jest.mock('../icon', () => mockComponent('icon'))
+jest.mock('react-ink', () => mockComponent('Ink'))
 
 const snapshot = props => snap(Button)({ onClick: () => {}, ...props })
 
