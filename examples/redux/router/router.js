@@ -1,7 +1,6 @@
 export default {
   '/': {
     code: 'HOME',
-    public: true,
     '/icon': {
       code: 'ICON',
     },

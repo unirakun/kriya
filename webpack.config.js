@@ -17,10 +17,8 @@ function getEntrySources() {
   const entries = []
 
   if (dev) {
-    entries.push('babel-polyfill')
     entries.push('react-hot-loader/patch')
-    entries.push('webpack/hot/only-dev-server')
-    entries.push('./examples')
+    entries.push('./examples/index-hmr.jsx')
   } else {
     entries.push('./examples')
   }

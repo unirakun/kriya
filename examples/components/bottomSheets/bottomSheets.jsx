@@ -35,4 +35,4 @@ BottomSheets.defaultProps = {
   className: '',
 }
 
-export default forRoute('BOTTOMSHEETS', { getState: state => state.router })(onlyUpdateForPropTypes(BottomSheets))
+export default forRoute('BOTTOMSHEETS')(onlyUpdateForPropTypes(BottomSheets))
