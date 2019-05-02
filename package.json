@@ -136,7 +136,7 @@
     "recompose": "^0.30.0",
     "redux-saga": "0.16.0",
     "sass-lint": "^1.13.1",
-    "sass-loader": "^4.1.1",
+    "sass-loader": "^7.1.0",
     "sinon": "^2.1.0",
     "style-loader": "^0.13.1",
     "webpack": "^3.0.0",
