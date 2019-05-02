@@ -9,35 +9,35 @@ import {
 } from 'redux/router'
 
 export function* goToHome() {
-  yield put(push('/'))
+  yield put(push('HOME'))
 }
 
 export function* goToIcon() {
-  yield put(push('/icon'))
+  yield put(push('ICON'))
 }
 
 export function* goToButton() {
-  yield put(push('/button'))
+  yield put(push('BUTTON'))
 }
 
 export function* goToInput() {
-  yield put(push('/input'))
+  yield put(push('INPUT'))
 }
 
 export function* goToGroup() {
-  yield put(push('/group'))
+  yield put(push('GROUP'))
 }
 
 export function* goToPopover() {
-  yield put(push('/popover'))
+  yield put(push('POPOVER'))
 }
 
 export function* goToBottomSheets() {
-  yield put(push('/bottomSheets'))
+  yield put(push('BOTTOMSHEETS'))
 }
 
 export function* goToTabs() {
-  yield put(push('/tabs'))
+  yield put(push('TABS'))
 }
 
 export function* load() {
@@ -47,5 +47,5 @@ export function* load() {
 }
 
 export function* goToToast() {
-  yield put(push('/toast'))
+  yield put(push('TOAST'))
 }

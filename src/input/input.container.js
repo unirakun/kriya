@@ -1,6 +1,5 @@
 import { connect } from 'react-redux'
 import { change, formValueSelector, getFormSyncErrors, getFormMeta } from 'redux-form'
-import { formInjector } from '../helpers'
 import Component from './input'
 
 const mapStateToProps = (state, { form, name, placeholder, label, withoutLabel, forceTouch }) => {
@@ -27,4 +26,4 @@ const mapDispatchToProps = (dispatch, { form, name, type }) => {
   }
 }
 
-export default formInjector(connect(mapStateToProps, mapDispatchToProps)(Component))
+export default connect(mapStateToProps, mapDispatchToProps)(Component)

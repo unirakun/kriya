@@ -1,30 +1,30 @@
 export default {
   '/': {
-    title: 'HOME',
-
+    code: 'HOME',
+    public: true,
     '/icon': {
-      title: 'ICON',
+      code: 'ICON',
     },
     '/button': {
-      title: 'BUTTON',
+      code: 'BUTTON',
     },
     '/input': {
-      title: 'INPUT',
+      code: 'INPUT',
     },
     '/group': {
-      title: 'GROUP',
+      code: 'GROUP',
     },
     '/popover': {
-      title: 'POPOVER',
+      code: 'POPOVER',
     },
     '/bottomSheets': {
-      title: 'BOTTOMSHEETS',
+      code: 'BOTTOMSHEETS',
     },
     '/tabs': {
-      title: 'TABS',
+      code: 'TABS',
     },
     '/toast': {
-      title: 'TOAST',
+      code: 'TOAST',
     },
   },
 }

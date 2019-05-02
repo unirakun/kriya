@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
+const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
@@ -16,8 +17,10 @@ function getEntrySources() {
   const entries = []
 
   if (dev) {
+    entries.push('babel-polyfill')
     entries.push('react-hot-loader/patch')
-    entries.push('./examples/index-hmr.jsx')
+    entries.push('webpack/hot/only-dev-server')
+    entries.push('./examples')
   } else {
     entries.push('./examples')
   }
@@ -31,6 +34,8 @@ function getPlugins(plugins) {
     inject: true,
     hash: true,
   }))
+
+  plugins.push(new webpack.NamedModulesPlugin())
 
   if (!dev) {
     plugins.push(new ExtractTextPlugin('kriya.css'))

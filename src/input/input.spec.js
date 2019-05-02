@@ -3,8 +3,8 @@
 
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { reduxForm } from 'redux-form'
-import { createStore } from 'redux'
+import { reduxForm, reducer as reduxFormReducer } from 'redux-form'
+import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
 import { mount } from 'enzyme'
 import mockComponent from '__mocks__/component'
@@ -78,17 +78,16 @@ describe('common/Input', () => {
   })
   describe('container', () => {
     const snapContainer = (state, props) => {
-      const store = createStore(() => (
-        {
-          form: {
-            form1: {
-              values: {
-                field1: '1',
-              },
-            },
+      const form = {
+        form1: {
+          values: {
+            field1: '1',
           },
-        }
-      ))
+        },
+      }
+      const reducer = combineReducers({ form: reduxFormReducer })
+      const store = createStore(reducer, { form })
+
       const component = renderer.create(
         <Provider store={store}>
           <DecoratedContainer {...props} />

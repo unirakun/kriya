@@ -1,19 +1,17 @@
 import { createStore, combineReducers, compose, applyMiddleware } from 'redux'
 import createSagaMiddleware from 'redux-saga'
 import { reducer as form } from 'redux-form'
-import { routerForBrowser, initializeCurrentLocation } from 'redux-little-router'
+import { router } from '@k-redux-router/core'
 import sagas from '../sagas'
 import config from './config'
 import ui from './ui'
-import router from './router'
+import routes from './router'
 
+// eslint-disable-next-line no-underscore-dangle, no-undef
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const sagaMiddleware = createSagaMiddleware()
 
-const {
-  reducer,
-  enhancer,
-  middleware,
-} = routerForBrowser({ routes: router, basename: '' })
+const { init, middleware, reducer } = router(routes, { getState: state => state.router })
 
 const store = createStore(
   combineReducers({
@@ -22,20 +20,15 @@ const store = createStore(
     ui,
     router: reducer,
   }),
-  compose(
-    enhancer,
+  undefined,
+  composeEnhancers(
     applyMiddleware(sagaMiddleware, middleware),
-    /* eslint-env browser */
-    window.devToolsExtension ? window.devToolsExtension() : f => f,
   ),
 
 )
 
 sagaMiddleware.run(sagas)
 
-const initialLocation = store.getState().router
-if (initialLocation) {
-  store.dispatch(initializeCurrentLocation(initialLocation))
-}
+store.dispatch(init())
 
 export default store

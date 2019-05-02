@@ -1,3 +1,3 @@
-import { PUSH } from 'redux-little-router'
+import { actions } from '@k-redux-router/core'
 
-export const push = url => ({ type: PUSH, payload: url })
+export const push = code => actions.push(code)

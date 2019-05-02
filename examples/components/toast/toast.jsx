@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import router from 'hoc-little-router'
 import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
+import forRoute from '../../helpers/router'
 import styles from './toast.styles.scss'
 
 
@@ -47,4 +47,4 @@ ToastExample.defaultProps = {
   type: '',
 }
 
-export default router('TOAST')(onlyUpdateForPropTypes(ToastExample))
+export default forRoute('TOAST')(onlyUpdateForPropTypes(ToastExample))
