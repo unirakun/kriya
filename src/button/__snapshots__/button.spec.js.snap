@@ -7,27 +7,12 @@ exports[`common/Button graphical (JSX) should add children 1`] = `
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 >
-  <canvas
-    className="ink"
-    height={0}
-    onDragOver={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    style={
-      Object {
-        "borderRadius": "inherit",
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": "100%",
-      }
-    }
-    width={0}
-  />
+  <div
+    className="Ink"
+  >
+    {"name":"Ink","props":{}}
+  </div>
   a child
 </button>
 `;
@@ -39,27 +24,12 @@ exports[`common/Button graphical (JSX) should add custom className 1`] = `
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 >
-  <canvas
-    className="ink"
-    height={0}
-    onDragOver={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    style={
-      Object {
-        "borderRadius": "inherit",
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": "100%",
-      }
-    }
-    width={0}
-  />
+  <div
+    className="Ink"
+  >
+    {"name":"Ink","props":{}}
+  </div>
 </button>
 `;
 
@@ -74,27 +44,12 @@ exports[`common/Button graphical (JSX) should add custom style 1`] = `
     }
   }
   title=""
-  type={undefined}
 >
-  <canvas
-    className="ink"
-    height={0}
-    onDragOver={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    style={
-      Object {
-        "borderRadius": "inherit",
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": "100%",
-      }
-    }
-    width={0}
-  />
+  <div
+    className="Ink"
+  >
+    {"name":"Ink","props":{}}
+  </div>
 </button>
 `;
 
@@ -107,25 +62,11 @@ exports[`common/Button graphical (JSX) should be a submit button 1`] = `
   title=""
   type="submit"
 >
-  <canvas
-    className="ink"
-    height={0}
-    onDragOver={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    style={
-      Object {
-        "borderRadius": "inherit",
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": "100%",
-      }
-    }
-    width={0}
-  />
+  <div
+    className="Ink"
+  >
+    {"name":"Ink","props":{}}
+  </div>
 </button>
 `;
 
@@ -136,7 +77,6 @@ exports[`common/Button graphical (JSX) should create a disabled button 1`] = `
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 />
 `;
 
@@ -147,7 +87,6 @@ exports[`common/Button graphical (JSX) should create a flat button 1`] = `
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 />
 `;
 
@@ -158,7 +97,6 @@ exports[`common/Button graphical (JSX) should create a flat primary button 1`] =
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 />
 `;
 
@@ -169,7 +107,6 @@ exports[`common/Button graphical (JSX) should create a flat secondary button 1`]
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 />
 `;
 
@@ -180,27 +117,12 @@ exports[`common/Button graphical (JSX) should create a large button 1`] = `
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 >
-  <canvas
-    className="ink"
-    height={0}
-    onDragOver={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    style={
-      Object {
-        "borderRadius": "inherit",
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": "100%",
-      }
-    }
-    width={0}
-  />
+  <div
+    className="Ink"
+  >
+    {"name":"Ink","props":{}}
+  </div>
 </button>
 `;
 
@@ -211,27 +133,12 @@ exports[`common/Button graphical (JSX) should create a primary button 1`] = `
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 >
-  <canvas
-    className="ink"
-    height={0}
-    onDragOver={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    style={
-      Object {
-        "borderRadius": "inherit",
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": "100%",
-      }
-    }
-    width={0}
-  />
+  <div
+    className="Ink"
+  >
+    {"name":"Ink","props":{}}
+  </div>
 </button>
 `;
 
@@ -242,27 +149,12 @@ exports[`common/Button graphical (JSX) should create a secondary button 1`] = `
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 >
-  <canvas
-    className="ink"
-    height={0}
-    onDragOver={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    style={
-      Object {
-        "borderRadius": "inherit",
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": "100%",
-      }
-    }
-    width={0}
-  />
+  <div
+    className="Ink"
+  >
+    {"name":"Ink","props":{}}
+  </div>
 </button>
 `;
 
@@ -273,27 +165,12 @@ exports[`common/Button graphical (JSX) should create button with left icon  1`] 
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 >
-  <canvas
-    className="ink"
-    height={0}
-    onDragOver={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    style={
-      Object {
-        "borderRadius": "inherit",
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": "100%",
-      }
-    }
-    width={0}
-  />
+  <div
+    className="Ink"
+  >
+    {"name":"Ink","props":{}}
+  </div>
   <div
     className="icon"
   >
@@ -309,27 +186,12 @@ exports[`common/Button graphical (JSX) should create button with link 1`] = `
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 >
-  <canvas
-    className="ink"
-    height={0}
-    onDragOver={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    style={
-      Object {
-        "borderRadius": "inherit",
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": "100%",
-      }
-    }
-    width={0}
-  />
+  <div
+    className="Ink"
+  >
+    {"name":"Ink","props":{}}
+  </div>
 </button>
 `;
 
@@ -343,25 +205,11 @@ exports[`common/Button graphical (JSX) should create button with link on new tab
   target="_blank"
   title=""
 >
-  <canvas
-    className="ink"
-    height={0}
-    onDragOver={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    style={
-      Object {
-        "borderRadius": "inherit",
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": "100%",
-      }
-    }
-    width={0}
-  />
+  <div
+    className="Ink"
+  >
+    {"name":"Ink","props":{}}
+  </div>
 </a>
 `;
 
@@ -372,27 +220,12 @@ exports[`common/Button graphical (JSX) should create button with right and left 
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 >
-  <canvas
-    className="ink"
-    height={0}
-    onDragOver={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    style={
-      Object {
-        "borderRadius": "inherit",
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": "100%",
-      }
-    }
-    width={0}
-  />
+  <div
+    className="Ink"
+  >
+    {"name":"Ink","props":{}}
+  </div>
   <div
     className="icon"
   >
@@ -413,27 +246,12 @@ exports[`common/Button graphical (JSX) should create button with right icon  1`]
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 >
-  <canvas
-    className="ink"
-    height={0}
-    onDragOver={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    style={
-      Object {
-        "borderRadius": "inherit",
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": "100%",
-      }
-    }
-    width={0}
-  />
+  <div
+    className="Ink"
+  >
+    {"name":"Ink","props":{}}
+  </div>
   <div
     className="icon"
   >
@@ -449,27 +267,12 @@ exports[`common/Button graphical (JSX) should have a default behaviour 1`] = `
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 >
-  <canvas
-    className="ink"
-    height={0}
-    onDragOver={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    style={
-      Object {
-        "borderRadius": "inherit",
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": "100%",
-      }
-    }
-    width={0}
-  />
+  <div
+    className="Ink"
+  >
+    {"name":"Ink","props":{}}
+  </div>
 </button>
 `;
 
@@ -480,6 +283,5 @@ exports[`common/Button graphical (JSX) shouldnt print ink behaviour 1`] = `
   onClick={[Function]}
   style={Object {}}
   title=""
-  type={undefined}
 />
 `;

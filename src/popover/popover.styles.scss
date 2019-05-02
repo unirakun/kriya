@@ -10,7 +10,7 @@
   opacity: 0;
   position: fixed;
   top: 0;
-  transition: all $default-transition;
+  transition: z-index $default-transition, opacity $default-transition;
   width: 100%;
   z-index: -10;
 }

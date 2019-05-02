@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import router from 'hoc-little-router'
 import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
+import forRoute from '../../helpers/router'
 import Button from '../../../src/button'
 import styles from './button.styles.scss'
 
@@ -73,4 +73,4 @@ ButtonExample.defaultProps = {
   className: '',
 }
 
-export default router('BUTTON')(onlyUpdateForPropTypes(ButtonExample))
+export default forRoute('BUTTON')(onlyUpdateForPropTypes(ButtonExample))

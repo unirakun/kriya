@@ -1,3 +1,7 @@
+
+import enzyme from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
+
 /* eslint-disable */
 global.Intl = require('intl')
 
@@ -5,6 +9,8 @@ global.Intl = require('intl')
 global.Intl.__disableRegExpRestore()
 
 /* eslint-enable */
+
+enzyme.configure({ adapter: new Adapter() })
 
 // Make console.error a real failure
 console.error = (message) => { // eslint-disable-line no-console

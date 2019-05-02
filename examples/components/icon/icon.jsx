@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import router from 'hoc-little-router'
 import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
+import forRoute from '../../helpers/router'
 import Icon from '../../../src/icon'
 import styles from './icon.styles.scss'
 
@@ -49,4 +49,4 @@ IconExample.defaultProps = {
   className: '',
 }
 
-export default router('ICON')(onlyUpdateForPropTypes(IconExample))
+export default forRoute('ICON')(onlyUpdateForPropTypes(IconExample))

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { onlyUpdateForPropTypes } from 'recompose'
-import router from 'hoc-little-router'
+import forRoute from '../../helpers/router'
 import Awesome from './awesome'
 import styles from './bottomSheets.styles.scss'
 
@@ -35,4 +35,4 @@ BottomSheets.defaultProps = {
   className: '',
 }
 
-export default router('BOTTOMSHEETS')(onlyUpdateForPropTypes(BottomSheets))
+export default forRoute('BOTTOMSHEETS')(onlyUpdateForPropTypes(BottomSheets))

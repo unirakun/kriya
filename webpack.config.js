@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
+const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
@@ -31,6 +32,8 @@ function getPlugins(plugins) {
     inject: true,
     hash: true,
   }))
+
+  plugins.push(new webpack.NamedModulesPlugin())
 
   if (!dev) {
     plugins.push(new ExtractTextPlugin('kriya.css'))
