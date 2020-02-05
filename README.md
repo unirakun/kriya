@@ -1,5 +1,5 @@
 # Kriya
-[![CircleCI](https://circleci.com/gh/alakarteio/kriya.svg?style=shield)](https://circleci.com/gh/alakarteio/kriya) [![Coverage Status](https://coveralls.io/repos/github/alakarteio/kriya/badge.svg?branch=master)](https://coveralls.io/github/alakarteio/kriya?branch=master) [![NPM Version](https://badge.fury.io/js/kriya.svg)](https://www.npmjs.com/package/kriya) 
+[![CircleCI](https://circleci.com/gh/unirakun/kriya.svg?style=shield)](https://circleci.com/gh/unirakun/kriya) [![Coverage Status](https://coveralls.io/repos/github/unirakun/kriya/badge.svg?branch=master)](https://coveralls.io/github/unirakun/kriya?branch=master) [![NPM Version](https://badge.fury.io/js/kriya.svg)](https://www.npmjs.com/package/kriya) 
 
 ## Usage
 ### Change Sass variables
@@ -14,10 +14,10 @@ TODO
  - TODO : API
 
 
-# About ![alakarteio](http://alakarte.io/assets/img/logo.markdown.png)
-**alakarteio** is created by two passionate french developers.
+# About uni rakun ![unirakun](https://avatars3.githubusercontent.com/u/26111459?s=50&v=4)
+**uni rakun** is created by two passionate french developers.
 
-Do you want to contact them ? Go to their [website](http://alakarte.io)
+Do you want to contact them ? Go to their [website](https://unirakun.fr)
 
 <table border="0">
  <tr>
